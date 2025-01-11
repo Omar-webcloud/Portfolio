@@ -21,12 +21,12 @@ header image {
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #e0ffff;
+    background-color: #ffffed;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 /* Heading Styeles */
-h1,h2 {color: #06402B;
+h1,h2 {color: #343434;
 }
 a:hover {
     text-decoration: none;
