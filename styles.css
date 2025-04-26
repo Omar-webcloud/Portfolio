@@ -17,6 +17,9 @@ header image {
     margin: 10px 0;
 
 }
+header p {
+color:#101017;
+}
 /* Section Styles */
 section {
     padding: 20px;
