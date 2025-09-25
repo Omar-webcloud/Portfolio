@@ -1,23 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-//change background color
-function
-changeBackgroundColor() {
-    const colors = ["#f4f4f4", "#e0f7fa", "#fce4ec", "#e8f5e9", "#fff3e0"];
-    const randomColor = 
-          colors[Math.floor(Math.random()* colors.length)];
-    document.body.style.backgroundColor = randomColor;
-}
+// Toggle sidebar on mobile
+const sidebar = document.getElementById("sidebar");
+const hamburger = document.getElementById("hamburger");
+const closeBtn = document.getElementById("close-btn");
 
-// Show Greeting
-function showGreeting() {
-    const name = prompt("What is your name?");
-    if (name) {
-        alert(`Hello, ${name} <3 ! Welcome to my portfolio!`);
-               }
-               }
+hamburger.addEventListener("click", () => {
+  sidebar.classList.add("active");
+});
 
-              
-              // Event Listeners
-              document.getElementById("bg-button").addEventListener("click", changeBackgroundColor);
-        document.getElementById("greet-button").addEventListener("click",showGreeting);
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
+
+// Close sidebar when link is clicked (on mobile)
+document.querySelectorAll(".sidebar ul li a").forEach(link => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
 });
