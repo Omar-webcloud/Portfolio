@@ -261,7 +261,14 @@ footer {
   /* Hamburger visible */
   .hamburger {
     display: block;
-  }
+    cursor: pointer;
+}
+
+/* Hide hamburger when sidebar is active */
+.sidebar.active ~ .hamburger {
+  display: none;
+}
+  
 
   /* Content full width */
   .content {
