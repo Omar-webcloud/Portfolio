@@ -1,67 +1,46 @@
-#Omar’s Portfolio Website
+# 🧑‍💻 Portfolio Website
 
-This is my personal portfolio website, built to showcase my skills, projects, certificates, and contact information in a clean, modern, and responsive design.
+A personal portfolio website that showcases my journey as a self-taught web developer, highlights my skills, projects, certifications, and provides a way to contact me.
 
-The site includes a sidebar navigation on desktop and a mobile-friendly hamburger menu that slides in when clicked.
+---
 
- #Features
+## 🚀 Live Demo
 
-Responsive Design → Works seamlessly on desktop, tablet, and mobile
+[View the live version here](https://omar-webcloud.github.io/Portfolio/)  
 
-Sidebar Navigation → Fixed on desktop, collapses into a hamburger menu on mobile
+---
 
-About Me Section → Highlights my journey, self-learning, and passion for web development
+## 🛠️ Built With
 
-Skills Section → Core technical skills (HTML, CSS, JavaScript, React)
+| Technology | Purpose |
+|------------|---------|
+| HTML        | Structure & markup |
+| CSS         | Styling & layout |
+| JavaScript   | Interactivity & functionality |
+| React (Optional) | Component-based UI |
+| Git & GitHub  | Version control & hosting |
 
-Projects Section → Links to my live hosted projects (To-do List, Calculator, Pun Generator, BMI Calculator)
+---
 
-Certificates Section → Verified certificates from SoloLearn and freeCodeCamp
+## 📦 Features
 
-Contact Section → Email and LinkedIn links
+- Responsive design optimized for desktop, tablet, and mobile  
+- Sidebar navigation with collapsible menu on mobile  
+- About Me section detailing my web development journey  
+- Skills section showcasing HTML, CSS, JavaScript, React, etc.  
+- Projects section with links to live demos and GitHub repositories  
+- Certificates section displaying my achievements  
+- Contact section with email, LinkedIn, Twitter, and GitHub links  
 
-Footer → Copyright information
+---
 
- #Technologies Used
+## 🧭 How to Use / Run Locally
 
-HTML5 – Structure of the site
-
-CSS3 – Styling and responsive design with @media queries
-
-JavaScript (ES6) – Sidebar toggle and interactivity
-
-Font Awesome – Icons for navigation and contact links
-
-#How to Run Locally
-
-Clone the repository:
-
-git clone https://github.com/Omar-webcloud/portfolio.git
-
-
-Navigate into the project folder:
-
-cd portfolio
-
-
-Open index.html in your browser.
+1. Clone this repo  
+```bash
+git clone https://github.com/Omar-webcloud/Portfolio.git
 
 
 
- #Certificates
-
-SoloLearn – HTML Certificate
-
-freeCodeCamp – Responsive Web Design
-
-#Contact
-
-Email: omarfarukcihs@gmail.com
-
-LinkedIn: Md. Omar Faruk Chowdhury
-
-
-
- #License
-
-This project is licensed under the MIT License.
+## 📄 License
+This project is licensed under the MIT License. 
