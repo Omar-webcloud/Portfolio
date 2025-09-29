@@ -40,8 +40,3 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 ```bash
 git clone https://github.com/Omar-webcloud/Portfolio.git
 
----
-
-
-## 📄 License
-This project is licensed under the MIT License. 
