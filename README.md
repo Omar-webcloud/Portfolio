@@ -30,7 +30,7 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 - Skills section showcasing HTML, CSS, JavaScript, React, etc.  
 - Projects section with links to live demos and GitHub repositories  
 - Certificates section displaying my achievements  
-- Contact section with email, LinkedIn, Twitter, and GitHub links  
+- Contact section with email, LinkedIn and GitHub links  
 
 ---
 
@@ -40,6 +40,7 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 ```bash
 git clone https://github.com/Omar-webcloud/Portfolio.git
 
+---
 
 
 ## 📄 License
