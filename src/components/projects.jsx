@@ -73,7 +73,7 @@ export function Projects() {
 
                   <Button
   variant="outline"
-  className="w-full text-primary bg-transparent border-2 border-cyan-400 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-300"
+  className="w-full text-primary bg-transparent border-2 border-cyan-200/50 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-400"
 >
   <a
     href={project.link}
