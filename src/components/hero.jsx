@@ -11,7 +11,7 @@ export function Hero() {
     setMounted(true)
   }, [])
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
   }
@@ -34,11 +34,18 @@ export function Hero() {
             <span className="text-primary font-mono text-sm md:text-base">{}</span>
           </div>
 
+          {/* Animated Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 glow-text">
-            Hi! I'm <span className="text-primary">Omar</span>
+            Hi! I'm{" "}
+            <span className="text-primary animate-pulse-slow font-extrabold tracking-wide inline-block scale-animation">
+              Omar
+            </span>
           </h1>
 
-          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8 font-light">A Web Developer</p>
+          {/* Sci-fi styled title */}
+          <p className="text-2xl md:text-3xl lg:text-4xl mb-8 font-light text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 font-mono flicker-text">
+            A Web Developer
+          </p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
             I'm Mohammad Omar, a web developer with an English major background, creating functional and creative
