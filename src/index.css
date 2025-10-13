@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+
+:root {
+  --background: oklch(0.12 0.02 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.16 0.02 240);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.16 0.02 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.2 200);
+  --primary-foreground: oklch(0.12 0.02 240);
+  --secondary: oklch(0.22 0.02 240);
+  --secondary-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.22 0.02 240);
+  --muted-foreground: oklch(0.55 0.01 240);
+  --accent: oklch(0.65 0.2 200);
+  --accent-foreground: oklch(0.12 0.02 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.25 0.02 240);
+  --input: oklch(0.25 0.02 240);
+  --ring: oklch(0.65 0.2 200);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * { 
+    border-color: transparent;
+    outline: none;
+    outline-offset: 0;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Sci-fi glow effects */
+.glow-text {
+  text-shadow: 0 0 20px oklch(0.65 0.2 200 / 0.5);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px oklch(0.65 0.2 200 / 0.3);
+}
+
+/* Grid background effect */
+.grid-bg {
+  background-image: linear-gradient(oklch(0.25 0.02 240 / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.25 0.02 240 / 0.5) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-card {
+  box-shadow: 0 0 12px 2px #67e8f9aa;
+}
