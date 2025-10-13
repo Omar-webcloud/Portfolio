@@ -72,19 +72,20 @@ export function Projects() {
                   </div>
 
                   <Button
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary/10 bg-transparent"
-                  >
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-full"
-                    >
-                      View Project
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
+  variant="outline"
+  className="w-full text-primary bg-transparent border-2 border-cyan-400 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-300"
+>
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center w-full"
+  >
+    View Project
+    <ExternalLink className="ml-2 w-4 h-4" />
+  </a>
+</Button>
+
                 </CardContent>
               </Card>
             ))}
