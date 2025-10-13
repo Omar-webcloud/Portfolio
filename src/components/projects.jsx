@@ -44,23 +44,29 @@ export function Projects() {
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="bg-card border border-cyan-8/10 rounded-xl glow-card transition-all duration-300 group overflow-hidden"
+                className="bg-card border border-cyan-8/10 rounded-xl glow-card transition-all duration-300 group overflow-hidden p-6"
               >
-                <CardHeader>
-                  <CardTitle className="text-2xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
-                  <CardDescription className="text-base">{project.description}</CardDescription>
+                <CardHeader className="mb-4">
+                  <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-base text-muted-foreground">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
+
                 <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full border border-primary/20"
+                        className="px-3 py-1 text-xs font-semibold bg-primary/20 text-primary rounded-full border border-primary/30"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
                   <Button
                     variant="outline"
                     className="w-full border-primary text-primary hover:bg-primary/10 bg-transparent"
