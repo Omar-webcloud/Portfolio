@@ -30,9 +30,9 @@ export function Certificates() {
             {certificates.map((cert) => (
               <Card
                 key={cert.title}
-                className="bg-card border-border hover:border-primary transition-all duration-300 group"
+                className="bg-card border border-cyan-8/10 rounded-xl glow-card transition-all duration-300 group overflow-hidden p-6"
               >
-                <CardHeader>
+                <CardHeader className="mb-4">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                       <Award className="w-6 h-6 text-primary" />
@@ -45,10 +45,11 @@ export function Certificates() {
                     </div>
                   </div>
                 </CardHeader>
+
                 <CardContent>
                   <Button
                     variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary/10 bg-transparent"
+                    className="w-full text-primary bg-transparent border-2 border-cyan-200/50 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-400"
                   >
                     <a
                       href={cert.link}
