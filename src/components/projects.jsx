@@ -60,7 +60,11 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-semibold bg-primary/20 text-primary rounded-full border border-primary/30"
+                        className="px-3 py-1 text-xs font-semibold rounded-full border border-cyan-400/30"
+                        style={{
+                          backgroundColor: "rgba(224, 255, 255, 0.2)", // light cyan with low opacity
+                          color: "#00bcd4", // cyan text
+                        }}
                       >
                         {tag}
                       </span>
