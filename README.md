@@ -14,10 +14,8 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 
 | Technology | Purpose |
 |------------|---------|
-| HTML        | Structure & markup |
 | CSS         | Styling & layout |
-| JavaScript   | Interactivity & functionality |
-| React (Optional) | Component-based UI |
+| React (Javascript) | Component-based UI |
 | Git & GitHub  | Version control & hosting |
 
 ---
@@ -33,10 +31,4 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 - Contact section with email, LinkedIn and GitHub links  
 
 ---
-
-## 🧭 How to Use / Run Locally
-
-1. Clone this repo  
-```bash
-git clone https://github.com/Omar-webcloud/Portfolio.git
 
