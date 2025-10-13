@@ -4,7 +4,7 @@ import { Award, ExternalLink } from "lucide-react"
 
 const certificates = [
   {
-    title: "Web Development Certificate",
+    title: "Web Development",
     issuer: "SoloLearn",
     link: "https://api2.sololearn.com/v2/certificates/CC-HMCA6F6M/image/png?t=638934664199742353",
   },
