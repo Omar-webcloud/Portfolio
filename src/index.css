@@ -61,3 +61,36 @@
 .glow-card {
   box-shadow: 0 0 12px 2px #67e8f9aa;
 }
+
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2.5s infinite ease-in-out;
+}
+
+.scale-animation {
+  transition: transform 0.3s ease;
+}
+
+.flicker-text {
+  animation: flicker 3s infinite;
+}
