@@ -6,7 +6,7 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 
 ## 🚀 Live Demo
 
-[View the live version here](https://omar-webcloud.github.io/Portfolio/)  
+[View the live version here](https://portfolio-liard-rho-18.vercel.app/)  
 
 ---
 
