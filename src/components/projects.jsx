@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Movie Explorer App",
     description: "Get suggestions on which movie to watch this weekend.",
-    link: "https://v0-movie-xplorer.vercel.app/",
+    link: "https://kino-xplorer.vercel.app/",
     tags: ["React", "API", "JavaScript"],
   },
   {
