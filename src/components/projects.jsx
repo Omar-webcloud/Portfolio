@@ -22,10 +22,10 @@ const projects = [
     tags: ["React", "API", "JavaScript"],
   },
   {
-    title: "BMI Calculator",
-    description: "Calculate your Body Mass Index easily and quickly.",
-    link: "https://omar-webcloud.github.io/Bmi-calculator/",
-    tags: ["JavaScript", "HTML", "CSS"],
+    title: "Blog App",
+    description: "A full stack blogging app.",
+    link: "https://bloggin-app-six.vercel.app//",
+    tags: ["JavaScript", "TypeScript", "Next.js", "Firebase"],
   },
 ]
 
