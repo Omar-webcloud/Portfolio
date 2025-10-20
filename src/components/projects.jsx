@@ -5,9 +5,9 @@ import { ExternalLink } from "lucide-react"
 const projects = [
   {
     title: "Role-Playing-Game",
-    description: 'A simple browser-based RPG, inspired by the freeCodeCamp project — "Build a Role-Playing Game."',
+    description: 'A full stack browser-based RPG, inspired by the freeCodeCamp project, with user authentication and game progress storage.',
     link: "https://omar-webcloud.github.io/Role-Playing-Game/",
-    tags: ["JavaScript", "HTML", "CSS"],
+    tags: ["JavaScript", "HTML+CSS", " MongoDB", "Firebase" ],
   },
   {
     title: "E-Commerce App",
@@ -22,8 +22,8 @@ const projects = [
     tags: ["React", "API", "JavaScript"],
   },
   {
-    title: "Blog App",
-    description: "A full stack blogging app.",
+    title: "Bloggin' ",
+    description: "A full stack blogging app with user authentication.",
     link: "https://bloggin-app-six.vercel.app//",
     tags: ["JavaScript", "TypeScript", "Next.js", "Firebase"],
   },
