@@ -1,6 +1,6 @@
 import { Button } from "./ui/button"
 import { Card } from "./ui/card"
-import { Mail, Linkedin, Github } from "lucide-react"
+import { Mail, Linkedin, Github, Download } from "lucide-react"
 
 const contactLinks = [
   {
@@ -62,9 +62,17 @@ export function Contact() {
             <p className="text-muted-foreground mb-6">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-border">
-              <a href="mailto:omarfarukcihs@gmail.com">Send me an email</a>
-            </Button>
+            <div className="flex justify-center gap-4">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-border">
+                <a href="mailto:omarfarukcihs@gmail.com">Send me an email</a>
+              </Button>
+              <Button size="lg" variant="outline" className="glow-border">
+                <a href="/Resume.pdf" download className="flex items-center">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
