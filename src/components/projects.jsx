@@ -3,29 +3,31 @@ import { Button } from "./ui/button"
 import { ExternalLink } from "lucide-react"
 
 const projects = [
-  {
-    title: "Role-Playing-Game",
-    description: 'A full stack browser-based RPG, inspired by the freeCodeCamp project, with user authentication and game progress storage.',
-    link: "https://omar-webcloud.github.io/Role-Playing-Game/",
-    tags: ["JavaScript", "HTML+CSS", " MongoDB", "Firebase" ],
-  },
-  {
-    title: "E-Commerce App",
-    description: "A simple e-commerce app built with react.",
-    link: "https://fresh-farm-zeta.vercel.app/",
-    tags: ["React", "JavaScript", "CSS"],
-  },
+  
+  
   {
     title: "Movie Explorer App",
-    description: "Get suggestions on which movie to watch this weekend.",
+    description: "Kino‑Xplorer is a sleek browser-based tool that lets you search, discover, and browse movies effortlessly. It uses a movie API to fetch up-to-date information, including genres, ratings, release dates, and synopses, providing a smooth and dynamic movie exploration experience.",
     link: "https://kino-xplorer.vercel.app/",
     tags: ["React", "API", "JavaScript"],
   },
   {
     title: "Bloggin' ",
-    description: "A full stack blogging app with user authentication.",
+    description: "Bloggin’ is a modern blogging platform where you can sign up, log in, and manage your posts with full control. It features user authentication for secure access, and lets you create, edit, and delete posts easily.",
     link: "https://bloggin-app-six.vercel.app//",
     tags: ["JavaScript", "TypeScript", "Next.js", "Firebase"],
+  },
+  {
+    title: "Role-Playing-Game",
+    description: "A browser-based RPG inspired by freeCodeCamp, featuring user authentication, game progress storage, and dynamic gameplay.",
+    link: "https://omar-webcloud.github.io/Role-Playing-Game/",
+    tags: ["JavaScript", "HTML+CSS", "MongoDB", "Express", "FirebaseAuth"],
+  },
+  {
+    title: "E-Commerce App",
+    description: "A frontend e-commerce app built with react.",
+    link: "https://fresh-farm-zeta.vercel.app/",
+    tags: ["React", "JavaScript", "CSS"],
   },
 ]
 

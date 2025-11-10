@@ -37,7 +37,7 @@
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
     "@vercel/analytics": "latest",
-    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-react": "4.2.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -66,7 +66,7 @@
     "terser": "latest",
     "tsx": "latest",
     "vaul": "^0.9.9",
-    "vite": "latest",
+    "vite": "4.5.3",
     "yaml": "latest",
     "zod": "3.25.76"
   },

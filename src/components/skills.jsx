@@ -2,9 +2,11 @@ import { Card } from "./ui/card"
 
 const skills = [
   { name: "HTML", level: 90 },
-  { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 80 },
-  { name: "React", level: 75 },
+  { name: "CSS", level: 90 },
+  { name: "JavaScript", level: 90 },
+  { name: "React", level: 90 },
+  { name: "TypeScript", level: 90 },
+  { name: "NextJS", level: 90 },
 ]
 
 export function Skills() {
