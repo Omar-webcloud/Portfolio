@@ -6,6 +6,12 @@ const projects = [
   
   
   {
+    title: "PlastiTrack",
+    description: "PlastiTrack is a web-based application that helps users monitor and reduce their plastic consumption and waste. Through its intuitive interface, users can log plastic-use events, track their progress over time with visual charts, and manage their usage history.",
+    link: "https://plasti-track.vercel.app/",
+    tags: ["Nextjs", "TailwindCSS", "TypeScript"],
+  },
+  {
     title: "Movie Explorer App",
     description: "Kino‑Xplorer is a sleek browser-based tool that lets you search, discover, and browse movies effortlessly. It uses a movie API to fetch up-to-date information, including genres, ratings, release dates, and synopses, providing a smooth and dynamic movie exploration experience.",
     link: "https://kino-xplorer.vercel.app/",
