@@ -41,9 +41,8 @@ export function Hero() {
           <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8 font-light">A Web Developer</p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            I'm Mohammad Omar, a web developer with an English major background, creating functional and creative
-            websites.
-          </p>
+            I build scalable web experiences with modern UI, optimized for performance and UX.
+           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
