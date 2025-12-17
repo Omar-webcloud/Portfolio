@@ -26,10 +26,7 @@ export function About() {
             {/* Text content */}
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground flex-1">
               <p>
-                I create functional and creative websites that combine clean design with smooth user experiences. With a
-                unique background in English Literature, I bring strong communication skills and an eye for detail into
-                my development work. Although my academic foundation isn't in computer science, I am a self-taught
-                developer who is driven, curious, and passionate about learning.
+               I create functional and creative websites that focus on clean design and smooth user experiences. I bring strong communication skills, attention to detail, and a problem-solving mindset into every project. As a developer, I’m driven by curiosity, continuous learning, and a genuine passion for building things that work well and look great.
               </p>
 
               <p>
