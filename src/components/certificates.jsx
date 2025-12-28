@@ -7,22 +7,44 @@ const certificates = [
     title: "Web Development",
     issuer: "SoloLearn",
     link: "https://api2.sololearn.com/v2/certificates/CC-HMCA6F6M/image/png?t=638934664199742353",
+    color: "blue",
   },
   {
     title: "Responsive Web Design",
     issuer: "freeCodeCamp",
     link: "https://freecodecamp.org/certification/fcc-43a93b12-1d40-4a5b-a38b-9b4846c24ed9/responsive-web-design",
+    color: "purple",
   },
 ]
 
+const glassColorMap = {
+  blue: {
+    card: "bg-blue-500/5 border-blue-500/20 group-hover:border-blue-500/50 shadow-blue-500/10",
+    button: "border-blue-400/50 text-blue-400 hover:shadow-[0_0_15px_rgba(59,130,246,0.6)]",
+    icon: "bg-blue-500/10 text-blue-400",
+  },
+  purple: {
+    card: "bg-purple-500/5 border-purple-500/20 group-hover:border-purple-500/50 shadow-purple-500/10",
+    button: "border-purple-400/50 text-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)]",
+    icon: "bg-purple-500/10 text-purple-400",
+  },
+};
+
 export function Certificates() {
   return (
-    <section id="certificates" className="py-24 md:py-32 bg-secondary/30 relative">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto glow-border border-2 border-primary rounded-xl p-8">
+    <section id="certificates" className="py-24 md:py-32 relative overflow-hidden bg-black">
+      {/* Background Glows for Depth */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-900/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Main Glass Container */}
+        <div className="max-w-4xl mx-auto backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
           <div className="mb-12">
             <span className="text-primary font-mono text-sm mb-2 block">{"// My achievements"}</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Certificates</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Certificates</h2>
             <div className="h-1 w-20 bg-primary rounded-full" />
           </div>
 
@@ -30,32 +52,36 @@ export function Certificates() {
             {certificates.map((cert) => (
               <Card
                 key={cert.title}
-                className="bg-card border border-cyan-8/10 rounded-xl glow-card transition-all duration-300 group overflow-hidden p-6"
+                className={`
+                  backdrop-blur-md rounded-xl transition-all duration-500 group overflow-hidden 
+                  hover:-translate-y-2 hover:shadow-2xl
+                  ${glassColorMap[cert.color].card}
+                `}
               >
-                <CardHeader className="mb-4">
+                <CardHeader className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <Award className="w-6 h-6 text-primary" />
+                    <div className={`p-3 rounded-lg transition-colors duration-300 ${glassColorMap[cert.color].icon} group-hover:bg-opacity-20`}>
+                      <Award className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                      <CardTitle className="text-xl mb-1 text-white transition-colors">
                         {cert.title}
                       </CardTitle>
-                      <p className="text-sm text-muted-foreground font-mono">{cert.issuer}</p>
+                      <p className="text-sm text-slate-400 font-mono">{cert.issuer}</p>
                     </div>
                   </div>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className="px-6 pb-6">
                   <Button
                     variant="outline"
-                    className="w-full text-primary bg-transparent border-2 border-cyan-200/50 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-400"
+                    className={`w-full bg-transparent border-2 rounded-lg transition duration-300 backdrop-blur-sm ${glassColorMap[cert.color].button}`}
                   >
                     <a
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-full"
+                      className="flex items-center justify-center w-full font-semibold"
                     >
                       View Certificate
                       <ExternalLink className="ml-2 w-4 h-4" />

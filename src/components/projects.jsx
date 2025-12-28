@@ -3,8 +3,6 @@ import { Button } from "./ui/button"
 import { ExternalLink } from "lucide-react"
 
 const projects = [
-  
-  
   {
     title: "PlastiTrack",
     description: "PlastiTrack is a web-based application that helps users monitor and reduce their plastic consumption and waste. Through its intuitive interface, users can log plastic-use events, track their progress over time with visual charts, and manage their usage history.",
@@ -39,40 +37,43 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32 relative">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto glow-border border-2 border-primary rounded-xl p-8">
-          <div className="mb-12">
-            <span className="text-primary font-mono text-sm mb-2 block">{"// What I've built"}</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h2>
-            <div className="h-1 w-20 bg-primary rounded-full" />
+    <section id="projects" className="py-24 md:py-32 relative overflow-hidden bg-black">
+      {/* Background Glows */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Main Glass Container */}
+        <div className="max-w-6xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
+          <div className="mb-16">
+            <span className="text-cyan-400 font-mono text-sm mb-3 block">{"// What I've built"}</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">My Projects</h2>
+            <div className="h-1.5 w-24 bg-cyan-500 rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="bg-card border border-cyan-8/10 rounded-xl glow-card transition-all duration-300 group overflow-hidden p-6"
+                className="flex flex-col h-full bg-cyan-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_20px_50px_rgba(6,182,212,0.15)]"
               >
-                <CardHeader className="mb-4">
-                  <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
+                <CardHeader className="p-8 md:p-10 pb-4">
+                  <CardTitle className="text-2xl md:text-3xl mb-4 text-white group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-base text-muted-foreground">
+                  <CardDescription className="text-lg text-slate-400 leading-relaxed">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent>
-                  <div className="flex flex-wrap gap-3 mb-6">
+                <CardContent className="p-8 md:p-10 pt-0 mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-8">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-semibold rounded-full border border-cyan-400/30"
-                        style={{
-                          backgroundColor: "rgba(224, 255, 255, 0.2)", // light cyan with low opacity
-                          color: "#00bcd4", // cyan text
-                        }}
+                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300"
                       >
                         {tag}
                       </span>
@@ -80,20 +81,20 @@ export function Projects() {
                   </div>
 
                   <Button
-  variant="outline"
-  className="w-full text-primary bg-transparent border-2 border-cyan-200/50 rounded-md transition duration-300 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.6)] hover:border-cyan-400"
->
-  <a
-    href={project.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center w-full"
-  >
-    View Project
-    <ExternalLink className="ml-2 w-4 h-4" />
-  </a>
-</Button>
-
+                    variant="outline"
+                    asChild
+                    className="w-full h-12 bg-transparent border-cyan-500/30 text-cyan-400 rounded-xl transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
+                  >
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                    >
+                      View Project
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
