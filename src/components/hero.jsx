@@ -21,7 +21,7 @@ export function Hero() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
       {/* Animated background light sources for glass interaction */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
@@ -60,7 +60,7 @@ export function Hero() {
             >
               
               <span className="font-semibold text-lg"> <FontAwesomeIcon icon={faBriefcase} />
- View My Work</span>
+               View My Work</span>
               
               {/* Animated glass shine */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

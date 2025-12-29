@@ -34,8 +34,8 @@ export function About() {
     <section id="about" className="py-24 md:py-32 relative overflow-hidden bg-black">
       {/* Background Glows for Depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-t from-black via-slate-950 to-blue-950/20" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
