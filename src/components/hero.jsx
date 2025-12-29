@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
-import { ArrowDown, Code2, Rocket } from "lucide-react"
+import { ArrowDown} from "lucide-react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase, faPhone } from '@fortawesome/free-solid-svg-icons'
+
+
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -54,8 +58,9 @@ export function Hero() {
                          border border-blue-500/30 hover:border-blue-500/60
                          text-blue-400 hover:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
             >
-              <Rocket className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-              <span className="font-semibold text-lg">View My Work</span>
+              
+              <span className="font-semibold text-lg"> <FontAwesomeIcon icon={faBriefcase} />
+ View My Work</span>
               
               {/* Animated glass shine */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -71,8 +76,8 @@ export function Hero() {
                          border border-white/10 hover:border-indigo-500/40
                          text-muted-foreground hover:text-indigo-400"
             >
-              <Code2 className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              <span className="font-semibold text-lg">Contact Me</span>
+              
+              <span className="font-semibold text-lg"> <FontAwesomeIcon icon={faPhone} /> Contact Me</span>
             </Button>
           </div>
         </div>
