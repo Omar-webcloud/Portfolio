@@ -14,7 +14,7 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 
 | Technology | Purpose |
 |------------|---------|
-| CSS         | Styling & layout |
+| TailwindCSS         | Styling & layout |
 | React (Javascript) | Component-based UI |
 | Git & GitHub  | Version control & hosting |
 
