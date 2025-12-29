@@ -1,10 +1,10 @@
 import { Card } from "./ui/card"
 
 const skills = [
-  { name: "HTML", level: 90, color: "orange" },
-  { name: "CSS", level: 90, color: "blue" },
-  { name: "JavaScript", level: 90, color: "purple" },
-  { name: "React", level: 90, color: "indigo" },
+  { name: "HTML", level: 100, color: "orange" },
+  { name: "CSS", level: 100, color: "blue" },
+  { name: "JavaScript", level: 99, color: "purple" },
+  { name: "React", level: 95, color: "indigo" },
   { name: "TypeScript", level: 90, color: "blue" },
   { name: "NextJS", level: 90, color: "green" },
 ]
@@ -13,10 +13,10 @@ export function Skills() {
   // Mapping for the memorized glass colors
   const glassColorMap = {
     blue: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
-    purple: "from-purple-500/10 to-purple-400/5 border-purple-500/20 text-purple-400",
-    orange: "from-orange-500/10 to-orange-400/5 border-orange-500/20 text-orange-400",
-    green: "from-green-500/10 to-green-400/5 border-green-500/20 text-green-400",
-    indigo: "from-indigo-500/10 to-indigo-400/5 border-indigo-500/20 text-indigo-400",
+    purple:"from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
+    orange: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
+    green: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
+    indigo: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
   };
 
   return (
@@ -39,7 +39,7 @@ export function Skills() {
             {skills.map((skill) => (
               <Card
                 key={skill.name}
-                className={`p-6 bg-gradient-to-br backdrop-blur-sm border transition-all duration-300 group hover:-translate-y-1 ${glassColorMap[skill.color]}`}
+                className={`p-6 bg-gradient-to-br backdrop-blur-sm border transition-all duration-300 group hover:-translate-y-1 rounded-2xl ${glassColorMap[skill.color]}`}
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white group-hover:text-current transition-colors">
