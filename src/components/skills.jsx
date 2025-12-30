@@ -41,7 +41,6 @@ const stackCategories = [
 
 export function Skills() {
   // Mapping for the glass colors
- 
   const glassColorMap = {
     orange: "from-orange-500/10 to-orange-400/5 border-orange-500/20 text-orange-400",
     blue: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
@@ -92,7 +91,9 @@ export function Skills() {
                         {/* Render the icon component */}
                         <skill.icon />
                       </div>
-                      <span className="text-sm font-medium text-white/80 group-hover:text-white">
+                      
+                      
+                      <span className="text-sm font-medium opacity-90 group-hover:opacity-100 transition-opacity">
                         {skill.name}
                       </span>
                     </Card>
