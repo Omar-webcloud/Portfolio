@@ -1,22 +1,55 @@
-import { Card } from "./ui/card"
+import { Card } from "./ui/card";
+import { 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaJs, 
+  FaReact, 
+  FaNodeJs, 
+} from "react-icons/fa";
+import { 
+  SiTailwindcss, 
+  SiTypescript, 
+  SiNextdotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiFirebase 
+} from "react-icons/si";
 
-const skills = [
-  { name: "HTML", level: 100, color: "orange" },
-  { name: "CSS", level: 100, color: "blue" },
-  { name: "JavaScript", level: 99, color: "purple" },
-  { name: "React", level: 95, color: "indigo" },
-  { name: "TypeScript", level: 90, color: "blue" },
-  { name: "NextJS", level: 90, color: "green" },
-]
+const stackCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "HTML", icon: FaHtml5, color: "orange" },
+      { name: "CSS", icon: FaCss3Alt, color: "blue" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "cyan" },
+      { name: "JavaScript", icon: FaJs, color: "yellow" },
+      { name: "TypeScript", icon: SiTypescript, color: "blue" },
+      { name: "React", icon: FaReact, color: "cyan" },
+      { name: "Next.js", icon: SiNextdotjs, color: "white" },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: FaNodeJs, color: "green" },
+      { name: "Express", icon: SiExpress, color: "white" },
+      { name: "MongoDB", icon: SiMongodb, color: "green" },
+      { name: "Firebase", icon: SiFirebase, color: "orange" },
+    ],
+  },
+];
 
 export function Skills() {
-  // Mapping for the memorized glass colors
+  // Mapping for the glass colors
+ 
   const glassColorMap = {
+    orange: "from-orange-500/10 to-orange-400/5 border-orange-500/20 text-orange-400",
     blue: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
-    purple:"from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
-    orange: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
-    green: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
-    indigo: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
+    purple: "from-purple-500/10 to-purple-400/5 border-purple-500/20 text-purple-400",
+    green: "from-emerald-500/10 to-emerald-400/5 border-emerald-500/20 text-emerald-400",
+    cyan: "from-cyan-500/10 to-cyan-400/5 border-cyan-500/20 text-cyan-400",
+    yellow: "from-yellow-500/10 to-yellow-400/5 border-yellow-500/20 text-yellow-400",
+    white: "from-slate-500/10 to-slate-400/5 border-slate-500/20 text-slate-200",
   };
 
   return (
@@ -29,44 +62,47 @@ export function Skills() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Glass Container */}
-        <div className="max-w-4xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
           <div className="mb-12">
-            <span className="text-primary font-mono text-sm mb-2 block">{"// My expertise"}</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">My Skills</h2>
+            <span className="text-primary font-mono text-sm mb-2 block">
+              {"// My expertise"}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              My Stacks
+            </h2>
             <div className="h-1 w-20 bg-primary rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill) => (
-              <Card
-                key={skill.name}
-                className={`p-6 bg-gradient-to-br backdrop-blur-sm border transition-all duration-300 group hover:-translate-y-1 rounded-2xl ${glassColorMap[skill.color]}`}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-current transition-colors">
-                    {skill.name}
-                  </h3>
-                  <span className="text-sm font-mono opacity-80">{skill.level}%</span>
-                </div>
+          <div className="space-y-12">
+            {stackCategories.map((category) => (
+              <div key={category.title}>
+                <h3 className="text-2xl font-semibold text-white mb-6 border-l-4 border-primary pl-4">
+                  {category.title}
+                </h3>
                 
-                {/* Modern Progress Bar with Glass Styling */}
-                <div className="relative h-2 bg-white/5 rounded-full overflow-hidden border border-white/5">
-                  <div
-                    className="absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out"
-                    style={{
-                      width: `${skill.level}%`,
-                      background: "currentColor",
-                      boxShadow: "0 0 15px currentColor",
-                    }}
-                  />
-                  {/* Glass Shine on Bar */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {category.skills.map((skill) => (
+                    <Card
+                      key={skill.name}
+                      className={`p-4 flex flex-col items-center justify-center gap-3 bg-gradient-to-br backdrop-blur-sm border transition-all duration-300 group hover:-translate-y-2 hover:shadow-lg rounded-xl ${
+                        glassColorMap[skill.color] || glassColorMap.blue
+                      }`}
+                    >
+                      <div className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
+                        {/* Render the icon component */}
+                        <skill.icon />
+                      </div>
+                      <span className="text-sm font-medium text-white/80 group-hover:text-white">
+                        {skill.name}
+                      </span>
+                    </Card>
+                  ))}
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
