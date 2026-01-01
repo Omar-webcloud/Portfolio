@@ -19,7 +19,7 @@ const projects = [
     title: "Bloggin' ",
     description: "Bloggin’ is a modern blogging platform where you can sign up, log in, and manage your posts with full control. It features user authentication for secure access, and lets you create, edit, and delete posts easily.",
     link: "https://bloggin-app-six.vercel.app//",
-    tags: ["JavaScript", "TypeScript", "Next.js", "Firebase"],
+    tags: ["TypeScript", "Next.js", "Firebase"],
   },
   {
     title: "Dragon Repeller -RPG",
