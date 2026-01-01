@@ -10,7 +10,7 @@ const projects = [
     tags: ["Nextjs", "TailwindCSS", "TypeScript"],
   },
   {
-    title: "Movie Explorer App",
+    title: "Kino-Xplorer",
     description: "Kino‑Xplorer is a sleek browser-based tool that lets you search, discover, and browse movies effortlessly. It uses a movie API to fetch up-to-date information, including genres, ratings, release dates, and synopses, providing a smooth and dynamic movie exploration experience.",
     link: "https://kino-xplorer.vercel.app/",
     tags: ["React", "API", "JavaScript"],
@@ -22,14 +22,14 @@ const projects = [
     tags: ["JavaScript", "TypeScript", "Next.js", "Firebase"],
   },
   {
-    title: "Role-Playing-Game",
-    description: "A browser-based RPG inspired by freeCodeCamp, featuring user authentication, game progress storage, and dynamic gameplay.",
+    title: "Dragon Repeller -RPG",
+    description: "A browser-based Role-playing game, inspired by freeCodeCamp, featuring user authentication, game progress storage, and dynamic gameplay.",
     link: "https://omar-webcloud.github.io/Role-Playing-Game/",
     tags: ["JavaScript", "HTML+CSS", "MongoDB", "Express", "FirebaseAuth"],
   },
   {
-    title: "E-Commerce App",
-    description: "A frontend e-commerce app built with react.",
+    title: "Fresh Farm",
+    description: "A frontend e-commerce platform for fruits and vegetables, built with react.",
     link: "https://fresh-farm-zeta.vercel.app/",
     tags: ["React", "JavaScript", "CSS"],
   },
