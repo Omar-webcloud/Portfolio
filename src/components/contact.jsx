@@ -126,7 +126,7 @@ export function Contact() {
 
       <footer className="mt-24 pt-8 border-t border-border">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-muted-foreground font-mono">{"</> Omar © 2025"}</p>
+          <p className="text-center text-sm text-muted-foreground font-mono">{"</> Omar © 2026"}</p>
         </div>
       </footer>
     </section>
