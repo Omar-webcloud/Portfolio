@@ -22,7 +22,7 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Animated background light sources for glass interaction */}
+      
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
@@ -40,11 +40,11 @@ export function Hero() {
           </h1>
 
           <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8 font-light italic">
-            A Web Developer
+            A Frontend Developer
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            I build scalable web experiences with modern UI, optimized for performance and UX.
+             Modern UI || Performance and UX Optimization || Scalable Web Experience
           </p>
 
           {/* GLASS STYLE BUTTONS - Implementing your memorized Blue & Indigo themes */}

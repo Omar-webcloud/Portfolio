@@ -6,12 +6,12 @@ export function About() {
       svg: <svg xmlns="www.w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> 
     },
     { 
-      label: 'Modern UI', 
+      label: 'Smooth UX', 
       color: 'purple', 
       svg: <svg xmlns="www.w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> 
     },
     { 
-      label: 'Fast UX', 
+      label: 'Web Performance', 
       color: 'orange', 
       svg: <svg xmlns="www.w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> 
     },
@@ -61,12 +61,12 @@ export function About() {
             {/* Content Text */}
             <div className="space-y-6 text-lg leading-relaxed text-slate-300 flex-1">
               <p>
-                I create functional and creative websites that focus on clean design and smooth user experiences. 
-                I bring strong communication skills and a problem-solving mindset into every project.
+               I build conversion focused websites driven by user behavior analysis, performance optimization, and interface clarity. Every design decision is made to reduce friction, improve usability, and guide users toward meaningful actions.
+
+
               </p>
               <p>
-                I balance creativity with functionality to deliver impactful results, ensuring websites are responsive, 
-                user-friendly, and visually appealing.
+                My process combines UX research, information architecture, and visual design with front end performance best practices to deliver fast, intuitive experiences. The goal is not only visual appeal, but measurable improvements in engagement, retention, and conversion rates.
               </p>
             </div>
           </div>
