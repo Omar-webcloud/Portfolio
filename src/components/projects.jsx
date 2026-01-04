@@ -57,7 +57,7 @@ export function Projects() {
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="flex flex-col h-full bg-blue-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(6,182,212,0.15)]"
+                className="flex flex-col h-full bg-blue-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(14,100,233,0.15)]"
               >
                 <CardHeader className="p-8 md:p-10 pb-4">
                   <CardTitle className="text-2xl md:text-3xl mb-4 text-white group-hover:text-blue-400 transition-colors">
@@ -73,7 +73,7 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-cyan-500/10 border border-cyan-500/20 text-blue-400"
+                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-blue-500/10 border border-blue-900/20 text-blue-500"
                       >
                         {tag}
                       </span>
@@ -83,7 +83,7 @@ export function Projects() {
                   <Button
                     variant="outline"
                     asChild
-                    className="w-full h-12 bg-transparent border-cyan-500/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
+                    className="w-full h-12 bg-transparent border-blue-900/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
                   >
                     <a
                       href={project.link}

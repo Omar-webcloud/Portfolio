@@ -8,29 +8,29 @@ const contactLinks = [
     value: "omarfarukcihs@gmail.com",
     href: "mailto:omarfarukcihs@gmail.com",
     icon: Mail,
-    color: "blue", // Mapping to your GlassIcons colors
+    color: "purple", 
   },
   {
     name: "LinkedIn",
     value: "Connect on LinkedIn",
     href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury",
     icon: Linkedin,
-    color: "indigo",
+    color: "blue",
   },
   {
     name: "GitHub",
     value: "View my repositories",
     href: "https://github.com/omar-webcloud",
     icon: Github,
-    color: "purple",
+    color: "stone",
   },
 ]
 
-// Color utility to match your memorized style
+// Color utility 
 const glassColorMap = {
   blue: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400 group-hover:border-blue-500/50",
-  indigo: "from-indigo-500/10 to-indigo-400/5 border-indigo-500/20 text-indigo-400 group-hover:border-indigo-500/50",
-  purple: "from-purple-500/10 to-purple-400/5 border-purple-500/20 text-purple-400 group-hover:border-purple-500/50",
+  stone: "from-stone-400/10 to-stone-200/5 border-stone-400/20 text-stone-300",
+  purple: "from-red-400/10 to-red-200/5 border-red-400/20 text-red-500 group-hover:border-red-500/50",
 };
 
 export function Contact() {
@@ -85,7 +85,7 @@ export function Contact() {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-  {/* Primary Action - "Blue" Glass Style */}
+  
   <Button 
     size="lg" 
     asChild
