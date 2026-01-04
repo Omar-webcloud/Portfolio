@@ -38,7 +38,7 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="py-24 md:py-32 relative overflow-hidden bg-black">
-      {/* Background Glows */}
+      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
@@ -48,19 +48,19 @@ export function Projects() {
         {/* Main Glass Container */}
         <div className="max-w-6xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
           <div className="mb-16">
-            <span className="text-cyan-400 font-mono text-sm mb-3 block">{"// What I've built"}</span>
+            <span className="text-gray-300 font-mono text-sm mb-3 block">{"// What I've built"}</span>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">My Projects</h2>
-            <div className="h-1.5 w-24 bg-cyan-500 rounded-full" />
+            <div className="h-1.5 w-24 bg-blue-400 rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
             {projects.map((project) => (
               <Card
                 key={project.title}
-                className="flex flex-col h-full bg-cyan-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_20px_50px_rgba(6,182,212,0.15)]"
+                className="flex flex-col h-full bg-blue-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(6,182,212,0.15)]"
               >
                 <CardHeader className="p-8 md:p-10 pb-4">
-                  <CardTitle className="text-2xl md:text-3xl mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  <CardTitle className="text-2xl md:text-3xl mb-4 text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </CardTitle>
                   <CardDescription className="text-lg text-slate-400 leading-relaxed">
@@ -73,7 +73,7 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300"
+                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-cyan-500/10 border border-cyan-500/20 text-blue-400"
                       >
                         {tag}
                       </span>
@@ -83,7 +83,7 @@ export function Projects() {
                   <Button
                     variant="outline"
                     asChild
-                    className="w-full h-12 bg-transparent border-cyan-500/30 text-cyan-400 rounded-xl transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
+                    className="w-full h-12 bg-transparent border-cyan-500/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
                   >
                     <a
                       href={project.link}
