@@ -1,12 +1,8 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
-import { ArrowDown} from "lucide-react"
+import { ArrowDown, Globe } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faPhone } from '@fortawesome/free-solid-svg-icons'
-
-
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -34,7 +30,6 @@ export function Hero() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Header Section */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 glow-text tracking-tight">
             Hi! I'm <span className="text-primary">Omar</span>
           </h1>
@@ -43,13 +38,36 @@ export function Hero() {
             A Frontend Developer
           </p>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
              Modern UI || Performance and UX Optimization || Scalable Web Experience
           </p>
 
-          {/* GLASS STYLE BUTTONS - Implementing your memorized Blue & Indigo themes */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            {/* Primary Action (Blue Theme) */}
+          <div className="flex justify-center mb-10">
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-6 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-white/20 transition-colors">
+              
+              <div className="flex items-center gap-2.5">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span className="text-sm font-medium text-gray-200 tracking-wide">
+                  Available for Remote
+                </span>
+              </div>
+
+              <div className="hidden sm:block w-px h-4 bg-white/10" />
+
+              <div className="flex items-center gap-2.5">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-medium text-gray-200 tracking-wide">
+                  Open to Any Timezone
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
@@ -58,15 +76,13 @@ export function Hero() {
                          border border-blue-500/30 hover:border-blue-500/60
                          text-blue-400 hover:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
             >
-              
-              <span className="font-semibold text-lg"> <FontAwesomeIcon icon={faBriefcase} />
-               View My Work</span>
-              
-              {/* Animated glass shine */}
+              <span className="font-semibold text-lg flex items-center gap-2"> 
+                <FontAwesomeIcon icon={faBriefcase} />
+                View My Work
+              </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </Button>
 
-            {/* Secondary Action (Indigo/White Theme) */}
             <Button
               size="lg"
               variant="outline"
@@ -76,21 +92,22 @@ export function Hero() {
                          border border-white/10 hover:border-indigo-500/40
                          text-muted-foreground hover:text-indigo-400"
             >
-              
-              <span className="font-semibold text-lg"> <FontAwesomeIcon icon={faPhone} /> Contact Me</span>
+              <span className="font-semibold text-lg flex items-center gap-2"> 
+                <FontAwesomeIcon icon={faPhone} /> 
+                Contact Me
+              </span>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* GLASS STYLE SCROLL INDICATOR */}
       <button
         onClick={() => scrollToSection("about")}
-        className="absolute bottom-5 left-1/2 -translate-x-1/2 group transition-all duration-300"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 group transition-all duration-300"
         aria-label="Scroll to about section"
       >
-        <div className="p-1 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
-          <ArrowDown className="w-4 h-4 text-primary animate-bounce" />
+        <div className="p-1 rounded-full  bg-white/5 backdrop-blur-lg border border-white/10 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+          <ArrowDown className="w-4 h-4  text-primary animate-bounce" />
         </div>
       </button>
     </section>
