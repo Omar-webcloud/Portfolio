@@ -43,7 +43,7 @@ export function Hero() {
           </p>
 
           <div className="flex justify-center mb-10">
-            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-6 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-white/20 transition-colors">
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-6 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-white/20 focus:border-white/20 transition-colors">
               
               <div className="flex items-center gap-2.5">
                 <span className="relative flex h-2.5 w-2.5">
@@ -72,15 +72,15 @@ export function Hero() {
               size="lg"
               onClick={() => scrollToSection("projects")}
               className="relative group h-14 px-10 rounded-xl overflow-hidden transition-all duration-300
-                         bg-blue-500/10 hover:bg-blue-500/20 backdrop-blur-md 
-                         border border-blue-500/30 hover:border-blue-500/60
-                         text-blue-400 hover:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+                         bg-blue-500/10 hover:bg-blue-500/20 focus:bg-blue-500/20 backdrop-blur-md 
+                         border border-blue-500/30 hover:border-blue-500/60 focus:border-blue-500/60
+                         text-blue-400 hover:text-blue-300 focus:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
             >
               <span className="font-semibold text-lg flex items-center gap-2"> 
                 <FontAwesomeIcon icon={faBriefcase} />
                 View My Work
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full group-focus:translate-x-full transition-transform duration-1000" />
             </Button>
 
             <Button
@@ -88,9 +88,9 @@ export function Hero() {
               variant="outline"
               onClick={() => scrollToSection("contact")}
               className="relative group h-14 px-10 rounded-xl overflow-hidden transition-all duration-300
-                         bg-white/5 hover:bg-white/10 backdrop-blur-md 
-                         border border-white/10 hover:border-indigo-500/40
-                         text-muted-foreground hover:text-indigo-400"
+                         bg-white/5 hover:bg-white/10 focus:bg-white/10 backdrop-blur-md 
+                         border border-white/10 hover:border-indigo-500/40 focus:border-indigo-500/40
+                         text-muted-foreground hover:text-indigo-400 focus:text-indigo-400"
             >
               <span className="font-semibold text-lg flex items-center gap-2"> 
                 <FontAwesomeIcon icon={faPhone} /> 
@@ -106,7 +106,7 @@ export function Hero() {
         className="absolute bottom-4 left-1/2 -translate-x-1/2 group transition-all duration-300"
         aria-label="Scroll to about section"
       >
-        <div className="p-1 rounded-full  bg-white/5 backdrop-blur-lg border border-white/10 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+        <div className="p-1 rounded-full  bg-white/5 backdrop-blur-lg border border-white/10 group-hover:border-primary/50 group-focus:border-primary/50 group-hover:bg-primary/5 group-focus:bg-primary/5 transition-all">
           <ArrowDown className="w-4 h-4  text-primary animate-bounce" />
         </div>
       </button>
