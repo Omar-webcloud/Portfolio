@@ -2,9 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Button } from "./ui/button"
 import { ExternalLink } from "lucide-react"
 import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiFirebase, SiMongodb, SiExpress } from "react-icons/si"
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiFirebase, SiMongodb, SiExpress, SiFramer } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
-
 
 const techIcons = {
   "Nextjs": { icon: SiNextdotjs, color: "text-white" },
@@ -19,7 +18,8 @@ const techIcons = {
   "MongoDB": { icon: SiMongodb, color: "text-green-500" },
   "Express": { icon: SiExpress, color: "text-white" },
   "HTML": { icon: FaHtml5, color: "text-orange-600" }, 
-  "CSS": { icon: FaCss3Alt, color: "text-blue-600" }
+  "CSS": { icon: FaCss3Alt, color: "text-blue-600" },
+  "Framer Motion": { icon: SiFramer, color: "text-white" },
 }
 
 const projects = [
@@ -27,7 +27,7 @@ const projects = [
     title: "PlastiTrack",
     description: "PlastiTrack is a web-based application that helps users monitor and reduce their plastic consumption and waste. Through its intuitive interface, users can log plastic-use events, track their progress over time with visual charts, and manage their usage history.",
     link: "https://plasti-track.vercel.app/",
-    tags: ["Nextjs", "TailwindCSS", "TypeScript"],
+    tags: ["Nextjs", "TailwindCSS", "TypeScript", "Framer Motion"],
   },
   {
     title: "Kino-Xplorer",
