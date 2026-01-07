@@ -1,10 +1,13 @@
 import { Card } from "./ui/card";
 import { 
-  FaHtml5, 
-  FaCss3Alt, 
   FaJs, 
   FaReact, 
   FaNodeJs, 
+  FaGitAlt, 
+  FaGithub, 
+  FaNpm, 
+  FaFigma, 
+  FaChrome 
 } from "react-icons/fa";
 import { 
   SiTailwindcss, 
@@ -12,20 +15,21 @@ import {
   SiNextdotjs, 
   SiExpress, 
   SiMongodb, 
-  SiFirebase 
+  SiFirebase, 
+  SiVite,
+  SiMui
 } from "react-icons/si";
 
 const stackCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML", icon: FaHtml5, color: "orange" },
-      { name: "CSS", icon: FaCss3Alt, color: "blue" },
       { name: "Tailwind", icon: SiTailwindcss, color: "cyan" },
       { name: "JavaScript", icon: FaJs, color: "yellow" },
       { name: "TypeScript", icon: SiTypescript, color: "blue" },
       { name: "React", icon: FaReact, color: "cyan" },
       { name: "Next.js", icon: SiNextdotjs, color: "white" },
+      { name: "Material UI", icon: SiMui, color: "blue" },
     ],
   },
   {
@@ -37,10 +41,20 @@ const stackCategories = [
       { name: "Firebase", icon: SiFirebase, color: "orange" },
     ],
   },
+  {
+    title: "Other Tools",
+    skills: [
+      { name: "GitHub", icon: FaGithub, color: "white" },
+      { name: "Git", icon: FaGitAlt, color: "orange" },
+      { name: "Vite", icon: SiVite, color: "purple" },
+      { name: "npm", icon: FaNpm, color: "red" },
+      { name: "Figma", icon: FaFigma, color: "purple" },
+      { name: "Chrome DevTools", icon: FaChrome, color: "blue" },
+    ],
+  },
 ];
 
 export function Skills() {
-  // Mapping for the glass colors
   const glassColorMap = {
     orange: "from-orange-500/10 to-orange-400/5 border-orange-500/20 text-orange-400",
     blue: "from-blue-500/10 to-blue-400/5 border-blue-500/20 text-blue-400",
@@ -49,18 +63,17 @@ export function Skills() {
     cyan: "from-cyan-500/10 to-cyan-400/5 border-cyan-500/20 text-cyan-400",
     yellow: "from-yellow-500/10 to-yellow-400/5 border-yellow-500/20 text-yellow-400",
     white: "from-slate-500/10 to-slate-400/5 border-slate-500/20 text-slate-200",
+    red: "from-red-500/10 to-red-400/5 border-red-500/20 text-red-400",
   };
 
   return (
     <section id="skills" className="py-24 md:py-32 relative overflow-hidden bg-black">
-      {/* Background Glows for Depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Main Glass Container */}
         <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
           <div className="mb-12">
             <span className="text-primary font-mono text-sm mb-2 block">
@@ -88,10 +101,8 @@ export function Skills() {
                       }`}
                     >
                       <div className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
-                        {/* Render the icon component */}
                         <skill.icon />
                       </div>
-                      
                       
                       <span className="text-sm font-medium opacity-90 group-hover:opacity-100 transition-opacity">
                         {skill.name}

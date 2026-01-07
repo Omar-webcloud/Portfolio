@@ -1,6 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 import { Button } from "./ui/button"
 import { ExternalLink } from "lucide-react"
+import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiFirebase, SiMongodb, SiExpress } from "react-icons/si"
+import { TbApi } from "react-icons/tb"
+
+
+const techIcons = {
+  "Nextjs": { icon: SiNextdotjs, color: "text-white" },
+  "Next.js": { icon: SiNextdotjs, color: "text-white" },
+  "React": { icon: FaReact, color: "text-blue-400" },
+  "TailwindCSS": { icon: SiTailwindcss, color: "text-cyan-400" },
+  "TypeScript": { icon: SiTypescript, color: "text-blue-500" },
+  "JavaScript": { icon: FaJs, color: "text-yellow-400" },
+  "API": { icon: TbApi, color: "text-gray-300" },
+  "Firebase": { icon: SiFirebase, color: "text-orange-500" },
+  "FirebaseAuth": { icon: SiFirebase, color: "text-orange-500" },
+  "MongoDB": { icon: SiMongodb, color: "text-green-500" },
+  "Express": { icon: SiExpress, color: "text-white" },
+  "HTML": { icon: FaHtml5, color: "text-orange-600" }, 
+  "CSS": { icon: FaCss3Alt, color: "text-blue-600" }
+}
 
 const projects = [
   {
@@ -25,7 +45,7 @@ const projects = [
     title: "Dragon Repeller -RPG",
     description: "A browser-based Role-playing game, inspired by freeCodeCamp, featuring user authentication, game progress storage, and dynamic gameplay.",
     link: "https://omar-webcloud.github.io/Role-Playing-Game/",
-    tags: ["JavaScript", "HTML+CSS", "MongoDB", "Express", "FirebaseAuth"],
+    tags: [ "HTML", "CSS", "JavaScript", "MongoDB", "Express", "FirebaseAuth"],
   },
   {
     title: "Fresh Farm",
@@ -45,7 +65,7 @@ export function Projects() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Main Glass Container */}
+        
         <div className="max-w-6xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
           <div className="mb-16">
             <span className="text-gray-300 font-mono text-sm mb-3 block">{"// What I've built"}</span>
@@ -69,15 +89,22 @@ export function Projects() {
                 </CardHeader>
 
                 <CardContent className="p-8 md:p-10 pt-0 mt-auto">
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-4 py-1.5 text-xs font-medium rounded-full bg-blue-500/10 border border-blue-900/20 text-blue-500"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {project.tags.map((tag) => {
+                      const IconData = techIcons[tag] || { icon: TbApi, color: "text-gray-400" } 
+                      const IconComponent = IconData.icon
+                      
+                      return (
+                        <div
+                          key={tag}
+                          title={tag}
+                          className="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-blue-500/30"
+                        >
+                          <IconComponent className={`w-5 h-5 ${IconData.color}`} />
+                        </div>
+                      )
+                    })}
                   </div>
 
                   <Button
