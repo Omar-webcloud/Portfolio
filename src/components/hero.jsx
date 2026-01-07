@@ -67,16 +67,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          
+          <div className="flex flex-row gap-3 sm:gap-4 justify-center items-center">
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
-              className="relative group h-14 px-10 rounded-xl overflow-hidden transition-all duration-300
+              className="relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
                          bg-blue-500/10 hover:bg-blue-500/20 focus:bg-blue-500/20 backdrop-blur-md 
                          border border-blue-500/30 hover:border-blue-500/60 focus:border-blue-500/60
                          text-blue-400 hover:text-blue-300 focus:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
             >
-              <span className="font-semibold text-lg flex items-center gap-2"> 
+              <span className="font-semibold text-sm sm:text-lg flex items-center gap-2"> 
                 <FontAwesomeIcon icon={faBriefcase} />
                 View My Work
               </span>
@@ -87,12 +88,12 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
-              className="relative group h-14 px-10 rounded-xl overflow-hidden transition-all duration-300
+              className="relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
                          bg-white/5 hover:bg-white/10 focus:bg-white/10 backdrop-blur-md 
                          border border-white/10 hover:border-indigo-500/40 focus:border-indigo-500/40
                          text-muted-foreground hover:text-indigo-400 focus:text-indigo-400"
             >
-              <span className="font-semibold text-lg flex items-center gap-2"> 
+              <span className="font-semibold text-sm sm:text-lg flex items-center gap-2"> 
                 <FontAwesomeIcon icon={faPhone} /> 
                 Contact Me
               </span>
