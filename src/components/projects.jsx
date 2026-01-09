@@ -84,7 +84,7 @@ export function Projects() {
                 key={project.title}
                 className="flex flex-col h-full bg-blue-500/[0.03] border-white/10 backdrop-blur-md rounded-2xl transition-all duration-500 group overflow-hidden hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_20px_50px_rgba(14,100,233,0.15)]"
               >
-                <CardHeader className="p-8 md:p-10 pb-4">
+                <CardHeader className="p-5 md:p-10 pb-4">
                   <CardTitle className="text-2xl md:text-3xl mb-4 text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </CardTitle>
@@ -93,7 +93,7 @@ export function Projects() {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="p-8 md:p-10 pt-0 mt-auto">
+                <CardContent className="p-5 md:p-10 pt-0 mt-auto">
                   
                   <div className="flex flex-wrap gap-3 mb-8">
                     {project.tags.map((tag) => {
@@ -112,35 +112,35 @@ export function Projects() {
                     })}
                   </div>
 
-                  <div className="flex flex-row gap-4 mt-auto">
+                  <div className="flex flex-row gap-3 md:gap-4 mt-auto">
                     <Button
                       variant="outline"
                       asChild
-                      className="flex-1 h-12 bg-transparent border-blue-900/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
+                      className="flex-1 h-10 sm:h-12 bg-transparent border-blue-900/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
                     >
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-xs md:text-sm"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-normal sm:tracking-wider text-[10px] sm:text-sm"
                       >
                         Live Link
-                        <ExternalLink className="ml-2 w-4 h-4" />
+                        <ExternalLink className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                       </a>
                     </Button>
                     <Button
                       variant="outline"
                       asChild
-                      className="flex-1 h-12 bg-transparent border-purple-900/30 text-purple-400 rounded-xl transition-all duration-300 hover:bg-purple-500 hover:text-black hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] border-2"
+                      className="flex-1 h-10 sm:h-12 bg-transparent border-purple-900/30 text-purple-400 rounded-xl transition-all duration-300 hover:bg-purple-500 hover:text-black hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] border-2"
                     >
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-xs md:text-sm"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-normal sm:tracking-wider text-[10px] sm:text-sm"
                       >
                         Github Repo
-                        <FaGithub className="ml-2 w-4 h-4" />
+                        <FaGithub className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                       </a>
                     </Button>
                   </div>
