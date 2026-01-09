@@ -112,7 +112,7 @@ export function Projects() {
                     })}
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                  <div className="flex flex-row gap-4 mt-auto">
                     <Button
                       variant="outline"
                       asChild
@@ -122,7 +122,7 @@ export function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-xs md:text-sm"
                       >
                         Live Link
                         <ExternalLink className="ml-2 w-4 h-4" />
@@ -137,7 +137,7 @@ export function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-xs md:text-sm"
                       >
                         Github Repo
                         <FaGithub className="ml-2 w-4 h-4" />
