@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 import { Button } from "./ui/button"
 import { ExternalLink } from "lucide-react"
-import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"
+import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa"
 import { SiNextdotjs, SiTailwindcss, SiTypescript, SiFirebase, SiMongodb, SiExpress, SiFramer } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
 
@@ -27,30 +27,35 @@ const projects = [
     title: "PlastiTrack",
     description: "PlastiTrack is a web-based application that helps users monitor and reduce their plastic consumption and waste. Through its intuitive interface, users can log plastic-use events, track their progress over time with visual charts, and manage their usage history.",
     link: "https://plasti-track.vercel.app/",
+    github: "https://github.com/Omar-webcloud/PlastiTrack", 
     tags: ["Nextjs", "TailwindCSS", "TypeScript", "Framer Motion"],
   },
   {
     title: "Kino-Xplorer",
     description: "Kino‑Xplorer is a sleek browser-based tool that lets you search, discover, and browse movies effortlessly. It uses a movie API to fetch up-to-date information, including genres, ratings, release dates, and synopses, providing a smooth and dynamic movie exploration experience.",
     link: "https://kino-xplorer.vercel.app/",
+    github: "https://github.com/Omar-webcloud/movie-explorer",
     tags: ["React", "API", "JavaScript"],
   },
   {
     title: "Bloggin' ",
     description: "Bloggin’ is a modern blogging platform where you can sign up, log in, and manage your posts with full control. It features user authentication for secure access, and lets you create, edit, and delete posts easily.",
     link: "https://bloggin-app-six.vercel.app//",
+    github: "https://github.com/Omar-webcloud/Bloggin-App",
     tags: ["TypeScript", "Next.js", "Firebase"],
   },
   {
     title: "Dragon Repeller -RPG",
     description: "A browser-based Role-playing game, inspired by freeCodeCamp, featuring user authentication, game progress storage, and dynamic gameplay.",
     link: "https://omar-webcloud.github.io/Role-Playing-Game/",
+    github: "https://github.com/Omar-webcloud/Role-Playing-Game",
     tags: [ "HTML", "CSS", "JavaScript", "MongoDB", "Express", "FirebaseAuth"],
   },
   {
     title: "Fresh Farm",
     description: "A frontend e-commerce platform for fruits and vegetables, built with react.",
     link: "https://fresh-farm-zeta.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fresh-Farm",
     tags: ["React", "JavaScript", "CSS"],
   },
 ]
@@ -107,21 +112,38 @@ export function Projects() {
                     })}
                   </div>
 
-                  <Button
-                    variant="outline"
-                    asChild
-                    className="w-full h-12 bg-transparent border-blue-900/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
-                  >
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                  <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                    <Button
+                      variant="outline"
+                      asChild
+                      className="flex-1 h-12 bg-transparent border-blue-900/30 text-blue-400 rounded-xl transition-all duration-300 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] border-2"
                     >
-                      View Project
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                      >
+                        Live Link
+                        <ExternalLink className="ml-2 w-4 h-4" />
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      asChild
+                      className="flex-1 h-12 bg-transparent border-purple-900/30 text-purple-400 rounded-xl transition-all duration-300 hover:bg-purple-500 hover:text-black hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] border-2"
+                    >
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full font-bold uppercase tracking-wider text-sm"
+                      >
+                        Github Repo
+                        <FaGithub className="ml-2 w-4 h-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
