@@ -73,7 +73,7 @@ export function Projects() {
         
         <div className="max-w-6xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
           <div className="mb-16">
-            <span className="text-gray-300 font-mono text-sm mb-3 block">{"// What I've built"}</span>
+            <span className="text-gray-300 font-mono text-sm mb-3 block">{"// Few of My Works"}</span>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">My Projects</h2>
             <div className="h-1.5 w-24 bg-blue-400 rounded-full" />
           </div>
