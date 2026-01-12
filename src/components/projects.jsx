@@ -31,6 +31,13 @@ const projects = [
     tags: ["Nextjs", "TailwindCSS", "TypeScript", "Framer Motion"],
   },
   {
+    title: "WebChronicles",
+    description: "WebChronicles is an interactive web application that visualizes the mood and headlines of the internet over time. It allows users to explore trending topics, sentiment analysis, and news highlights in a dynamic interface.",
+    link: "https://web-chronicles.vercel.app/",
+    github: "https://github.com/Omar-webcloud/WebChronicles",
+    tags: ["Nextjs", "TypeScript", "TailwindCSS", "Framer Motion", "API"],
+  },
+  {
     title: "Kino-Xplorer",
     description: "Kino‑Xplorer is a sleek browser-based tool that lets you search, discover, and browse movies effortlessly. It uses a movie API to fetch up-to-date information, including genres, ratings, release dates, and synopses, providing a smooth and dynamic movie exploration experience.",
     link: "https://kino-xplorer.vercel.app/",
