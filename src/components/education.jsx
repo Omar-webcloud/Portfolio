@@ -12,10 +12,10 @@ export function Education() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
-          <div className="mb-12">
-            <span className="text-gray-300 font-mono text-sm mb-3 block">{"// Academic Background"}</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">Education</h2>
-            <div className="h-1.5 w-24 bg-green-500 rounded-full" />
+          <div className="mb-16">
+            <span className="text-primary font-mono text-sm mb-3 block">{"// Academic Background"}</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">Education</h2>
+            <div className="h-1.5 w-24 bg-primary rounded-full" />
           </div>
 
           <div className="space-y-8">

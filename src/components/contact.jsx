@@ -36,17 +36,16 @@ const glassColorMap = {
 export function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 relative overflow-hidden bg-black">
-      {/* Background Glows for Depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12 text-center">
-            <span className="text-primary font-mono text-sm mb-2 block">{"// Let's connect"}</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Contact Me</h2>
-            <div className="h-1 w-20 bg-primary rounded-full mx-auto" />
+          <div className="mb-16 text-center">
+            <span className="text-primary font-mono text-sm mb-3 block">{"// Let's connect"}</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Contact Me</h2>
+            <div className="h-1.5 w-24 bg-primary rounded-full mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -54,7 +53,6 @@ export function Contact() {
               const Icon = contact.icon
               return (
                 <div key={contact.name} className="group relative">
-                   {/* Glass Effect Card */}
                   <div className={`
                     h-full relative z-10 backdrop-blur-md bg-gradient-to-br border rounded-2xl 
                     transition-all duration-300 hover:-translate-y-2
@@ -73,7 +71,6 @@ export function Contact() {
                     </a>
                   </div>
                   
-                  {/* Subtle glow behind glass */}
                   <div className={`absolute inset-0 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl bg-current ${glassColorMap[contact.color]}`} />
                 </div>
               )
@@ -94,17 +91,15 @@ export function Contact() {
                border border-blue-500/30 hover:border-blue-500/60
                text-blue-400 hover:text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.15)]"
   >
-    <a href="mailto:omarfarukcihs@gmail.com" className="flex items-center gap-2">
-      <Mail className="w-5 h-5 transition-transform group-hover:scale-110" />
-      <span className="font-semibold tracking-wide">Send me an email</span>
-      
-      {/* Internal Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-white/5 to-blue-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-    </a>
-  </Button>
+      <a href="mailto:omarfarukcihs@gmail.com" className="flex items-center gap-2">
+        <Mail className="w-5 h-5 transition-transform group-hover:scale-110" />
+        <span className="font-semibold tracking-wide">Send me an email</span>
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-white/5 to-blue-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      </a>
+    </Button>
 
-  {/* Secondary Action - "Purple/Indigo" Glass Style */}
-  <Button 
+    <Button 
     size="lg" 
     variant="outline"
     asChild

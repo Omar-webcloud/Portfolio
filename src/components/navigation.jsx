@@ -32,7 +32,7 @@ export function Navigation() {
           </button>
 
           <div className="hidden md:flex items-center gap-6">
-            {["about", "skills", "projects", "certificates", "contact"].map((section) => (
+            {["about", "skills", "projects", "certificates", "blog", "contact"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}

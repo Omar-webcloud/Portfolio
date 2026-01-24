@@ -74,15 +74,15 @@ export function Skills() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
-          <div className="mb-12">
-            <span className="text-primary font-mono text-sm mb-2 block">
+        <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 md:p-16 shadow-2xl">
+          <div className="mb-16">
+            <span className="text-primary font-mono text-sm mb-3 block">
               {"// My expertise"}
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
               My Stacks
             </h2>
-            <div className="h-1 w-20 bg-primary rounded-full" />
+            <div className="h-1.5 w-24 bg-primary rounded-full" />
           </div>
 
           <div className="space-y-12">

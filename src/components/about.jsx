@@ -30,9 +30,7 @@ export function About() {
   };
 
   return (
-    /* GRADIENT BACKGROUND: Seamlessly matching Hero (Blue/Black theme) */
     <section id="about" className="py-24 md:py-32 relative overflow-hidden bg-black">
-      {/* Background Glows for Depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
@@ -40,14 +38,13 @@ export function About() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <span className="text-primary font-mono text-sm mb-2 block">{"// Get to know me"}</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
-            <div className="h-1 w-20 bg-primary rounded-full" />
+          <div className="mb-16">
+            <span className="text-primary font-mono text-sm mb-3 block">{"// Get to know me"}</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">About Me</h2>
+            <div className="h-1.5 w-24 bg-primary rounded-full" />
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start mb-16">
-            {/* Headshot with Sci-Fi Glass Ring */}
             <div className="flex-shrink-0">
               <div className="relative group">
                 <div className="absolute -inset-3 rounded-full bg-blue-500/5 backdrop-blur-sm border border-blue-500/10 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
@@ -58,12 +55,9 @@ export function About() {
               </div>
             </div>
 
-            {/* Content Text */}
             <div className="space-y-6 text-lg leading-relaxed text-slate-300 flex-1">
               <p>
                I build conversion focused websites driven by user behavior analysis, performance optimization, and interface clarity. Every design decision is made to reduce friction, improve usability, and guide users toward meaningful actions.
-
-
               </p>
               <p>
                 My process combines UX research, information architecture, and visual design with front end performance best practices to deliver fast, intuitive experiences. The goal is not only visual appeal, but measurable improvements in engagement, retention, and conversion rates.
@@ -71,7 +65,6 @@ export function About() {
             </div>
           </div>
 
-          {/* GLASS ICONS GRID */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {skills.map((skill, index) => (
               <div 
@@ -89,7 +82,6 @@ export function About() {
                   {skill.label}
                 </span>
                 
-                {/* Glass Polish Overlay */}
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
               </div>
             ))}
