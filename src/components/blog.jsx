@@ -4,10 +4,16 @@ import { ExternalLink } from "lucide-react"
 
 const blogPosts = [
   {
+    title: "Image Optimization Techniques Every Frontend Developer Should Know",
+    description: "Images make a website look good, but they are also one of the biggest reasons a site becomes slow. When images are not handled properly, pages take longer to load and users leave early. That is why...",
+    link: "https://bloggin-app-six.vercel.app/post/pYTSIN48N3C1LB93DPHq",
+    date: "2026",
+  },
+  {
     title: "Flexbox vs Grid and How I Choose Between Them",
     description: "When I started learning modern CSS, Flexbox and Grid felt like magic. Suddenly layouts stopped being a fight and started to make sense. Over time though I realized they are not competitors...",
     link: "https://bloggin-app-six.vercel.app/post/SK7AwRIC5o3zZugpHRA2",
-    date: "2024",
+    date: "2025",
   },
 ]
 
