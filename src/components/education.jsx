@@ -11,11 +11,11 @@ export function Education() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-16">
-          <div className="mb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-16 text-center">
             <span className="text-primary font-mono text-sm mb-3 block">{"// Academic Background"}</span>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">Education</h2>
-            <div className="h-1.5 w-24 bg-primary rounded-full" />
+            <div className="h-1.5 w-24 bg-primary rounded-full mx-auto" />
           </div>
 
           <div className="space-y-8">

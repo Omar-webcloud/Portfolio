@@ -3,6 +3,7 @@ import { Button } from "./ui/button"
 import { ArrowDown, Globe } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { QuickAccess } from "./ui/quick-access"
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -88,7 +89,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
-              className="relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
+              className="hidden sm:flex relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
                          bg-white/5 hover:bg-white/10 focus:bg-white/10 backdrop-blur-md 
                          border border-white/10 hover:border-indigo-500/40 focus:border-indigo-500/40
                          text-muted-foreground hover:text-indigo-400 focus:text-indigo-400"
@@ -98,6 +99,10 @@ export function Hero() {
                 Contact Me
               </span>
             </Button>
+
+            <div className="flex sm:hidden">
+              <QuickAccess />
+            </div>
           </div>
         </div>
       </div>
