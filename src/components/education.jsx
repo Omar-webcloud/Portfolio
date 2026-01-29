@@ -6,8 +6,8 @@ export function Education() {
     <section id="education" className="py-24 md:py-32 relative overflow-hidden bg-black">
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+         <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px] animate-pulse" />
+         <div className="absolute bottom-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
