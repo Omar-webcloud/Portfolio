@@ -48,7 +48,7 @@ export function Blog() {
                   ${glassColorMap[post.color] || glassColorMap.blue}
                 `}
               >
-                <div className={`absolute inset-0 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl bg-current`} />
+                <div className={`absolute inset-0 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl bg-current pointer-events-none`} />
                  
                 <CardHeader className="p-5 md:p-10 pb-4">
                   <div className="flex justify-between items-start mb-4">
