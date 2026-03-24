@@ -84,7 +84,7 @@ const glassColorMap = {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32 relative overflow-hidden bg-black">
+    <section id="projects" className="py-24 md:py-32 relative overflow-hidden bg-black/50">
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />

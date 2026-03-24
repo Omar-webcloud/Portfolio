@@ -8,11 +8,13 @@ import { Certificates } from "./components/certificates"
 import { Blog } from "./components/blog"
 import { Contact } from "./components/contact"
 import { AnimatedBackground } from "./components/ui/animated-background"
+import { BackgroundBeams } from "./components/ui/background-beams"
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll"
 
 function App() {
   return (
     <main className="min-h-screen relative selection:bg-primary/20 selection:text-primary">
+      <BackgroundBeams />
       <AnimatedBackground />
       <Navigation />
       <Hero /> 

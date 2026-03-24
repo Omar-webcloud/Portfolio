@@ -3,7 +3,7 @@ import { GraduationCap, Calendar } from "lucide-react"
 
 export function Education() {
   return (
-    <section id="education" className="py-24 md:py-32 relative overflow-hidden bg-black">
+    <section id="education" className="py-24 md:py-32 relative overflow-hidden bg-black/50">
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px] animate-pulse" />
