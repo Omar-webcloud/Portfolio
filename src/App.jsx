@@ -2,13 +2,15 @@ import { useState, useEffect } from "react"
 import { Hero } from "./components/hero"
 import { Experience } from "./components/experience"
 import { Credentials } from "./components/credentials"
+import { Blog } from "./components/blog"
 
 const SLIDES = [
   { id: "about",       label: "About",      component: <About /> },
-  { id: "expertise",   label: "Expertise",  component: <Credentials /> },
   { id: "projects",    label: "Projects",   component: <Hero /> },
-  { id: "connect",     label: "Connect",    component: <Connect /> },
   { id: "experience",  label: "Experience", component: <Experience /> },
+  { id: "expertise",   label: "Expertise",  component: <Credentials /> },
+  { id: "blog",        label: "Blog",       component: <Blog /> },
+  { id: "connect",     label: "Connect",    component: <Connect /> },
 ]
 
 function About() {
