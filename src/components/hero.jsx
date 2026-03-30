@@ -1,9 +1,53 @@
 import { useEffect, useState } from "react"
-import { Button } from "./ui/button"
-import { ArrowDown, Globe } from "lucide-react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { QuickAccess } from "./ui/quick-access"
+import { ExternalLink, Github } from "lucide-react"
+
+const featuredProjects = [
+  {
+    num: "01",
+    year: "'23",
+    title: "PLASTITRACK",
+    description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
+    link: "https://plasti-track.vercel.app/",
+    github: "https://github.com/Omar-webcloud/PlastiTrack",
+  },
+  {
+    num: "02",
+    year: "'22",
+    title: "WEBCHRONICLES",
+    description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
+    link: "https://web-chronicles.vercel.app/",
+    github: "https://github.com/Omar-webcloud/WebChronicles",
+  },
+  {
+    num: "03",
+    year: "'21",
+    title: "KINO-XPLORER",
+    description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
+    stack: ["React", "API", "JavaScript"],
+    link: "https://kino-xplorer.vercel.app/",
+    github: "https://github.com/Omar-webcloud/movie-explorer",
+  },
+  {
+    num: "04",
+    year: "'21",
+    title: "BLOGGIN'",
+    description: "Modern blogging platform with full user authentication and post management capabilities.",
+    stack: ["TypeScript", "Next.js", "Firebase"],
+    link: "https://bloggin-app-six.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Bloggin-App",
+  },
+  {
+    num: "05",
+    year: "'20",
+    title: "FRESH FARM",
+    description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
+    stack: ["React", "JavaScript", "CSS"],
+    link: "https://fresh-farm-zeta.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fresh-Farm",
+  }
+]
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -12,110 +56,73 @@ export function Hero() {
     setMounted(true)
   }, [])
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-black/50 overflow-hidden">
-      
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div
-          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 glow-text tracking-tight">
-            Hi! I'm <span className="text-primary">Omar</span>
-          </h1>
-
-          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8 font-light italic">
-            A Frontend Developer
-          </p>
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-             Modern UI || Performance and UX Optimization || Scalable Web Experience
-          </p>
-
-          <div className="flex justify-center mb-10">
-            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-6 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-white/20 focus:border-white/20 transition-colors">
-              
-              <div className="flex items-center gap-2.5">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                <span className="text-sm font-medium text-gray-200 tracking-wide">
-                  Available for Remote
-                </span>
-              </div>
-
-              <div className="hidden sm:block w-px h-4 bg-white/10" />
-
-              <div className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-blue-400" />
-                <span className="text-sm font-medium text-gray-200 tracking-wide">
-                  Open to Any Timezone
-                </span>
-              </div>
-
-            </div>
-          </div>
-
+    <div className="relative w-full h-full flex flex-col items-center">
+      <div className="container mx-auto px-4 sm:px-8 py-4 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 min-h-full">
           
-          <div className="flex flex-row gap-3 sm:gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("projects")}
-              className="relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
-                         bg-blue-500/10 hover:bg-blue-500/20 focus:bg-blue-500/20 backdrop-blur-md 
-                         border border-blue-500/30 hover:border-blue-500/60 focus:border-blue-500/60
-                         text-blue-400 hover:text-blue-300 focus:text-blue-300 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
-            >
-              <span className="font-semibold text-sm sm:text-lg flex items-center gap-2"> 
-                <FontAwesomeIcon icon={faBriefcase} />
-                View My Work
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full group-focus:translate-x-full transition-transform duration-1000" />
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection("contact")}
-              className="hidden sm:flex relative group h-11 sm:h-14 px-4 sm:px-10 rounded-xl overflow-hidden transition-all duration-300
-                         bg-white/5 hover:bg-white/10 focus:bg-white/10 backdrop-blur-md 
-                         border border-white/10 hover:border-indigo-500/40 focus:border-indigo-500/40
-                         text-muted-foreground hover:text-indigo-400 focus:text-indigo-400"
-            >
-              <span className="font-semibold text-sm sm:text-lg flex items-center gap-2"> 
-                <FontAwesomeIcon icon={faPhone} /> 
-                Contact Me
-              </span>
-            </Button>
-
-            <div className="flex sm:hidden">
-              <QuickAccess />
+          <div className={`w-full lg:w-[40%] lg:sticky lg:top-0 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-[0.9] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
+              Selected<br />
+              Projects
+            </h1>
+            <p className="text-sm sm:text-lg md:text-xl text-muted-foreground uppercase tracking-widest font-light mb-4 sm:mb-8">
+              Digital Experience & Interfaces
+            </p>
+            <div className="max-w-md hidden sm:block">
+              <p className="text-sm sm:text-base text-foreground/80 leading-relaxed mb-6">
+                A showcase of my recent work focusing on clean code, modern stacks, and user-centric designs.
+              </p>
             </div>
+          </div>
+
+          <div className="w-full lg:w-[50%] flex flex-col gap-8 sm:gap-16 pb-12 sm:pb-20">
+            {featuredProjects.map((project, idx) => (
+              <div 
+                key={idx} 
+                className={`relative w-full transition-all duration-1000 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
+              >
+                <div className="flex items-center gap-3 mb-2 sm:mb-4">
+                  <div className="bg-background w-7 h-7 rounded-full border border-border flex items-center justify-center text-[9px] font-mono z-10 shrink-0">
+                    {project.num}
+                  </div>
+                  <div className="h-[1px] flex-1 bg-border/40"></div>
+                  <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">{project.year}</span>
+                </div>
+
+                <div className="minimal-card w-full bg-background p-4 sm:p-6 relative group border border-border">
+                  <div className="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                  <div className="flex justify-between items-start mb-3 sm:mb-6">
+                    <h3 className="text-xl sm:text-3xl font-bold uppercase tracking-wide">{project.title}</h3>
+                  </div>
+                  <div className="mb-4 sm:mb-8">
+                    <p className="text-sm sm:text-lg text-foreground/80 leading-relaxed">{project.description}</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-end border-t border-border pt-4 sm:pt-6">
+                    <div className="w-full sm:flex-1">
+                      <p className="text-[9px] font-mono uppercase text-muted-foreground mb-2 sm:mb-3 tracking-[0.2em]">Technological Stack</p>
+                      <ul className="flex flex-wrap gap-1.5">
+                        {project.stack.map(s => (
+                          <li key={s} className="text-[9px] font-mono uppercase bg-black/5 px-2 py-0.5 border border-border rounded-sm">{s}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="flex items-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-foreground text-background px-4 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Live <span className="hidden sm:inline">Link</span> <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </a>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 sm:p-2.5 border border-border hover:bg-black/5 transition-colors" title="Github Repository">
+                        <Github className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
-      <button
-        onClick={() => scrollToSection("about")}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 group transition-all duration-300"
-        aria-label="Scroll to about section"
-      >
-        <div className="p-1 rounded-full  bg-white/5 backdrop-blur-lg border border-white/10 group-hover:border-primary/50 group-focus:border-primary/50 group-hover:bg-primary/5 group-focus:bg-primary/5 transition-all">
-          <ArrowDown className="w-4 h-4  text-primary animate-bounce" />
-        </div>
-      </button>
-    </section>
+    </div>
   )
 }
