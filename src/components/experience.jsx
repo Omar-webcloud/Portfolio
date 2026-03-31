@@ -22,7 +22,7 @@ export function Experience() {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="container mx-auto px-4 sm:px-8 py-6 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-12 lg:pb-32">
           
           <div className={`w-full lg:w-1/2 lg:sticky lg:top-0 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
