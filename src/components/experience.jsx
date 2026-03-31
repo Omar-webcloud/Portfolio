@@ -52,9 +52,9 @@ export function Experience() {
                     <div className="flex-1 h-[1px] border-b border-dashed border-border ml-2" />
                   </div>
 
-                  <div className={`minimal-card w-full bg-background p-5 sm:p-6 ${exp.rotation} lg:origin-bottom-right group cursor-default transition-transform duration-500 hover:rotate-0`}>
-                    <div className="absolute inset-0 bg-background border border-border rotate-[3deg] -z-10 translate-y-1 translate-x-1" />
-                    <div className="absolute inset-0 bg-background border border-border rotate-[-2deg] -z-20 translate-y-2 translate-x-2" />
+                  <div className={`minimal-card w-full bg-background p-5 sm:p-6 lg:origin-bottom-right group cursor-default transition-all duration-300 transform`}>
+                    <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
+                    <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
                     <div className="flex justify-between items-start mb-4 sm:mb-6">
                       <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wide flex items-center gap-2">{exp.title}</h3>
                       <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">Active</span>

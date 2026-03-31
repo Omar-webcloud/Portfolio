@@ -7,7 +7,7 @@ export function Credentials() {
     { 
       title: "Core Stack", 
       icon: <Layers className="w-5 h-5" />, 
-      items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Material UI"] 
+      items: ["Next.js", "React", "JavaScript","TypeScript", "Tailwind CSS", "PHP"] 
     },
     { 
       title: "Backend & Data", 
@@ -17,7 +17,7 @@ export function Credentials() {
     { 
       title: "Development Tools", 
       icon: <Wrench className="w-5 h-5" />, 
-      items: ["Git/GitHub", "Vite", "npm", "Figma", "DevTools"] 
+      items: ["Git/GitHub", "Vite", "npm", "Figma", "DevTools", "Wordpress"] 
     }
   ]
 
