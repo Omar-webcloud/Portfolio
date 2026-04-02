@@ -22,16 +22,16 @@ export function About({ onConnect }) {
                 </p>
                 <div className="h-[1px] w-8 bg-border hidden md:block"></div>
                 <motion.div 
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="flex items-center gap-2 px-2 py-1 bg-green-500/10 border border-green-500/20 rounded-full"
+                   initial={{ opacity: 0, scale: 0.8 }}
+                   animate={{ opacity: 1, scale: 1 }}
+                   transition={{ delay: 0.5 }}
+                   className="flex items-center gap-2 px-2 py-1 bg-green-500/10 border border-green-500/20 rounded-full"
                 >
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  <span className="text-[8px] sm:text-[10px] font-mono text-green-700 uppercase tracking-wider font-bold">Active Now</span>
+                  <span className="text-[8px] sm:text-[10px] font-mono text-green-700 dark:text-green-400 uppercase tracking-wider font-bold">Active Now</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -43,7 +43,7 @@ export function About({ onConnect }) {
               className="shrink-0 scale-[0.6] min-[350px]:scale-75 md:scale-90 lg:scale-100 origin-right"
             >
               <div className="minimal-card p-2 pb-6 flex flex-col items-center w-[110px] min-[350px]:w-[140px] sm:w-[180px] bg-background border border-border">
-                <div className="w-full aspect-[4/5] bg-gray-200 mb-2 border border-border overflow-hidden group">
+                <div className="w-full aspect-[4/5] bg-gray-200 dark:bg-gray-800 mb-2 border border-border overflow-hidden group">
                    <img 
                      src="/images/omar-headshot.jpg" 
                      alt="MD Omar Faruk Chowdhury" 
@@ -73,7 +73,7 @@ export function About({ onConnect }) {
               {/* Timezone Card */}
               <motion.div 
                 whileHover="hover"
-                className="flex items-center gap-3 px-3 py-2 border border-border bg-white rounded-sm self-start sm:self-auto cursor-default group"
+                className="flex items-center gap-3 px-3 py-2 border border-border bg-card rounded-sm self-start sm:self-auto cursor-default group"
               >
                 <div className="p-1.5 bg-foreground/5 rounded-full">
                   <motion.div

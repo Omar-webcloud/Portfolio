@@ -37,10 +37,10 @@ export function Connect() {
 
           <div className="w-full lg:w-1/2 flex flex-col gap-3">
             {[
-              { label: "Email",    value: "omarfarukcihs@gmail.com", href: "mailto:omarfarukcihs@gmail.com", icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-background/70 transition-colors" /> },
-              { label: "LinkedIn", value: "in/md-omar-faruk-chowdhury",href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury", icon: <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-background/70 transition-colors" /> },
-              { label: "GitHub",   value: "Omar-webcloud",           href: "https://github.com/Omar-webcloud", icon: <Github className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-background/70 transition-colors" /> },
-              { label: "Resume",   value: "Download PDF (0.3MB)",    href: "/Resume.pdf", download: true, icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-background/70 transition-colors" /> },
+              { label: "Email",    value: "omarfarukcihs@gmail.com", href: "mailto:omarfarukcihs@gmail.com", icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
+              { label: "LinkedIn", value: "in/md-omar-faruk-chowdhury",href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury", icon: <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
+              { label: "GitHub",   value: "Omar-webcloud",           href: "https://github.com/Omar-webcloud", icon: <Github className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
+              { label: "Resume",   value: "Download PDF (0.3MB)",    href: "/Resume.pdf", download: true, icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
             ].map(({ label, value, href, download, icon }, idx) => (
               <motion.div
                 key={label}
@@ -55,24 +55,24 @@ export function Connect() {
                   target={download ? undefined : "_blank"}
                   download={download}
                   rel={download ? undefined : "noopener noreferrer"}
-                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-white hover:bg-foreground transition-all duration-300 w-full"
+                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-card hover:bg-foreground transition-all duration-300 w-full"
                 >
                   <div className="flex items-center gap-3 w-full sm:w-32 shrink-0">
                     <motion.div
                       variants={{
                         hover: label === "Email" ? { x: [0, -2, 2, -2, 2, 0] } :
-                               label === "LinkedIn" ? { scale: 1.2, y: -2 } :
-                               label === "GitHub" ? { scale: 1.3, fill: "currentColor" } :
-                               label === "Resume" ? { y: [0, -4, 0] } : {}
+                                label === "LinkedIn" ? { scale: 1.2, y: -2 } :
+                                label === "GitHub" ? { scale: 1.3, fill: "currentColor" } :
+                                label === "Resume" ? { y: [0, -4, 0] } : {}
                       }}
                       transition={label === "Email" ? { duration: 0.4 } : 
                                  label === "Resume" ? { repeat: Infinity, duration: 1.5 } : { duration: 0.3 }}
                     >
                       {icon}
                     </motion.div>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60 transition-colors">{label}</span>
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 transition-colors">{label}</span>
                   </div>
-                  <span className={`text-base sm:text-lg font-medium group-hover:text-background transition-colors flex-1 ${label === "Email" ? "" : "truncate"}`}>
+                  <span className={`text-base sm:text-lg font-medium group-hover:text-primary-foreground transition-colors flex-1 ${label === "Email" ? "" : "truncate"}`}>
                     {value}
                   </span>
                   
@@ -83,7 +83,7 @@ export function Connect() {
                       }}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     >
-                      <Download className="w-4 h-4 text-background" />
+                      <Download className="w-4 h-4 text-primary-foreground" />
                     </motion.div>
                   ) : label === "Email" ? null : (
                     <motion.div
@@ -92,7 +92,7 @@ export function Connect() {
                       }}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     >
-                      <ArrowRight className="w-4 h-4 text-background" />
+                      <ArrowRight className="w-4 h-4 text-primary-foreground" />
                     </motion.div>
                   )}
                 </motion.a>
@@ -103,7 +103,7 @@ export function Connect() {
                       e.preventDefault();
                       copyEmail(value);
                     }}
-                    className="absolute -top-4 right-4 sm:-top-6 sm:right-2 flex items-center gap-2 px-3 py-1.5 bg-black text-white text-[7px] sm:text-[9px] font-mono border border-black uppercase tracking-widest opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50 shadow-2xl"
+                    className="absolute -top-4 right-4 sm:-top-6 sm:right-2 flex items-center gap-2 px-3 py-1.5 bg-foreground text-background text-[7px] sm:text-[9px] font-mono border border-border uppercase tracking-widest opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50 shadow-2xl"
                   >
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
                     {copied ? "Copied Successfully!" : "Click to Copy Email"}

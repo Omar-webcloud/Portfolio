@@ -79,12 +79,12 @@ export function Credentials() {
                       {group.icon}
                       {group.title}
                     </div>
-                    <div className="flex flex-wrap gap-1.5 text-black">
+                    <div className="flex flex-wrap gap-1.5 text-foreground">
                       {group.items.map(skill => (
                         <motion.span 
-                          whileHover={{ y: -2, backgroundColor: "rgba(0,0,0,0.05)" }}
+                          whileHover={{ y: -2, backgroundColor: "var(--accent)" }}
                           key={skill} 
-                          className="text-[10px] sm:text-[11px] font-mono uppercase border border-border px-2 py-0.5 bg-black/[0.02] rounded-sm cursor-default"
+                          className="text-[10px] sm:text-[11px] font-mono uppercase border border-border px-2 py-0.5 bg-secondary rounded-sm cursor-default"
                         >
                           {skill}
                         </motion.span>
@@ -105,7 +105,7 @@ export function Credentials() {
                 className="minimal-card p-4 sm:p-5 bg-background relative border border-border"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-2 sm:p-3 bg-black/[0.02] border border-border shrink-0">
+                  <div className="p-2 sm:p-3 bg-secondary border border-border shrink-0">
                     <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>

@@ -88,7 +88,7 @@ export function Blog() {
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground">
-                      <span className="bg-foreground/5 px-2 py-0.5 border border-border rounded-sm">{article.category}</span>
+                      <span className="bg-secondary px-2 py-0.5 border border-border rounded-sm">{article.category}</span>
                       <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" /> {article.readTime}</span>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-foreground/20 group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />

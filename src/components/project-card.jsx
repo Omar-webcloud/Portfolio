@@ -55,9 +55,9 @@ export function ProjectCard({ project, idx }) {
             <ul className="flex flex-wrap gap-1.5">
               {project.stack.map(s => (
                 <motion.li 
-                  whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.05)" }}
+                  whileHover={{ scale: 1.05, backgroundColor: "var(--accent)" }}
                   key={s} 
-                  className="text-[9px] font-mono uppercase bg-black/5 px-2 py-0.5 border border-border rounded-sm cursor-default"
+                  className="text-[9px] font-mono uppercase bg-secondary px-2 py-0.5 border border-border rounded-sm cursor-default"
                 >
                   {s}
                 </motion.li>
@@ -83,12 +83,12 @@ export function ProjectCard({ project, idx }) {
               </motion.div>
             </motion.a>
             <motion.a 
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.05)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={project.github} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center justify-center p-2 sm:p-2.5 border border-border transition-colors bg-white shadow-sm active:shadow-none" 
+              className="flex items-center justify-center p-2 sm:p-2.5 border border-border transition-colors bg-card shadow-sm active:shadow-none" 
               title="Github Repository"
             >
               <Github className="w-4 h-4" />

@@ -9,7 +9,9 @@ import {
   ArrowRight,
   Sparkles,
   MessageSquare,
-  Clock
+  Clock,
+  Sun,
+  Moon
 } from "lucide-react"
 import { Hero } from "./components/hero"
 import { Experience } from "./components/experience"
@@ -34,6 +36,21 @@ export default function App() {
   const [prev, setPrev]       = useState(null)
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    // Session storage default light
+    return sessionStorage.getItem("portfolio-theme") || "light"
+  })
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+    sessionStorage.setItem("portfolio-theme", theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light")
 
   const goTo = (index) => {
     if (index === current || animating) return
@@ -56,7 +73,7 @@ export default function App() {
   const slices = SLIDES(goTo)
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative">
+    <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
       <nav className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 max-[500px]:mb-5">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[10px] sm:text-xs md:text-sm tracking-wider uppercase">
           {slices.map(({ id, label }, i) => (
@@ -71,7 +88,7 @@ export default function App() {
                 {current === i && (
                   <motion.div 
                     layoutId="active-nav-pill"
-                    className="absolute inset-0 bg-white/5 backdrop-blur-xl border-2 border-white/50 rounded-full -z-10 shadow-[0_0_25px_rgba(255,255,255,0.2)] overflow-hidden"
+                    className="absolute inset-0 bg-white/5 backdrop-blur-xl border-2 border-white/50 rounded-full -z-10 shadow-[0_0_25px_rgba(255,255,255,0.2)] dark:shadow-[0_0_25px_rgba(0,0,0,0.5)] overflow-hidden"
                     transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                   >
                     <motion.div 
@@ -84,7 +101,7 @@ export default function App() {
                         ease: "linear",
                         repeatDelay: 1
                       }}
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg]"
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent skew-x-[-20deg]"
                     />
                   </motion.div>
                 )}
@@ -107,6 +124,26 @@ export default function App() {
              {slices[current].component}
           </motion.div>
         </AnimatePresence>
+      </div>
+
+      <div className="absolute bottom-6 left-8 flex items-center gap-4 z-50">
+        <button 
+          onClick={toggleTheme}
+          className="p-2 rounded-full border border-border bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group"
+          title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+        >
+          {theme === "light" ? (
+            <div className="flex items-center gap-2 px-2">
+              <Moon size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              <span className="text-[10px] tracking-widest uppercase font-medium">Dark</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 px-2">
+              <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              <span className="text-[10px] tracking-widest uppercase font-medium">Light</span>
+            </div>
+          )}
+        </button>
       </div>
 
       <div className="absolute bottom-6 right-8 flex items-center gap-4 select-none tracking-widest uppercase">
