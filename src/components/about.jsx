@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Globe, ArrowRight, Clock } from "lucide-react"
+import { Globe, ArrowRight, Clock, MapPin } from "lucide-react"
 
 export function About({ onConnect }) {
   return (
@@ -126,6 +126,14 @@ export function About({ onConnect }) {
                 </motion.div>
                 <span>GMT +6</span>
                 <span className="mx-1">·</span>
+                <motion.div
+                  variants={{
+                    hover: { y: -2, scale: 1.1 }
+                  }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <MapPin className="w-3 h-3" />
+                </motion.div>
                 <span>Chattogram, BD</span>
               </motion.div>
             </div>
