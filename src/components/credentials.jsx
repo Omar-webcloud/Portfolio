@@ -45,7 +45,7 @@ export function Credentials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[45%] lg:sticky lg:top-0"
+            className="w-full lg:w-[45%] lg:sticky lg:top-0 lg:pr-10"
           >
             <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
               Expertise &<br /> Credentials

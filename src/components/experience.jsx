@@ -25,8 +25,8 @@ export function Experience() {
       <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-12 lg:pb-32">
           
-          <div className={`w-full lg:w-1/2 lg:sticky lg:top-0 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
+          <div className={`w-full lg:w-1/2 lg:sticky lg:top-0 transition-all duration-1000 lg:pr-12 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl leading-[0.9] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
               Work<br /> Experience
             </h2>
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground uppercase tracking-widest font-light mb-6 sm:mb-8">
@@ -44,11 +44,11 @@ export function Experience() {
             <div className="relative w-full max-w-[420px] mt-4 sm:mt-8">
               {experiences.map((exp, idx) => (
                 <div key={idx} className={`relative lg:absolute lg:right-0 w-full transition-all duration-700 ${mounted ? "opacity-100" : "opacity-0 translate-x-10"}`} style={{ zIndex: exp.zIndex, transitionDelay: `${idx * 200}ms` }}>
-                  <div className="absolute -left-[40px] sm:-left-[100px] lg:-left-[240px] top-6 items-center w-[100px] lg:w-[240px] hidden sm:flex">
+                  <div className="absolute -left-[40px] sm:-left-[100px] lg:-left-[240px] top-1 items-center w-[100px] lg:w-[240px] hidden sm:flex">
                     <div className="timeline-dot bg-background w-8 h-8 rounded-full border border-border flex items-center justify-center text-[10px] font-mono mr-2 z-10">
                       {exp.num}
                     </div>
-                    <span className="text-[10px] font-mono text-muted-foreground w-6">{exp.year}</span>
+                    <span className="text-[10px] font-mono text-muted-foreground w-fit">{exp.year}</span>
                     <div className="flex-1 h-[1px] border-b border-dashed border-border ml-2" />
                   </div>
 

@@ -73,7 +73,7 @@ export default function App() {
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
-      <nav className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 max-[500px]:mb-5">
+      <nav className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3 sm:py-4 max-[500px]:mb-5">
         <div className="flex flex-wrap items-center justify-between w-full h-fit gap-y-4">
           <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-2 text-[10px] sm:text-xs md:text-sm tracking-widest uppercase">
             {slices.map(({ id, label }, i) => (
@@ -136,7 +136,7 @@ export default function App() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: dir * -40 }}
             transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-            className="absolute inset-0 w-full h-full pt-32 sm:pt-40 max-[500px]:pt-36"
+            className="absolute inset-0 w-full h-full pt-20 sm:pt-28 md:pt-32 max-[500px]:pt-24"
           >
              {slices[current].component}
           </motion.div>
