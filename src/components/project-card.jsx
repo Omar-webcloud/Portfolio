@@ -24,7 +24,6 @@ export function ProjectCard({ project, idx }) {
         whileHover="hover"
         className="minimal-card w-full bg-background p-4 sm:p-6 relative group border border-border transition-all duration-300 transform"
       >
-        {/* Stacked background layers matched to Experience cards (but no rotation) */}
         <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
         <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
         

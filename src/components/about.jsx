@@ -70,7 +70,6 @@ export function About({ onConnect }) {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
               <p className="text-sm sm:text-base md:text-lg font-medium uppercase tracking-tight">MD OMAR FARUK CHOWDHURY</p>
               
-              {/* Timezone Card */}
               <motion.div 
                 whileHover="hover"
                 className="flex items-center gap-3 px-3 py-2 border border-border bg-card rounded-sm self-start sm:self-auto cursor-default group"

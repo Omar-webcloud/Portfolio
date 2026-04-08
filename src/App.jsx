@@ -37,7 +37,6 @@ export default function App() {
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
   const [theme, setTheme] = useState(() => {
-    // Session storage default light
     return sessionStorage.getItem("portfolio-theme") || "light"
   })
 
