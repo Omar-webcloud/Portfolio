@@ -92,7 +92,7 @@ export function About({ onConnect }) {
 
             <div className="space-y-4 sm:space-y-5 text-sm sm:text-lg text-foreground/80 leading-relaxed font-light">
               <p>Specializing in building responsive, data-driven web applications with <span className="font-medium text-foreground">React, Next.js, and TypeScript</span>.</p>
-              <p>My background in English Literature provides a unique perspective on <span className="font-medium text-foreground italic">documentation and engineering communication</span>.</p>
+              
             </div>
 
             <div className="flex flex-wrap items-center gap-4 mt-8 sm:mt-10">
