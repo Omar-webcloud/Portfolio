@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Globe, Mail } from "lucide-react"
-
+import { Globe, Mail, MailOpen } from "lucide-react"
 export function About({ onConnect }) {
   const ROLES = ["Frontend Developer", "Web Developer", "WordPress Developer", "Full-Stack Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
@@ -75,16 +74,22 @@ export function About({ onConnect }) {
              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 font-sans"
            >
              <div 
-               className="bg-background text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold transition-all duration-300 text-[13px] sm:text-base tracking-wide shadow-lg shadow-background/5 w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:bg-background/90 hover:scale-[1.02]"
+               className="group relative bg-background/5 hover:bg-background/10 backdrop-blur-xl border border-background/10 hover:border-background/20 text-background px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:scale-[1.02]"
              >
-               <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-foreground/70" />
-               Available Worldwide
+               <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-background/70 group-hover:text-background group-hover:rotate-[360deg] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] shrink-0" />
+               <div className="relative overflow-hidden h-[20px] sm:h-[24px] flex flex-col justify-start w-[140px] sm:w-[155px]">
+                 <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Flexible Timezone</span>
+                 <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Available Remotely</span>
+               </div>
              </div>
              <button 
                onClick={onConnect}
-               className="border hover:border-background border-background/30 text-background hover:bg-background/10 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-300 text-[13px] sm:text-base tracking-wide w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95 group"
+               className="group relative bg-transparent hover:bg-background/5 backdrop-blur-md border border-background/20 hover:border-background/40 text-background px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95"
              >
-               <Mail className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-background transition-colors text-background/70" />
+               <span className="relative w-4 h-4 sm:w-5 sm:h-5 shrink-0 flex items-center justify-center">
+                 <Mail className="absolute w-full h-full text-background/70 transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 group-hover:-translate-y-2" />
+                 <MailOpen className="absolute w-full h-full text-background opacity-0 scale-75 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0" />
+               </span>
                Contact
              </button>
            </motion.div>

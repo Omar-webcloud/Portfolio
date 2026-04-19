@@ -67,7 +67,7 @@ export default function App() {
       const t = setTimeout(() => {
         setPrev(null)
         setAnimating(false)
-      }, 600)
+      }, 350)
       return () => clearTimeout(t)
     }
   }, [animating])
@@ -189,8 +189,9 @@ export default function App() {
             initial={{ opacity: 0, x: dir * 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: dir * -40 }}
-            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
             className="absolute inset-0 w-full h-full pt-10 sm:pt-16 md:pt-16 max-[500px]:pt-16"
+            style={{ willChange: "transform, opacity" }}
           >
              {slices[current].component}
           </motion.div>
