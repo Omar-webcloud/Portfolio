@@ -5,8 +5,9 @@ const experiences = [
     num: "01",
     year: "'26",
     title: "WEBERMELON",
+    companyDesc: "Web & Software Development Agency",
     role: "Web Developer Intern",
-    tools: ["Web & Software Development Agency"],
+    tools: ["Wordpress", "Elementor", "Notion", "SCRUM"],
     rotation: "rotate-[2deg]",
     zIndex: 30,
     offset: "translate-y-0",
@@ -67,10 +68,15 @@ export function Experience() {
                       </div>
                       <div className="flex gap-4 sm:gap-6 mt-1 sm:mt-2">
                         <div className="w-full flex flex-col justify-center gap-2 sm:gap-3">
-                           <div className="text-sm text-foreground/80 leading-relaxed">
-                            {exp.tools.map(t => (
-                              <p key={t}>{t}</p>
-                            ))}
+                          <div className="text-sm text-foreground/80 leading-relaxed">
+                            {exp.companyDesc && <p className="mb-2 italic text-muted-foreground">{exp.companyDesc}</p>}
+                            <div className="flex flex-wrap gap-1.5 mt-2">
+                              {exp.tools.map(t => (
+                                <span key={t} className="text-[10px] sm:text-[11px] font-mono uppercase bg-secondary border border-border px-2 py-0.5 rounded-sm text-foreground">
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>

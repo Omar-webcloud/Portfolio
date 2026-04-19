@@ -7,7 +7,7 @@ export function Credentials() {
     { 
       title: "Core Stack", 
       icon: <Layers className="w-5 h-5" />, 
-      items: ["Next.js", "React", "JavaScript","TypeScript", "Tailwind CSS", "PHP"] 
+      items: ["Next.js", "React", "JavaScript", "TypeScript", "Tailwind CSS", "PHP"] 
     },
     { 
       title: "Backend & Data", 
@@ -15,9 +15,9 @@ export function Credentials() {
       items: ["Node.js", "Express", "MongoDB", "Firebase"] 
     },
     { 
-      title: "Development Tools", 
+      title: "Tools & Platforms", 
       icon: <Wrench className="w-5 h-5" />, 
-      items: ["Git/GitHub", "Vite", "npm", "Figma", "DevTools", "Wordpress"] 
+      items: ["Git/GitHub", "Vite", "npm", "DevTools", "Figma", "Notion", "Wordpress", "Elementor", "SCRUM", "Jest"] 
     }
   ]
 
