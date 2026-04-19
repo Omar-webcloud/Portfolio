@@ -1,7 +1,20 @@
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Monitor } from "lucide-react"
+import { ExternalLink, Github, Monitor, BookOpen, Leaf, LineChart, Search, LayoutTemplate, ShoppingCart } from "lucide-react"
 
 export function ProjectCard({ project, idx }) {
+  const getProjectIcon = (type) => {
+    const iconClass = "w-12 h-12 -rotate-12";
+    switch (type) {
+      case "EdTech App": return <BookOpen className={iconClass} />;
+      case "GreenTech": return <Leaf className={iconClass} />;
+      case "Data Visualization": return <LineChart className={iconClass} />;
+      case "Search Tool": return <Search className={iconClass} />;
+      case "Platform": return <LayoutTemplate className={iconClass} />;
+      case "E-commerce": return <ShoppingCart className={iconClass} />;
+      default: return <Monitor className={iconClass} />;
+    }
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0, x: 20 }}
@@ -27,13 +40,13 @@ export function ProjectCard({ project, idx }) {
         <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
         <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
         
-        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-foreground">
           <motion.div
             variants={{
               hover: { scale: 1.1, rotate: 10 }
             }}
           >
-            <Monitor className="w-12 h-12 -rotate-12" />
+            {getProjectIcon(project.type)}
           </motion.div>
         </div>
         
