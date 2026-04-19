@@ -11,7 +11,9 @@ import {
   MessageSquare,
   Clock,
   Sun,
-  Moon
+  Moon,
+  Menu,
+  X
 } from "lucide-react"
 import { Hero } from "./components/hero"
 import { Experience } from "./components/experience"
@@ -36,6 +38,7 @@ export default function App() {
   const [prev, setPrev]       = useState(null)
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
+  const [menuOpen, setMenuOpen]   = useState(false)
   const [theme, setTheme] = useState(() => {
     return sessionStorage.getItem("portfolio-theme") || "light"
   })
@@ -73,14 +76,16 @@ export default function App() {
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
-      <nav className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3 sm:py-4 max-[500px]:mb-5">
-        <div className="flex flex-wrap items-center justify-between w-full h-fit gap-y-4">
-          <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-2 text-[10px] sm:text-xs md:text-sm tracking-widest uppercase">
+      <nav className="absolute top-0 left-0 right-0 z-50 px-5 sm:px-8 py-4 sm:py-5">
+        <div className="flex items-center justify-between w-full h-fit gap-y-4">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex flex-nowrap items-center gap-x-2 text-xs md:text-sm tracking-widest uppercase">
             {slices.map(({ id, label }, i) => (
-              <span key={id} className="relative flex items-center">
+              <span key={id} className="relative flex items-center shrink-0">
                 <button
                   onClick={() => goTo(i)}
-                  className={`transition-all duration-300 whitespace-nowrap relative px-4 sm:px-5 py-2 rounded-full font-medium ${
+                  className={`transition-all duration-300 whitespace-nowrap relative px-5 py-2 rounded-full font-medium ${
                     current === i ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -103,17 +108,28 @@ export default function App() {
             ))}
           </div>
 
+          {/* Mobile Navigation Toggle */}
+          <div className="flex lg:hidden items-center">
+            <button 
+              onClick={() => setMenuOpen(true)}
+              className="p-3 bg-secondary/30 backdrop-blur-md border border-border/50 rounded-full hover:bg-secondary/60 transition-colors shadow-sm"
+              title="Open Navigation"
+            >
+              <Menu size={16} className="text-foreground" />
+            </button>
+          </div>
+
           <AnimatePresence>
             {current === 0 && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className="flex items-center ml-auto h-10"
+                className="flex items-center ml-auto"
               >
                 <button 
                   onClick={toggleTheme}
-                  className="p-2 sm:p-2.5 rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 group shadow-sm"
+                  className="p-3 sm:p-2.5 rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 group shadow-sm"
                   title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
                 >
                   {theme === "light" ? (
@@ -127,6 +143,44 @@ export default function App() {
           </AnimatePresence>
         </div>
       </nav>
+
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { delay: 0.1, duration: 0.2 } }}
+            className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-xl flex flex-col justify-center items-center"
+          >
+            <button 
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-5 left-5 p-3 sm:p-4 bg-secondary/50 rounded-full border border-border/50 hover:bg-secondary/80 transition-colors shadow-sm"
+            >
+              <X size={20} className="text-foreground" />
+            </button>
+            <div className="flex flex-col gap-6 text-center">
+              {slices.map(({ id, label }, i) => (
+                <motion.div 
+                   key={id}
+                   initial={{ opacity: 0, y: 10 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   exit={{ opacity: 0, y: -10 }}
+                   transition={{ delay: i * 0.05 }}
+                >
+                  <button
+                    onClick={() => { goTo(i); setMenuOpen(false); }}
+                    className={`text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-colors ${
+                      current === i ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground/70"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="relative w-full h-full">
         <AnimatePresence mode="popLayout" initial={false}>
