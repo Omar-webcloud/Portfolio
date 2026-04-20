@@ -4,6 +4,13 @@ import { motion } from "framer-motion"
 
 const ARTICLES = [
   {
+    title: "How to Choose the Right Tech Stack for Your Web Project (A Practical Guide for Developers)",
+    excerpt: "You just decided to build something. You open your browser to research which stack to use and within ten minutes you are drowning in opinions. \"Use React.\" \"No, Next.js is better.\" \"Just use WordPress.\" \"PHP is dead.\" Every developer has been there. This guide skips the fluff and answers the questions that actually matter: what to use, when, and why.",
+    readTime: "6 min read",
+    category: "Web Development",
+    link: "https://bloggin-app-six.vercel.app/post/pfG4DDttAXhIVkY8MfAz"
+  },
+  {
     title: "Image Optimization Techniques Every Frontend Developer Should Know",
     excerpt: "Images make a website look good, but they are also one of the biggest reasons a site becomes slow. When images are not handled properly, pages take longer to load and users leave early. That is why...",
     readTime: "5 min read",
@@ -38,7 +45,7 @@ export function Blog() {
   return (
     <div className="relative w-full h-full flex flex-col items-center">
       <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-8 sm:pb-16 lg:pb-24">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-24 sm:pb-28 lg:pb-32">
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
