@@ -10,33 +10,6 @@ export const featuredProjects = [
   },
   {
     num: "02",
-    title: "PLASTITRACK",
-    description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
-    link: "https://plasti-track.vercel.app/",
-    github: "https://github.com/Omar-webcloud/PlastiTrack",
-    type: "GreenTech"
-  },
-  {
-    num: "03",
-    title: "WEBCHRONICLES",
-    description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
-    link: "https://web-chronicles.vercel.app/",
-    github: "https://github.com/Omar-webcloud/WebChronicles",
-    type: "Data Visualization"
-  },
-  {
-    num: "04",
-    title: "KINO-XPLORER",
-    description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
-    stack: ["React", "API", "JavaScript"],
-    link: "https://kino-xplorer.vercel.app/",
-    github: "https://github.com/Omar-webcloud/movie-explorer",
-    type: "Search Tool"
-  },
-  {
-    num: "05",
     title: "BLOGGIN'",
     description: "Modern blogging platform with full user authentication and post management capabilities.",
     stack: ["TypeScript", "Next.js", "Firebase"],
@@ -45,12 +18,39 @@ export const featuredProjects = [
     type: "Platform"
   },
   {
-    num: "06",
+    num: "03",
+    title: "PLASTITRACK",
+    description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
+    link: "https://plasti-track.vercel.app/",
+    github: "https://github.com/Omar-webcloud/PlastiTrack",
+    type: "GreenTech"
+  },
+  {
+    num: "04",
     title: "FRESH FARM",
     description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
     stack: ["React", "JavaScript", "CSS"],
     link: "https://fresh-farm-zeta.vercel.app/",
     github: "https://github.com/Omar-webcloud/Fresh-Farm",
     type: "E-commerce"
+  },
+  {
+    num: "05",
+    title: "WEBCHRONICLES",
+    description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
+    link: "https://web-chronicles.vercel.app/",
+    github: "https://github.com/Omar-webcloud/WebChronicles",
+    type: "Data Visualization"
+  },
+  {
+    num: "06",
+    title: "KINO-XPLORER",
+    description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
+    stack: ["React", "API", "JavaScript"],
+    link: "https://kino-xplorer.vercel.app/",
+    github: "https://github.com/Omar-webcloud/movie-explorer",
+    type: "Search Tool"
   }
 ]

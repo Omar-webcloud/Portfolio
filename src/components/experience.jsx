@@ -7,7 +7,9 @@ const experiences = [
     title: "WEBERMELON",
     companyDesc: "Web & Software Development Agency",
     role: "Web Developer Intern",
-    tools: ["Wordpress", "Elementor", "Notion", "SCRUM"],
+    tools: [],
+    link: "https://webermelon.com/",
+    logo: "/wm-logo.png",
     rotation: "rotate-[2deg]",
     zIndex: 30,
     offset: "translate-y-0",
@@ -57,7 +59,21 @@ export function Experience() {
                     <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
                     <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
                     <div className="flex justify-between items-start mb-4 sm:mb-6">
-                      <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wide flex items-center gap-2">{exp.title}</h3>
+                      <div className="flex items-center gap-3">
+                        {exp.logo && <img src={exp.logo} alt={exp.title} className="w-8 h-8 object-contain" />}
+                        <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wide flex items-center gap-2">
+                          {exp.link ? (
+                            <a href={exp.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                              {exp.title}
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          ) : (
+                            exp.title
+                          )}
+                        </h3>
+                      </div>
                       <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">Active</span>
                     </div>
 
