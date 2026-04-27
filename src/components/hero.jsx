@@ -1,12 +1,35 @@
-import { Monitor, Code2 } from "lucide-react"
-import { motion } from "framer-motion"
+import { useRef, useState, useEffect } from "react"
+import { Monitor, Code2, ChevronDown } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "./project-card"
 import { featuredProjects } from "../data/projects"
 
 export function Hero() {
+  const scrollRef = useRef(null)
+  const [showHint, setShowHint] = useState(true)
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    
+    const handleScroll = () => {
+      if (el.scrollTop > 100) {
+        setShowHint(false)
+      } else {
+        setShowHint(true)
+      }
+    }
+    
+    el.addEventListener("scroll", handleScroll)
+    return () => el.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div 
+        ref={scrollRef}
+        className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide"
+      >
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 min-h-full">
           
           <motion.div 
@@ -40,6 +63,57 @@ export function Hero() {
                   <span className="text-[10px] font-mono uppercase tracking-widest">Optimized Performance</span>
                 </div>
               </div>
+
+              <AnimatePresence>
+                {showHint && (
+                  <motion.div 
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -30 }}
+                    transition={{ 
+                      delay: 0.8, 
+                      duration: 0.8, 
+                      type: "spring",
+                      bounce: 0.4
+                    }}
+                    className="pt-12 flex items-center gap-4 group cursor-default"
+                  >
+                    <motion.div 
+                      animate={{ 
+                        x: [0, 5, 0],
+                      }}
+                      transition={{
+                        delay: 2,
+                        duration: 0.5,
+                        repeat: 2,
+                        repeatDelay: 3
+                      }}
+                      className="relative w-6 h-10 border-2 border-muted-foreground/40 rounded-full flex justify-center pt-2 group-hover:border-foreground/60 transition-colors shadow-sm"
+                    >
+                      <motion.div 
+                        animate={{ 
+                          y: [0, 14, 0],
+                          opacity: [1, 0, 1]
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity, 
+                          ease: "easeInOut" 
+                        }}
+                        className="w-1 h-2 bg-foreground/70 rounded-full"
+                      />
+                    </motion.div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-foreground/80 font-bold group-hover:text-foreground transition-colors">
+                        Scroll Down
+                      </span>
+                      <span className="text-[8px] font-mono uppercase tracking-[0.1em] text-muted-foreground/50">
+                        To see work
+                      </span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
 
@@ -50,6 +124,30 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {showHint && (
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ 
+              opacity: [0, 1, 0],
+              x: [-20, 0, -20],
+              y: [0, 5, 0]
+            }}
+            exit={{ opacity: 0 }}
+            transition={{ 
+              duration: 3, 
+              repeat: Infinity,
+              times: [0, 0.2, 1],
+              ease: "easeInOut"
+            }}
+            className="sm:hidden absolute bottom-8 left-6 flex flex-col items-start gap-1 text-muted-foreground/50 pointer-events-none z-20"
+          >
+            <span className="text-[8px] font-mono uppercase tracking-[0.3em]">Scroll</span>
+            <ChevronDown size={14} className="ml-1" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

@@ -15,7 +15,7 @@ export function About({ onConnect }) {
   return (
     <div className="w-full h-full overflow-x-hidden overflow-y-auto no-scrollbar pt-8 sm:pt-12 pb-32 flex flex-col items-center transition-colors duration-500">
       
-      {/* Header Titles */}
+
       <div className="w-[85%] max-w-[1050px] flex flex-col items-start z-0 select-none pointer-events-none mb-4 sm:mb-8 mx-auto pl-2 md:pl-6">
         <h1 className="text-[24px] min-[375px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-serif uppercase text-foreground/15 whitespace-nowrap leading-none tracking-[0.02em] font-bold transition-colors duration-500 text-left">
           MOHAMMAD OMAR
@@ -25,7 +25,7 @@ export function About({ onConnect }) {
         </h2>
       </div>
       
-      {/* Main Reverse-Color Card Container */}
+
       <motion.div 
         initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -33,7 +33,7 @@ export function About({ onConnect }) {
         className="w-[85%] sm:w-[90%] max-w-[1050px] bg-foreground rounded-[32px] sm:rounded-[40px] md:rounded-[48px] relative z-10 flex flex-col md:flex-row shadow-2xl transition-colors duration-700 mx-auto"
       >
         
-        {/* Left column: Framed Profile Pic */}
+
         <div className="w-full md:w-[40%] flex justify-center items-center order-1 pt-12 md:pt-0 pb-4 md:pb-0 md:pl-12 lg:pl-16 z-30 group cursor-pointer">
           <motion.div
             initial={{ scale: 0.85, opacity: 0 }}
@@ -56,7 +56,7 @@ export function About({ onConnect }) {
           </motion.div>
         </div>
 
-        {/* Right column: Content */}
+
         <div className="w-full md:w-[60%] p-6 sm:p-12 lg:p-16 flex flex-col justify-center order-2 z-20 text-background pb-10 sm:pb-16 pt-6 md:pt-16 transition-colors duration-700">
            <motion.h2 
              initial={{ opacity: 0, x: 20 }}

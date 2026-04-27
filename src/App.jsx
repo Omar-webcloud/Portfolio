@@ -78,8 +78,6 @@ export default function App() {
     <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
       <nav className="absolute top-0 left-0 right-0 z-50 px-5 sm:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between w-full h-fit">
-          
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-nowrap items-center gap-x-2 text-xs md:text-sm tracking-widest uppercase">
             {slices.map(({ id, label }, i) => (
               <span key={id} className="relative flex items-center shrink-0">
@@ -108,7 +106,6 @@ export default function App() {
             ))}
           </div>
 
-          {/* Mobile Navigation Toggle */}
           <div className="flex lg:hidden items-center">
             <button 
               onClick={() => setMenuOpen(true)}
