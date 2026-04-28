@@ -13,7 +13,11 @@ import {
   Sun,
   Moon,
   Menu,
-  X
+  X,
+  User,
+  Briefcase,
+  Award,
+  Layers
 } from "lucide-react"
 import { Hero } from "./components/hero"
 import { Experience } from "./components/experience"
@@ -24,12 +28,12 @@ import { About } from "./components/about"
 import { Connect } from "./components/connect"
 
 const SLIDES = (goTo) => [
-  { id: "about",       label: "About",      component: <About onConnect={() => goTo(5)} /> },
-  { id: "projects",    label: "Projects",   component: <Hero /> },
-  { id: "experience",  label: "Experience", component: <Experience /> },
-  { id: "expertise",   label: "Expertise",  component: <Credentials /> },
-  { id: "blog",        label: "Blog",       component: <Blog /> },
-  { id: "connect",     label: "Connect",    component: <Connect /> },
+  { id: "about",       label: "About",      icon: User,      component: <About onConnect={() => goTo(5)} /> },
+  { id: "projects",    label: "Projects",   icon: Layers,    component: <Hero /> },
+  { id: "experience",  label: "Experience", icon: Briefcase, component: <Experience /> },
+  { id: "expertise",   label: "Expertise",  icon: Award,     component: <Credentials /> },
+  { id: "blog",        label: "Blog",       icon: FileText,  component: <Blog /> },
+  { id: "connect",     label: "Connect",    icon: Mail,      component: <Connect /> },
 ]
 
 
@@ -79,15 +83,26 @@ export default function App() {
       <nav className="absolute top-0 left-0 right-0 z-50 px-5 sm:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between w-full h-fit">
           <div className="hidden lg:flex flex-nowrap items-center gap-x-2 text-xs md:text-sm tracking-widest uppercase">
-            {slices.map(({ id, label }, i) => (
+            {slices.map(({ id, label, icon: Icon }, i) => (
               <span key={id} className="relative flex items-center shrink-0">
                 <button
                   onClick={() => goTo(i)}
-                  className={`transition-all duration-300 whitespace-nowrap relative px-5 py-2 rounded-full font-medium ${
+                  className={`flex items-center transition-all duration-300 whitespace-nowrap relative px-4 sm:px-5 py-2 rounded-full font-medium group ${
                     current === i ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  {label}
+                  <motion.div
+                    animate={
+                      current === i
+                        ? { scale: [1, 1.2, 1], rotate: [0, -10, 10, -10, 10, 0] }
+                        : { scale: 1, rotate: 0 }
+                    }
+                    transition={{ duration: 0.5 }}
+                    className="mr-2 flex-shrink-0"
+                  >
+                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform duration-300" />
+                  </motion.div>
+                  <span className="text-xs sm:text-sm">{label}</span>
                   {current === i && (
                     <motion.div 
                       layoutId="active-nav-pill"
@@ -156,7 +171,7 @@ export default function App() {
               <X size={20} className="text-foreground" />
             </button>
             <div className="flex flex-col gap-6 text-center">
-              {slices.map(({ id, label }, i) => (
+              {slices.map(({ id, label, icon: Icon }, i) => (
                 <motion.div 
                    key={id}
                    initial={{ opacity: 0, y: 10 }}
@@ -166,10 +181,20 @@ export default function App() {
                 >
                   <button
                     onClick={() => { goTo(i); setMenuOpen(false); }}
-                    className={`text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-colors ${
+                    className={`flex items-center justify-center gap-4 w-full text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-colors group ${
                       current === i ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground/70"
                     }`}
                   >
+                    <motion.div
+                      animate={
+                        current === i
+                          ? { scale: [1, 1.2, 1], rotate: [0, -10, 10, -10, 10, 0] }
+                          : { scale: 1, rotate: 0 }
+                      }
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Icon className="w-6 h-6 min-[400px]:w-8 min-[400px]:h-8 group-hover:scale-110 transition-transform duration-300" />
+                    </motion.div>
                     {label}
                   </button>
                 </motion.div>
