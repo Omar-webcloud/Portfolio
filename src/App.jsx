@@ -181,8 +181,10 @@ export default function App() {
                 >
                   <button
                     onClick={() => { goTo(i); setMenuOpen(false); }}
-                    className={`flex items-center justify-center gap-4 w-full text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-colors group ${
-                      current === i ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground/70"
+                    className={`flex items-center justify-center gap-4 w-full text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-all duration-300 group px-6 py-3 rounded-2xl ${
+                      current === i 
+                        ? "text-foreground font-semibold bg-secondary/30 backdrop-blur-md border border-border/50 shadow-sm" 
+                        : "text-muted-foreground hover:text-foreground/70 border border-transparent"
                     }`}
                   >
                     <motion.div
