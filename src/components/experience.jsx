@@ -2,17 +2,28 @@ import { useEffect, useState } from "react"
 
 const experiences = [
   {
+    num: "02",
+    year: "'26",
+    title: "WEBERMELON",
+    companyDesc: "Web & Software Development Agency",
+    role: "Frontend Developer",
+    period: "May 2026 – Present",
+    tools: [],
+    link: "https://webermelon.com/",
+    logo: "/wm-logo.png",
+    zIndex: 40,
+  },
+  {
     num: "01",
     year: "'26",
     title: "WEBERMELON",
     companyDesc: "Web & Software Development Agency",
-    role: "Web Developer Intern",
+    role: "Intern Web Developer",
+    period: "Feb 2026 – Apr 2026",
     tools: [],
     link: "https://webermelon.com/",
     logo: "/wm-logo.png",
-    rotation: "rotate-[2deg]",
     zIndex: 30,
-    offset: "translate-y-0",
   }
 ]
 
@@ -42,11 +53,11 @@ export function Experience() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-0 flex flex-col items-center lg:items-end">
+          <div className="w-full lg:w-1/2 relative flex flex-col items-center lg:items-end gap-12 sm:gap-16">
             <div className="absolute left-[20px] sm:left-[80px] lg:left-[-120px] top-4 bottom-12 w-[1px] bg-border z-0 hidden sm:block" />
-            <div className="relative w-full max-w-[420px] mt-4 sm:mt-8">
+            <div className="relative w-full max-w-[420px] mt-4 sm:mt-8 flex flex-col gap-12 sm:gap-20">
               {experiences.map((exp, idx) => (
-                <div key={idx} className={`relative lg:absolute lg:right-0 w-full transition-all duration-700 ${mounted ? "opacity-100" : "opacity-0 translate-x-10"}`} style={{ zIndex: exp.zIndex, transitionDelay: `${idx * 200}ms` }}>
+                <div key={idx} className={`relative w-full transition-all duration-700 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`} style={{ zIndex: exp.zIndex, transitionDelay: `${idx * 200}ms` }}>
                   <div className="absolute -left-[40px] sm:-left-[100px] lg:-left-[240px] top-1 items-center w-[100px] lg:w-[240px] hidden sm:flex">
                     <div className="timeline-dot bg-background w-8 h-8 rounded-full border border-border flex items-center justify-center text-[10px] font-mono mr-2 z-10">
                       {exp.num}
@@ -74,25 +85,29 @@ export function Experience() {
                           )}
                         </h3>
                       </div>
-                      <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">Active</span>
+                      <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">
+                        {exp.period.includes("Present") ? "Active" : "Completed"}
+                      </span>
                     </div>
 
                     <div className="flex flex-col gap-3 sm:gap-4">
                       <div className="border-l-2 border-foreground/20 pl-4 py-0.5 sm:py-1">
                         <p className="text-base sm:text-lg font-medium text-foreground">{exp.role}</p>
-                        <p className="text-[10px] sm:text-sm font-mono text-muted-foreground mt-1 text-xs">Feb 2026 – Present</p>
+                        <p className="text-[10px] sm:text-sm font-mono text-muted-foreground mt-1 text-xs">{exp.period}</p>
                       </div>
                       <div className="flex gap-4 sm:gap-6 mt-1 sm:mt-2">
                         <div className="w-full flex flex-col justify-center gap-2 sm:gap-3">
                           <div className="text-sm text-foreground/80 leading-relaxed">
                             {exp.companyDesc && <p className="mb-2 italic text-muted-foreground">{exp.companyDesc}</p>}
-                            <div className="flex flex-wrap gap-1.5 mt-2">
-                              {exp.tools.map(t => (
-                                <span key={t} className="text-[10px] sm:text-[11px] font-mono uppercase bg-secondary border border-border px-2 py-0.5 rounded-sm text-foreground">
-                                  {t}
-                                </span>
-                              ))}
-                            </div>
+                            {exp.tools && exp.tools.length > 0 && (
+                              <div className="flex flex-wrap gap-1.5 mt-2">
+                                {exp.tools.map(t => (
+                                  <span key={t} className="text-[10px] sm:text-[11px] font-mono uppercase bg-secondary border border-border px-2 py-0.5 rounded-sm text-foreground">
+                                    {t}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
