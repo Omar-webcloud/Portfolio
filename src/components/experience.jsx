@@ -85,9 +85,11 @@ export function Experience() {
                           )}
                         </h3>
                       </div>
-                      <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">
-                        {exp.period.includes("Present") ? "Active" : "Completed"}
-                      </span>
+                      {exp.period.includes("Present") && (
+                        <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">
+                          Active
+                        </span>
+                      )}
                     </div>
 
                     <div className="flex flex-col gap-3 sm:gap-4">
