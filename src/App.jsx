@@ -26,6 +26,7 @@ import { Blog } from "./components/blog"
 
 import { About } from "./components/about"
 import { Connect } from "./components/connect"
+import { Splash } from "./components/splash"
 
 const SLIDES = (goTo) => [
   { id: "about",       label: "About",      icon: User,      component: <About onConnect={() => goTo(5)} /> },
@@ -58,6 +59,15 @@ export default function App() {
 
   const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light")
 
+  const [showSplash, setShowSplash] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false)
+    }, 4000)
+    return () => clearTimeout(timer)
+  }, [])
+
   const goTo = (index) => {
     if (index === current || animating) return
     setDir(index > current ? 1 : -1)
@@ -79,7 +89,26 @@ export default function App() {
   const slices = SLIDES(goTo)
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
+    <>
+      <AnimatePresence>
+        {showSplash && (
+          <motion.div
+            key="splash-screen"
+            initial={{ opacity: 1 }}
+            exit={{ 
+              opacity: 0,
+              scale: 0.96,
+              filter: "blur(8px)",
+              transition: { duration: 0.6, ease: "easeInOut" } 
+            }}
+            className="fixed inset-0 z-[9999]"
+          >
+            <Splash theme={theme} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
       <nav className="absolute top-0 left-0 right-0 z-50 px-5 sm:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between w-full h-fit">
           <div className="hidden lg:flex flex-nowrap items-center gap-x-2 text-xs md:text-sm tracking-widest uppercase">
@@ -230,6 +259,7 @@ export default function App() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
