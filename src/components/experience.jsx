@@ -6,7 +6,7 @@ const experiences = [
     year: "'26",
     title: "WEBERMELON",
     companyDesc: "Web & Software Development Agency",
-    role: "Frontend Developer",
+    role: "Junior Web Developer",
     period: "May 2026 – Present",
     tools: [],
     link: "https://webermelon.com/",
