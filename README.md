@@ -1,4 +1,5 @@
-# 🧑‍💻 Portfolio Website
+# 🧑‍💻
+ Portfolio Website
 
 A personal portfolio website that showcases my journey as a self-taught web developer, highlights my skills, projects, certifications, and provides a way to contact me.
 
