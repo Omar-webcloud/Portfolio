@@ -19,6 +19,15 @@ export const featuredProjects = [
   },
   {
     num: "03",
+    title: "FABLE",
+    description: "Modern e-book sharing platform where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
+    stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
+    link: "https://fable-umber.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fable",
+    type: "E-book Platform"
+  },
+  {
+    num: "04",
     title: "PLASTITRACK",
     description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
     stack: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -27,7 +36,7 @@ export const featuredProjects = [
     type: "GreenTech"
   },
   {
-    num: "04",
+    num: "05",
     title: "FRESH FARM",
     description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
     stack: ["React", "JavaScript", "CSS"],
@@ -36,7 +45,7 @@ export const featuredProjects = [
     type: "E-commerce"
   },
   {
-    num: "05",
+    num: "06",
     title: "WEBCHRONICLES",
     description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
@@ -45,7 +54,7 @@ export const featuredProjects = [
     type: "Data Visualization"
   },
   {
-    num: "06",
+    num: "07",
     title: "KINO-XPLORER",
     description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
     stack: ["React", "API", "JavaScript"],
