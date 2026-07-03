@@ -31,16 +31,16 @@ export function Connect() {
             </div>
             
             <p className="text-foreground/70 leading-relaxed mb-8 max-w-sm hidden sm:block italic">
-              "Let's create something meaningful together. Whether it's a high-performance web app or a unique digital experience, I'm here to bring your vision to life."
+              "I'm open to full-time roles and freelance projects. If you're building something ambitious, let's talk."
             </p>
           </motion.div>
 
           <div className="w-full lg:w-1/2 flex flex-col gap-3">
             {[
-              { label: "Email",    value: "omarfarukcihs@gmail.com", href: "mailto:omarfarukcihs@gmail.com", icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
-              { label: "LinkedIn", value: "in/md-omar-faruk-chowdhury",href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury", icon: <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
-              { label: "GitHub",   value: "Omar-webcloud",           href: "https://github.com/Omar-webcloud", icon: <Github className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
-              { label: "Resume",   value: "Download PDF (0.3MB)",    href: "/Resume.pdf", download: true, icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 transition-colors" /> },
+              { label: "Email",    value: "omarfarukcihs@gmail.com", href: "mailto:omarfarukcihs@gmail.com", icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
+              { label: "LinkedIn", value: "in/md-omar-faruk-chowdhury",href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury", icon: <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
+              { label: "GitHub",   value: "Omar-webcloud",           href: "https://github.com/Omar-webcloud", icon: <Github className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
+              { label: "Resume",   value: "View & Download CV",      href: "/Resume.pdf", download: true, icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
             ].map(({ label, value, href, download, icon }, idx) => (
               <motion.div
                 key={label}
@@ -55,7 +55,7 @@ export function Connect() {
                   target={download ? undefined : "_blank"}
                   download={download}
                   rel={download ? undefined : "noopener noreferrer"}
-                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-card hover:bg-foreground transition-all duration-300 w-full"
+                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-card hover:bg-foreground dark:hover:bg-secondary transition-all duration-300 w-full dark:[box-shadow:2px_2px_0px_oklch(0.13_0.01_260)]"
                 >
                   <div className="flex items-center gap-3 w-full sm:w-32 shrink-0">
                     <motion.div
@@ -70,9 +70,9 @@ export function Connect() {
                     >
                       {icon}
                     </motion.div>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 transition-colors">{label}</span>
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 dark:group-hover:text-foreground/60 transition-colors">{label}</span>
                   </div>
-                  <span className={`text-base sm:text-lg font-medium group-hover:text-primary-foreground transition-colors flex-1 ${label === "Email" ? "" : "truncate"}`}>
+                  <span className={`text-base sm:text-lg font-medium group-hover:text-primary-foreground dark:group-hover:text-foreground transition-colors flex-1 ${label === "Email" ? "" : "truncate"}`}>
                     {value}
                   </span>
                   
@@ -83,7 +83,7 @@ export function Connect() {
                       }}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     >
-                      <Download className="w-4 h-4 text-primary-foreground" />
+                      <Download className="w-4 h-4 text-primary-foreground dark:text-foreground" />
                     </motion.div>
                   ) : label === "Email" ? null : (
                     <motion.div
@@ -92,7 +92,7 @@ export function Connect() {
                       }}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     >
-                      <ArrowRight className="w-4 h-4 text-primary-foreground" />
+                      <ArrowRight className="w-4 h-4 text-primary-foreground dark:text-foreground" />
                     </motion.div>
                   )}
                 </motion.a>

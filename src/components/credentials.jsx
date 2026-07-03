@@ -7,17 +7,17 @@ export function Credentials() {
     { 
       title: "Core Stack", 
       icon: <Layers className="w-5 h-5" />, 
-      items: ["Next.js", "React", "JavaScript", "TypeScript", "Tailwind CSS", "PHP"] 
+      items: ["Next.js", "React", "JavaScript", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"] 
     },
     { 
       title: "Backend & Data", 
       icon: <Code2 className="w-5 h-5" />, 
-      items: ["Node.js", "Express", "MongoDB", "Firebase"] 
+      items: ["Node.js", "Express", "REST API", "MongoDB", "Firebase", "Stripe", "Better Auth"] 
     },
     { 
       title: "Tools & Platforms", 
       icon: <Wrench className="w-5 h-5" />, 
-      items: ["Git/GitHub", "Vite", "npm", "DevTools", "Figma", "Notion", "Wordpress", "Elementor", "SCRUM", "Jest"] 
+      items: ["Git", "GitHub", "Vercel", "Vite", "Figma", "Axios", "Framer Motion", "npm", "SCRUM", "Jest"] 
     }
   ]
 
@@ -55,7 +55,7 @@ export function Credentials() {
             </p>
             <div className="max-w-md hidden lg:block">
               <p className="text-sm sm:text-base text-foreground/70 leading-relaxed italic">
-                "Continuous learning is the benchmark of modern engineering. I constantly refine my stack to stay at the forefront of the industry."
+                "I build with purpose — every line of code is crafted to solve a real problem, scale cleanly, and delight the people using it."
               </p>
             </div>
           </motion.div>
@@ -135,14 +135,14 @@ export function Credentials() {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="minimal-card p-3 sm:p-4 bg-background border border-border flex items-center gap-3 sm:gap-4 cursor-pointer"
+                    className="minimal-card p-3 sm:p-4 bg-background border border-border flex items-center gap-3 sm:gap-4 cursor-pointer group"
                   >
                     <Award className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground/60 shrink-0" />
                     <div className="flex-1">
                       <p className="text-[10px] sm:text-xs font-bold uppercase tracking-tight">{cert.title}</p>
                       <p className="text-[9px] sm:text-[10px] font-mono text-muted-foreground uppercase">{cert.issuer}</p>
                     </div>
-                    <ExternalLink className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ExternalLink className="w-3 h-3 text-muted-foreground/40 group-hover:text-foreground transition-colors shrink-0" />
                   </motion.a>
                 ))}
               </div>

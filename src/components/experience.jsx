@@ -8,7 +8,8 @@ const experiences = [
     companyDesc: "Web & Software Development Agency",
     role: "Junior Web Developer",
     period: "May 2026 – Present",
-    tools: [],
+    description: "Developing and maintaining client-facing web applications, collaborating on full project lifecycles from scoping through delivery, and contributing to internal tooling and component libraries.",
+    tools: ["Next.js", "React", "Tailwind CSS", "WordPress"],
     link: "https://webermelon.com/",
     logo: "/wm-logo.png",
     zIndex: 40,
@@ -20,7 +21,8 @@ const experiences = [
     companyDesc: "Web & Software Development Agency",
     role: "Intern Web Developer",
     period: "Feb 2026 – Apr 2026",
-    tools: [],
+    description: "Built responsive UI components, contributed to live client projects, and gained hands-on experience with professional development workflows, code reviews, and agile sprints.",
+    tools: ["React", "JavaScript", "CSS", "Git"],
     link: "https://webermelon.com/",
     logo: "/wm-logo.png",
     zIndex: 30,
@@ -48,7 +50,7 @@ export function Experience() {
             </p>
             <div className="max-w-md hidden sm:block">
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                Applying my skills and academic background to deliver scalable and user-centric software solutions.
+                Building production-grade software and honing professional skills through real client delivery at a fast-paced web agency.
               </p>
             </div>
           </div>
@@ -101,6 +103,7 @@ export function Experience() {
                         <div className="w-full flex flex-col justify-center gap-2 sm:gap-3">
                           <div className="text-sm text-foreground/80 leading-relaxed">
                             {exp.companyDesc && <p className="mb-2 italic text-muted-foreground">{exp.companyDesc}</p>}
+                            {exp.description && <p className="text-sm text-foreground/70 leading-relaxed mb-3">{exp.description}</p>}
                             {exp.tools && exp.tools.length > 0 && (
                               <div className="flex flex-wrap gap-1.5 mt-2">
                                 {exp.tools.map(t => (
