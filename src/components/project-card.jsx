@@ -1,17 +1,20 @@
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Monitor, BookOpen, Leaf, LineChart, Search, LayoutTemplate, ShoppingCart } from "lucide-react"
+import { ExternalLink, Github, Monitor, BookOpen, BookMarked, GraduationCap, Layers, Leaf, LineChart, Search, LayoutTemplate, ShoppingCart } from "lucide-react"
 
 export function ProjectCard({ project, idx }) {
   const getProjectIcon = (type) => {
     const iconClass = "w-12 h-12 -rotate-12";
     switch (type) {
-      case "EdTech App": return <BookOpen className={iconClass} />;
-      case "GreenTech": return <Leaf className={iconClass} />;
+      case "E-book Platform":   return <BookMarked className={iconClass} />;
+      case "Platform":          return <LayoutTemplate className={iconClass} />;
+      case "EdTech App":        return <BookOpen className={iconClass} />;
+      case "EdTech Platform":   return <GraduationCap className={iconClass} />;
+      case "GreenTech":         return <Leaf className={iconClass} />;
+      case "E-learning":        return <Layers className={iconClass} />;
       case "Data Visualization": return <LineChart className={iconClass} />;
-      case "Search Tool": return <Search className={iconClass} />;
-      case "Platform": return <LayoutTemplate className={iconClass} />;
-      case "E-commerce": return <ShoppingCart className={iconClass} />;
-      default: return <Monitor className={iconClass} />;
+      case "E-commerce":        return <ShoppingCart className={iconClass} />;
+      case "Search Tool":       return <Search className={iconClass} />;
+      default:                  return <Monitor className={iconClass} />;
     }
   };
 

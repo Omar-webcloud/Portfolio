@@ -1,12 +1,12 @@
 export const featuredProjects = [
   {
     num: "01",
-    title: "SYNTAXA",
-    description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    link: "https://syntaxa-ten.vercel.app/",
-    github: "https://github.com/Omar-webcloud/syntaxa",
-    type: "EdTech App"
+    title: "FABLE",
+    description: "Modern e-book sharing platform where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
+    stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
+    link: "https://fable-umber.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fable",
+    type: "E-book Platform"
   },
   {
     num: "02",
@@ -19,15 +19,24 @@ export const featuredProjects = [
   },
   {
     num: "03",
-    title: "FABLE",
-    description: "Modern e-book sharing platform where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
-    stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
-    link: "https://fable-umber.vercel.app/",
-    github: "https://github.com/Omar-webcloud/Fable",
-    type: "E-book Platform"
+    title: "SYNTAXA",
+    description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    link: "https://syntaxa-ten.vercel.app/",
+    github: "https://github.com/Omar-webcloud/syntaxa",
+    type: "EdTech App"
   },
   {
     num: "04",
+    title: "MEDIQUEUE",
+    description: "Tutor booking and educational queue management platform with real-time session scheduling, advanced filtering, and personalized dashboards for students and educators.",
+    stack: ["Next.js", "Tailwind CSS 4", "Shadcn UI", "React Day Picker"],
+    link: "https://medi-queue-smoky.vercel.app/",
+    github: "https://github.com/Omar-webcloud/MediQueue",
+    type: "EdTech Platform"
+  },
+  {
+    num: "05",
     title: "PLASTITRACK",
     description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
     stack: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -36,16 +45,16 @@ export const featuredProjects = [
     type: "GreenTech"
   },
   {
-    num: "05",
-    title: "FRESH FARM",
-    description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
-    stack: ["React", "JavaScript", "CSS"],
-    link: "https://fresh-farm-zeta.vercel.app/",
-    github: "https://github.com/Omar-webcloud/Fresh-Farm",
-    type: "E-commerce"
+    num: "06",
+    title: "SKILL SPHERE",
+    description: "Online learning platform for discovering and mastering new skills, featuring secure authentication, real-time course search, personalized profiles, and a modern hero slider.",
+    stack: ["Next.js", "Better Auth", "Tailwind CSS 4", "DaisyUI", "Swiper.js"],
+    link: "https://skill-sphere-omar.vercel.app/",
+    github: "https://github.com/Omar-webcloud/SkillSphere",
+    type: "E-learning"
   },
   {
-    num: "06",
+    num: "07",
     title: "WEBCHRONICLES",
     description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
@@ -54,7 +63,16 @@ export const featuredProjects = [
     type: "Data Visualization"
   },
   {
-    num: "07",
+    num: "08",
+    title: "FRESH FARM",
+    description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
+    stack: ["React", "JavaScript", "CSS"],
+    link: "https://fresh-farm-zeta.vercel.app/",
+    github: "https://github.com/Omar-webcloud/Fresh-Farm",
+    type: "E-commerce"
+  },
+  {
+    num: "09",
     title: "KINO-XPLORER",
     description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
     stack: ["React", "API", "JavaScript"],
