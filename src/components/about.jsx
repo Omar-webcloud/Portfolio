@@ -17,10 +17,10 @@ export function About({ onConnect }) {
       
 
       <div className="w-[85%] max-w-[1050px] flex flex-col items-start z-0 select-none pointer-events-none mb-4 sm:mb-8 mx-auto pl-2 md:pl-6">
-        <h1 className="text-[24px] min-[375px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-serif uppercase text-foreground/15 whitespace-nowrap leading-none tracking-[0.02em] font-bold transition-colors duration-500 text-left">
+        <h1 className="text-[24px] min-[375px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-serif uppercase text-foreground whitespace-nowrap leading-none tracking-[0.02em] font-bold transition-colors duration-500 text-left">
           MOHAMMAD OMAR
         </h1>
-        <h2 className="text-[10px] sm:text-xs md:text-base mt-1 sm:mt-2 font-mono text-foreground/50 uppercase tracking-[0.4em] font-semibold transition-colors duration-500 text-left ml-1">
+        <h2 className="text-[10px] sm:text-xs md:text-base mt-1 sm:mt-2 font-mono text-muted-foreground uppercase tracking-[0.4em] font-semibold transition-colors duration-500 text-left ml-1">
           Web Developer
         </h2>
       </div>
@@ -30,7 +30,7 @@ export function About({ onConnect }) {
         initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="w-[85%] sm:w-[90%] max-w-[1050px] bg-foreground dark:bg-card dark:border dark:border-border rounded-[32px] sm:rounded-[40px] md:rounded-[48px] relative z-10 flex flex-col md:flex-row shadow-2xl dark:shadow-[2px_2px_0px_oklch(0.13_0.01_260),0_8px_32px_rgba(0,0,0,0.45)] transition-colors duration-700 mx-auto"
+        className="w-[85%] sm:w-[90%] max-w-[1050px] bg-card dark:border dark:border-border rounded-[32px] sm:rounded-[40px] md:rounded-[48px] relative z-10 flex flex-col md:flex-row shadow-2xl dark:shadow-[2px_2px_0px_oklch(0.13_0.01_260),0_8px_32px_rgba(0,0,0,0.45)] transition-colors duration-700 mx-auto"
       >
         
 
@@ -40,10 +40,10 @@ export function About({ onConnect }) {
             animate={{ scale: 1, opacity: 1 }}
             whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
             transition={{ duration: 0.8, ease: "easeOut", type: "spring", bounce: 0.4 }}
-            className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] aspect-square rounded-full p-1.5 sm:p-2 border border-background/10 dark:border-border shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:shadow-[0_10px_50px_rgba(0,0,0,0.2)] group-hover:border-background/30 transition-all duration-500 bg-background/5 dark:bg-secondary/30"
+            className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] aspect-square rounded-full p-1.5 sm:p-2 border border-border/50 dark:border-border shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:shadow-[0_10px_50px_rgba(0,0,0,0.2)] group-hover:border-border transition-all duration-500 bg-secondary/30 dark:bg-secondary/30"
           >
-            <div className="w-full h-full rounded-full bg-gradient-to-b from-background/10 dark:from-foreground/5 to-transparent overflow-hidden flex justify-center items-end relative shadow-inner border border-background/5 dark:border-border/30 transition-all duration-500 group-hover:from-background/20 dark:group-hover:from-foreground/10">
-              <div className="absolute inset-0 bg-background/5 mix-blend-overlay"></div>
+            <div className="w-full h-full rounded-full bg-gradient-to-b from-secondary/50 dark:from-foreground/5 to-transparent overflow-hidden flex justify-center items-end relative shadow-inner border border-border/30 dark:border-border/30 transition-all duration-500 group-hover:from-secondary dark:group-hover:from-foreground/10">
+              <div className="absolute inset-0 bg-secondary/10 mix-blend-overlay"></div>
               <img 
                 src="/images/omar.png" 
                 alt="Mohammad Omar"
@@ -57,14 +57,14 @@ export function About({ onConnect }) {
         </div>
 
 
-        <div className="w-full md:w-[60%] p-6 sm:p-12 lg:p-16 flex flex-col justify-center order-2 z-20 text-background dark:text-foreground pb-10 sm:pb-16 pt-6 md:pt-16 transition-colors duration-700">
+        <div className="w-full md:w-[60%] p-6 sm:p-12 lg:p-16 flex flex-col justify-center order-2 z-20 text-foreground pb-10 sm:pb-16 pt-6 md:pt-16 transition-colors duration-700">
            <motion.h2 
              initial={{ opacity: 0, x: 20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.6, delay: 0.3 }}
-             className="text-[20px] sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] font-medium leading-[1.3] md:leading-[1.15] mb-6 md:mb-8 font-sans tracking-tight text-background/90 dark:text-foreground/90"
+             className="text-[20px] sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] font-medium leading-[1.3] md:leading-[1.15] mb-6 md:mb-8 font-sans tracking-tight text-foreground/90"
            >
-             Building <span className="font-bold text-background dark:text-foreground">high-performance, intuitive digital experiences</span> that elevate your brand and drive business growth.
+             Building <span className="font-bold text-foreground">high-performance, intuitive digital experiences</span> that elevate your brand and drive business growth.
            </motion.h2>
 
            <motion.div 
@@ -74,9 +74,9 @@ export function About({ onConnect }) {
              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 font-sans"
            >
              <div 
-               className="group relative bg-background/5 hover:bg-background/10 dark:bg-secondary/50 dark:hover:bg-secondary dark:border-border backdrop-blur-xl border border-background/10 hover:border-background/20 text-background dark:text-foreground px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:scale-[1.02]"
+               className="group relative bg-secondary/30 hover:bg-secondary/50 dark:bg-secondary/50 dark:hover:bg-secondary dark:border-border backdrop-blur-xl border border-border/50 hover:border-border text-foreground px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:scale-[1.02]"
              >
-               <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-background/70 dark:text-muted-foreground group-hover:text-background dark:group-hover:text-foreground group-hover:rotate-[360deg] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] shrink-0" />
+               <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-foreground group-hover:rotate-[360deg] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] shrink-0" />
                <div className="relative overflow-hidden h-[20px] sm:h-[24px] flex flex-col justify-start w-[140px] sm:w-[155px]">
                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Flexible Timezone</span>
                  <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Available Remotely</span>
@@ -84,11 +84,11 @@ export function About({ onConnect }) {
              </div>
              <button 
                onClick={onConnect}
-               className="group relative bg-transparent hover:bg-background/5 dark:hover:bg-secondary/50 backdrop-blur-md border border-background/20 dark:border-border hover:border-background/40 dark:hover:border-border text-background dark:text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95"
+               className="group relative bg-transparent hover:bg-secondary/30 dark:hover:bg-secondary/50 backdrop-blur-md border border-border/50 hover:border-border text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95"
              >
                <span className="relative w-4 h-4 sm:w-5 sm:h-5 shrink-0 flex items-center justify-center">
-                 <Mail className="absolute w-full h-full text-background/70 dark:text-muted-foreground transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 group-hover:-translate-y-2" />
-                 <MailOpen className="absolute w-full h-full text-background dark:text-foreground opacity-0 scale-75 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0" />
+                 <Mail className="absolute w-full h-full text-muted-foreground transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 group-hover:-translate-y-2" />
+                 <MailOpen className="absolute w-full h-full text-foreground opacity-0 scale-75 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0" />
                </span>
                Contact
              </button>
@@ -98,7 +98,7 @@ export function About({ onConnect }) {
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              transition={{ duration: 0.8, delay: 0.8 }}
-             className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 text-background/40 dark:text-muted-foreground text-[10px] sm:text-xs font-mono uppercase font-semibold"
+             className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 text-muted-foreground text-[10px] sm:text-xs font-mono uppercase font-semibold"
            >
               <div className="relative overflow-hidden w-[150px] sm:w-[180px] h-[20px] flex items-center">
                 <AnimatePresence mode="wait">
@@ -108,15 +108,15 @@ export function About({ onConnect }) {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute left-0 tracking-[0.1em] sm:tracking-[0.2em] whitespace-nowrap text-background/60 dark:text-foreground/60"
+                    className="absolute left-0 tracking-[0.1em] sm:tracking-[0.2em] whitespace-nowrap text-foreground/60"
                   >
                     {ROLES[roleIndex]}
                   </motion.span>
                 </AnimatePresence>
               </div>
-              <span className="hidden sm:inline w-1 h-1 rounded-full bg-background/20 dark:bg-border"></span>
+              <span className="hidden sm:inline w-1 h-1 rounded-full bg-border"></span>
               <span className="tracking-[0.1em] sm:tracking-[0.2em] whitespace-nowrap">Chattogram, BD</span>
-              <span className="hidden sm:inline w-1 h-1 rounded-full bg-background/20 dark:bg-border"></span>
+              <span className="hidden sm:inline w-1 h-1 rounded-full bg-border"></span>
               <span className="tracking-[0.1em] sm:tracking-[0.2em] whitespace-nowrap">GMT +6</span>
            </motion.div>
         </div>

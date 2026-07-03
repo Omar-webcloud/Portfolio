@@ -56,7 +56,6 @@ export function Experience() {
           </div>
 
           <div className="w-full lg:w-1/2 relative flex flex-col items-center lg:items-end gap-12 sm:gap-16">
-            <div className="absolute left-[20px] sm:left-[80px] lg:left-[-120px] top-4 bottom-12 w-[1px] bg-border z-0 hidden sm:block" />
             <div className="relative w-full max-w-[420px] mt-4 sm:mt-8 flex flex-col gap-12 sm:gap-20">
               {experiences.map((exp, idx) => (
                 <div key={idx} className={`relative w-full transition-all duration-700 ${mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`} style={{ zIndex: exp.zIndex, transitionDelay: `${idx * 200}ms` }}>
