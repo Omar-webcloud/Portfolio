@@ -51,11 +51,12 @@ export function Connect() {
               >
                 <motion.a
                   whileHover="hover"
+                  whileTap={{ scale: 0.98 }}
                   href={href}
                   target={download ? undefined : "_blank"}
                   download={download}
                   rel={download ? undefined : "noopener noreferrer"}
-                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-card hover:bg-foreground dark:hover:bg-secondary transition-all duration-300 w-full dark:[box-shadow:2px_2px_0px_oklch(0.13_0.01_260)]"
+                  className="group flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 border border-border p-4 sm:p-5 bg-card hover:bg-foreground dark:hover:bg-secondary transition-all duration-300 w-full dark:[box-shadow:2px_2px_0px_oklch(0.13_0.01_260)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-lg dark:hover:shadow-[4px_4px_0px_oklch(0.13_0.01_260)]"
                 >
                   <div className="flex items-center gap-3 w-full sm:w-32 shrink-0">
                     <motion.div

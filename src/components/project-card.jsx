@@ -40,8 +40,8 @@ export function ProjectCard({ project, idx }) {
         whileHover="hover"
         className="minimal-card w-full bg-background p-4 sm:p-6 relative group border border-border transition-all duration-300 transform"
       >
-        <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
-        <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
+        <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1 group-hover:translate-y-2 group-hover:translate-x-2 transition-transform duration-300" />
+        <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2 group-hover:translate-y-4 group-hover:translate-x-4 transition-transform duration-300" />
         
         <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-foreground">
           <motion.div
@@ -81,8 +81,8 @@ export function ProjectCard({ project, idx }) {
           </div>
           <div className="flex items-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
             <motion.a 
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href={project.link} 
               target="_blank" 
               rel="noopener noreferrer" 

@@ -74,7 +74,7 @@ export function About({ onConnect }) {
              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 font-sans"
            >
              <div 
-               className="group relative bg-secondary/30 hover:bg-secondary/50 dark:bg-secondary/50 dark:hover:bg-secondary dark:border-border backdrop-blur-xl border border-border/50 hover:border-border text-foreground px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:scale-[1.02]"
+               className="group relative bg-secondary/30 hover:bg-secondary/50 dark:bg-secondary/50 dark:hover:bg-secondary dark:border-border backdrop-blur-xl border border-border/50 hover:border-border text-foreground px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 cursor-default hover:scale-105 hover:-translate-y-1"
              >
                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-foreground group-hover:rotate-[360deg] transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] shrink-0" />
                <div className="relative overflow-hidden h-[20px] sm:h-[24px] flex flex-col justify-start w-[140px] sm:w-[155px]">
@@ -84,7 +84,7 @@ export function About({ onConnect }) {
              </div>
              <button 
                onClick={onConnect}
-               className="group relative bg-transparent hover:bg-secondary/30 dark:hover:bg-secondary/50 backdrop-blur-md border border-border/50 hover:border-border text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95"
+               className="group relative bg-transparent hover:bg-secondary/30 dark:hover:bg-secondary/50 backdrop-blur-md border border-border/50 hover:border-border text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium transition-all duration-500 text-[13px] sm:text-base tracking-wide shadow-lg w-full sm:w-auto flex items-center justify-center gap-2.5 active:scale-95 hover:scale-105 hover:-translate-y-1"
              >
                <span className="relative w-4 h-4 sm:w-5 sm:h-5 shrink-0 flex items-center justify-center">
                  <Mail className="absolute w-full h-full text-muted-foreground transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 group-hover:-translate-y-2" />

@@ -86,10 +86,11 @@ export function Blog() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, x: -5 }}
+                whileTap={{ scale: 0.98 }}
                 className="group minimal-card p-5 sm:p-8 bg-background border border-border relative transition-all duration-300 transform"
               >
-                <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1" />
-                <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2" />
+                <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1 group-hover:translate-y-2 group-hover:translate-x-2 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2 group-hover:translate-y-4 group-hover:translate-x-4 transition-transform duration-300" />
                 
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
