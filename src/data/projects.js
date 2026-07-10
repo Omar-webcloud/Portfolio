@@ -2,7 +2,7 @@ export const featuredProjects = [
   {
     num: "01",
     title: "FABLE",
-    description: "Modern e-book sharing platform where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
+    description: "Modern e-book sharing platform featuring an RBAC (Role-Based Access Control) system where readers can browse, bookmark, and purchase ebooks while writers publish and manage their personal catalogs.",
     stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
     link: "https://fable-umber.vercel.app/",
     github: "https://github.com/Omar-webcloud/Fable",

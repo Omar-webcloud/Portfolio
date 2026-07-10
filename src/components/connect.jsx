@@ -73,29 +73,31 @@ export function Connect() {
                     </motion.div>
                     <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 dark:group-hover:text-foreground/60 transition-colors">{label}</span>
                   </div>
-                  <span className={`text-base sm:text-lg font-medium group-hover:text-primary-foreground dark:group-hover:text-foreground transition-colors flex-1 ${label === "Email" ? "" : "truncate"}`}>
-                    {value}
-                  </span>
-                  
-                  {label === "Resume" ? (
-                    <motion.div
-                      variants={{
-                        hover: { y: 2, scale: 1.1 }
-                      }}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <Download className="w-4 h-4 text-primary-foreground dark:text-foreground" />
-                    </motion.div>
-                  ) : label === "Email" ? null : (
-                    <motion.div
-                      variants={{
-                        hover: { x: 5, scale: 1.1 }
-                      }}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <ArrowRight className="w-4 h-4 text-primary-foreground dark:text-foreground" />
-                    </motion.div>
-                  )}
+                  <div className="flex items-center justify-between w-full sm:flex-1 mt-1 sm:mt-0 gap-2">
+                    <span className={`text-base sm:text-lg font-medium group-hover:text-primary-foreground dark:group-hover:text-foreground transition-colors truncate`}>
+                      {value}
+                    </span>
+                    
+                    {label === "Resume" ? (
+                      <motion.div
+                        variants={{
+                          hover: { y: 2, scale: 1.1 }
+                        }}
+                        className="opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-foreground group-hover:text-primary-foreground dark:text-foreground dark:group-hover:text-foreground"
+                      >
+                        <Download className="w-4 h-4" />
+                      </motion.div>
+                    ) : label === "Email" ? null : (
+                      <motion.div
+                        variants={{
+                          hover: { x: 5, scale: 1.1 }
+                        }}
+                        className="opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-foreground group-hover:text-primary-foreground dark:text-foreground dark:group-hover:text-foreground"
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </motion.div>
+                    )}
+                  </div>
                 </motion.a>
                 
                 {label === "Email" && (

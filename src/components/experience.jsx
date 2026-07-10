@@ -6,7 +6,7 @@ const experiences = [
     year: "'26",
     title: "WEBERMELON",
     companyDesc: "Web & Software Development Agency",
-    role: "Junior Web Developer",
+    role: "Frontend Developer",
     period: "May 2026 – Present",
     description: "Developing and maintaining client-facing web applications, collaborating on full project lifecycles from scoping through delivery, and contributing to internal tooling and component libraries.",
     tools: ["Next.js", "React", "Tailwind CSS", "WordPress"],
