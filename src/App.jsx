@@ -108,7 +108,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className="w-screen h-screen overflow-hidden bg-background text-foreground relative transition-colors duration-500">
+      <div className="w-full h-[100dvh] overflow-hidden bg-background text-foreground relative transition-colors duration-500">
       <nav className="absolute top-0 left-0 right-0 z-50 px-5 sm:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between w-full h-fit">
           <div className="hidden lg:flex flex-nowrap items-center gap-x-2 text-xs md:text-sm tracking-widest uppercase">
