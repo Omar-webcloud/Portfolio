@@ -44,7 +44,7 @@ export function Hero() {
             </h1>
             <div className="flex items-center gap-4 mb-8">
               <p className="text-sm sm:text-lg md:text-xl text-muted-foreground uppercase tracking-widest font-light">
-                Digital Experience & Interfaces
+                Projects and Case Studies
               </p>
             </div>
             

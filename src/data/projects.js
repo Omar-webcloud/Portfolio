@@ -6,7 +6,9 @@ export const featuredProjects = [
     stack: ["Next.js", "Tailwind CSS", "Better Auth", "Stripe", "Framer Motion"],
     link: "https://fable-umber.vercel.app/",
     github: "https://github.com/Omar-webcloud/Fable",
-    type: "E-book Platform"
+    type: "E-book Platform",
+    imageLight: "/projects/fable-light.png",
+    imageDark: "/projects/fable-dark.png"
   },
   {
     num: "02",
@@ -15,7 +17,9 @@ export const featuredProjects = [
     stack: ["TypeScript", "Next.js", "Firebase"],
     link: "https://bloggin-app-six.vercel.app/",
     github: "https://github.com/Omar-webcloud/Bloggin-App",
-    type: "Platform"
+    type: "Platform",
+    imageLight: "/projects/bloggin.png",
+    imageDark: "/projects/bloggin.png"
   },
   {
     num: "03",
@@ -24,7 +28,9 @@ export const featuredProjects = [
     stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
     link: "https://syntaxa-ten.vercel.app/",
     github: "https://github.com/Omar-webcloud/syntaxa",
-    type: "EdTech App"
+    type: "EdTech App",
+    imageLight: "/projects/syntaxa-light.png",
+    imageDark: "/projects/Syntaxa-dark.png"
   },
   {
     num: "04",
@@ -33,7 +39,9 @@ export const featuredProjects = [
     stack: ["Next.js", "Tailwind CSS 4", "Shadcn UI", "React Day Picker"],
     link: "https://medi-queue-smoky.vercel.app/",
     github: "https://github.com/Omar-webcloud/MediQueue",
-    type: "EdTech Platform"
+    type: "EdTech Platform",
+    imageLight: "/projects/mediqueue.png",
+    imageDark: "/projects/mediqueue.png"
   },
   {
     num: "05",
@@ -42,7 +50,9 @@ export const featuredProjects = [
     stack: ["Next.js", "Tailwind CSS", "TypeScript"],
     link: "https://plasti-track.vercel.app/",
     github: "https://github.com/Omar-webcloud/PlastiTrack",
-    type: "GreenTech"
+    type: "GreenTech",
+    imageLight: "/projects/plastitrack-light.png",
+    imageDark: "/projects/plastitrack-dark.png"
   },
   {
     num: "06",
@@ -51,7 +61,9 @@ export const featuredProjects = [
     stack: ["Next.js", "Better Auth", "Tailwind CSS 4", "DaisyUI", "Swiper.js"],
     link: "https://skill-sphere-omar.vercel.app/",
     github: "https://github.com/Omar-webcloud/SkillSphere",
-    type: "E-learning"
+    type: "E-learning",
+    imageLight: "/projects/skillsphere.png",
+    imageDark: "/projects/skillsphere.png"
   },
   {
     num: "07",
@@ -60,7 +72,9 @@ export const featuredProjects = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
     link: "https://web-chronicles.vercel.app/",
     github: "https://github.com/Omar-webcloud/WebChronicles",
-    type: "Data Visualization"
+    type: "Data Visualization",
+    imageLight: "/projects/webchronicles.png",
+    imageDark: "/projects/webchronicles.png"
   },
   {
     num: "08",
@@ -69,7 +83,9 @@ export const featuredProjects = [
     stack: ["React", "JavaScript", "CSS"],
     link: "https://fresh-farm-zeta.vercel.app/",
     github: "https://github.com/Omar-webcloud/Fresh-Farm",
-    type: "E-commerce"
+    type: "E-commerce",
+    imageLight: "/projects/fresh-farm-light.png",
+    imageDark: "/projects/fresh-farm-dark.png"
   },
   {
     num: "09",
@@ -78,6 +94,8 @@ export const featuredProjects = [
     stack: ["React", "API", "JavaScript"],
     link: "https://kino-xplorer.vercel.app/",
     github: "https://github.com/Omar-webcloud/movie-explorer",
-    type: "Search Tool"
+    type: "Search Tool",
+    imageLight: "/projects/kino-xplorer.png",
+    imageDark: "/projects/kino-xplorer.png"
   }
 ]

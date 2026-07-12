@@ -3,7 +3,7 @@ import { ExternalLink, Github, Monitor, BookOpen, BookMarked, GraduationCap, Lay
 
 export function ProjectCard({ project, idx }) {
   const getProjectIcon = (type) => {
-    const iconClass = "w-12 h-12 -rotate-12";
+    const iconClass = "w-8 h-8 sm:w-10 sm:h-10 text-muted-foreground group-hover:text-foreground transition-colors";
     switch (type) {
       case "E-book Platform":   return <BookMarked className={iconClass} />;
       case "Platform":          return <LayoutTemplate className={iconClass} />;
@@ -42,21 +42,34 @@ export function ProjectCard({ project, idx }) {
       >
         <div className="absolute inset-0 bg-background border border-border -z-10 translate-y-1 translate-x-1 group-hover:translate-y-2 group-hover:translate-x-2 transition-transform duration-300" />
         <div className="absolute inset-0 bg-background border border-border -z-20 translate-y-2 translate-x-2 group-hover:translate-y-4 group-hover:translate-x-4 transition-transform duration-300" />
-        
-        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-foreground">
-          <motion.div
-            variants={{
-              hover: { scale: 1.1, rotate: 10 }
-            }}
-          >
-            {getProjectIcon(project.type)}
-          </motion.div>
+
+        <div className="w-full aspect-video mb-5 sm:mb-6 overflow-hidden border border-border bg-secondary/20 relative rounded-sm z-0">
+          <img 
+            src={project.imageLight} 
+            alt={`${project.title} preview`} 
+            className="w-full h-full object-cover object-top block dark:hidden transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <img 
+            src={project.imageDark} 
+            alt={`${project.title} dark mode preview`} 
+            className="w-full h-full object-cover object-top hidden dark:block transition-transform duration-700 ease-out group-hover:scale-105"
+          />
         </div>
         
         <div className="flex justify-between items-start mb-3 sm:mb-4">
           <div>
             <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest mb-1 block">{project.type}</span>
             <h3 className="text-xl sm:text-3xl font-bold uppercase tracking-wide group-hover:text-primary transition-colors">{project.title}</h3>
+          </div>
+          
+          <div className="opacity-50 group-hover:opacity-100 transition-opacity shrink-0 ml-4 mt-1 sm:mt-0">
+            <motion.div
+              variants={{
+                hover: { scale: 1.1, rotate: 5 }
+              }}
+            >
+              {getProjectIcon(project.type)}
+            </motion.div>
           </div>
         </div>
 
