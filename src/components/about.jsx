@@ -47,7 +47,7 @@ export function About({ onConnect }) {
               <img 
                 src="/images/omar.png" 
                 alt="Mohammad Omar"
-                className="w-[90%] h-[95%] object-contain object-bottom drop-shadow-2xl relative z-10 transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-2 pointer-events-none"
+                className="w-[90%] h-[95%] object-cover object-bottom drop-shadow-2xl relative z-10 transition-transform duration-700 ease-out scale-110 -translate-y-2 group-hover:scale-125 group-hover:-translate-y-4 pointer-events-none"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=800";
                 }}
