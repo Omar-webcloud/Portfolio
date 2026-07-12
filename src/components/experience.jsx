@@ -86,16 +86,27 @@ export function Experience() {
                           )}
                         </h3>
                       </div>
-                      {exp.period.includes("Present") && (
-                        <span className="text-[10px] font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm bg-black/5">
-                          Active
-                        </span>
-                      )}
                     </div>
 
                     <div className="flex flex-col gap-3 sm:gap-4">
                       <div className="border-l-2 border-foreground/20 pl-4 py-0.5 sm:py-1">
-                        <p className="text-base sm:text-lg font-medium text-foreground">{exp.role}</p>
+                        <div className="flex items-center gap-3">
+                          <p className="text-base sm:text-lg font-medium text-foreground">{exp.role}</p>
+                          {exp.period.includes("Present") && (
+                            <div 
+                              className="flex items-center gap-1.5 border border-border px-1.5 sm:px-2 py-1 rounded-sm bg-secondary/30 shrink-0"
+                              title="Active Role"
+                            >
+                              <span className="relative flex w-1.5 h-1.5 sm:w-2 sm:h-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500"></span>
+                              </span>
+                              <span className="text-[9px] sm:text-[10px] font-mono text-muted-foreground hidden min-[400px]:inline-block">
+                                Active
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         <p className="text-[10px] sm:text-sm font-mono text-muted-foreground mt-1 text-xs">{exp.period}</p>
                       </div>
                       <div className="flex gap-4 sm:gap-6 mt-1 sm:mt-2">

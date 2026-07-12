@@ -86,7 +86,7 @@ export default function App() {
       const t = setTimeout(() => {
         setPrev(null)
         setAnimating(false)
-      }, 500) // matched with new transition duration
+      }, 500) 
       return () => clearTimeout(t)
     }
   }, [animating])
@@ -94,12 +94,17 @@ export default function App() {
   useEffect(() => {
     let lastTime = 0;
     let touchStartY = 0;
+    let accumulatedDelta = 0;
+    let scrollTimeout = null;
+
+    const resetAccumulator = () => {
+      accumulatedDelta = 0;
+    };
 
     const handleWheel = (e) => {
       if (animating || menuOpen) return;
       const now = Date.now();
-      if (now - lastTime < 600) return;
-
+      
       let el = e.target;
       let isScrollable = false;
       let atBottom = false;
@@ -119,15 +124,31 @@ export default function App() {
       }
 
       if (isScrollable) {
-        if (e.deltaY > 0 && !atBottom) return;
-        if (e.deltaY < 0 && !atTop) return;
+        if (e.deltaY > 0 && !atBottom) {
+          accumulatedDelta = 0;
+          return;
+        }
+        if (e.deltaY < 0 && !atTop) {
+          accumulatedDelta = 0;
+          return;
+        }
       }
 
-      if (e.deltaY > 30 && current < slices.length - 1) {
+      // Prevent quick successive transitions
+      if (now - lastTime < 1000) return;
+
+      accumulatedDelta += e.deltaY;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(resetAccumulator, 400);
+
+      // Require accumulated intentional scrolling
+      if (accumulatedDelta > 200 && current < slices.length - 1) {
         lastTime = now;
+        accumulatedDelta = 0;
         goTo(current + 1);
-      } else if (e.deltaY < -30 && current > 0) {
+      } else if (accumulatedDelta < -200 && current > 0) {
         lastTime = now;
+        accumulatedDelta = 0;
         goTo(current - 1);
       }
     };
@@ -140,10 +161,12 @@ export default function App() {
       if (animating || menuOpen) return;
       const touchEndY = e.changedTouches[0].clientY;
       const deltaY = touchStartY - touchEndY;
-      if (Math.abs(deltaY) < 40) return;
+      
+      // Requires a much firmer swipe to transition
+      if (Math.abs(deltaY) < 100) return;
 
       const now = Date.now();
-      if (now - lastTime < 600) return;
+      if (now - lastTime < 1000) return;
 
       let el = e.target;
       let isScrollable = false;
@@ -185,6 +208,7 @@ export default function App() {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
+      clearTimeout(scrollTimeout);
     };
   }, [current, animating, menuOpen]);
 
