@@ -86,10 +86,108 @@ export default function App() {
       const t = setTimeout(() => {
         setPrev(null)
         setAnimating(false)
-      }, 350)
+      }, 500) // matched with new transition duration
       return () => clearTimeout(t)
     }
   }, [animating])
+
+  useEffect(() => {
+    let lastTime = 0;
+    let touchStartY = 0;
+
+    const handleWheel = (e) => {
+      if (animating || menuOpen) return;
+      const now = Date.now();
+      if (now - lastTime < 600) return;
+
+      let el = e.target;
+      let isScrollable = false;
+      let atBottom = false;
+      let atTop = false;
+
+      while (el && el !== document.documentElement && el !== document.body) {
+        const style = window.getComputedStyle(el);
+        if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
+          if (el.scrollHeight > el.clientHeight) {
+            isScrollable = true;
+            if (Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight - 2) atBottom = true;
+            if (el.scrollTop <= 2) atTop = true;
+            break;
+          }
+        }
+        el = el.parentElement;
+      }
+
+      if (isScrollable) {
+        if (e.deltaY > 0 && !atBottom) return;
+        if (e.deltaY < 0 && !atTop) return;
+      }
+
+      if (e.deltaY > 30 && current < slices.length - 1) {
+        lastTime = now;
+        goTo(current + 1);
+      } else if (e.deltaY < -30 && current > 0) {
+        lastTime = now;
+        goTo(current - 1);
+      }
+    };
+
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (animating || menuOpen) return;
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = touchStartY - touchEndY;
+      if (Math.abs(deltaY) < 40) return;
+
+      const now = Date.now();
+      if (now - lastTime < 600) return;
+
+      let el = e.target;
+      let isScrollable = false;
+      let atBottom = false;
+      let atTop = false;
+
+      while (el && el !== document.documentElement && el !== document.body) {
+        const style = window.getComputedStyle(el);
+        if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
+          if (el.scrollHeight > el.clientHeight) {
+            isScrollable = true;
+            if (Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight - 2) atBottom = true;
+            if (el.scrollTop <= 2) atTop = true;
+            break;
+          }
+        }
+        el = el.parentElement;
+      }
+
+      if (isScrollable) {
+        if (deltaY > 0 && !atBottom) return;
+        if (deltaY < 0 && !atTop) return;
+      }
+
+      if (deltaY > 0 && current < slices.length - 1) {
+        lastTime = now;
+        goTo(current + 1);
+      } else if (deltaY < 0 && current > 0) {
+        lastTime = now;
+        goTo(current - 1);
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+    
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [current, animating, menuOpen]);
+
   
   const slices = SLIDES(goTo)
 
@@ -244,10 +342,10 @@ export default function App() {
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={current}
-            initial={{ opacity: 0, x: dir * 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: dir * -40 }}
-            transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
+            initial={{ opacity: 0, y: dir * 60, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: dir * -60, scale: 0.98 }}
+            transition={{ duration: 0.5, ease: [0.64, 0, 0.16, 1] }}
             className="absolute inset-0 w-full h-full pt-10 sm:pt-16 md:pt-16 max-[500px]:pt-16"
             style={{ willChange: "transform, opacity" }}
           >
