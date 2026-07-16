@@ -13,8 +13,8 @@ export function Connect() {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
-        <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-14 pb-16 lg:pb-24">
+      <div className="page-shell py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+        <div className="w-full mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-14 pb-16 lg:pb-24">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
