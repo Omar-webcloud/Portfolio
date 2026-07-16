@@ -62,6 +62,28 @@ export default function App() {
     sessionStorage.setItem("portfolio-theme", theme)
   }, [theme])
 
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false)
+      }
+    }
+
+    const originalOverflow = document.body.style.overflow
+    const originalTouchAction = document.body.style.touchAction
+    document.body.style.overflow = "hidden"
+    document.body.style.touchAction = "none"
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      document.body.style.touchAction = originalTouchAction
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [menuOpen])
+
   const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light")
 
   const [showSplash, setShowSplash] = useState(true)
@@ -280,10 +302,11 @@ export default function App() {
           <div className="flex lg:hidden items-center">
             <button 
               onClick={() => setMenuOpen(true)}
-              className="p-3 bg-secondary/30 backdrop-blur-md border border-border/50 rounded-full hover:bg-secondary/60 transition-colors shadow-sm"
+              className="flex items-center gap-2 px-3 py-2 bg-card/80 backdrop-blur-md border border-border/50 rounded-full hover:bg-secondary/60 transition-colors shadow-sm"
               title="Open Navigation"
             >
               <Menu size={16} className="text-foreground" />
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground">Menu</span>
             </button>
           </div>
 
@@ -318,46 +341,69 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { delay: 0.1, duration: 0.2 } }}
-            className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-xl flex flex-col justify-center items-center"
+            className="fixed inset-0 z-[100] bg-background/70 backdrop-blur-xl flex items-end sm:items-center justify-center p-3 sm:p-6"
           >
-            <button 
-              onClick={() => setMenuOpen(false)}
-              className="absolute top-5 left-5 p-3 sm:p-4 bg-secondary/50 rounded-full border border-border/50 hover:bg-secondary/80 transition-colors shadow-sm"
+            <motion.div
+              initial={{ y: 24, opacity: 0, scale: 0.97 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 18, opacity: 0, scale: 0.97 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full max-w-md rounded-[28px] border border-border/60 bg-card/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)] p-4 sm:p-5"
             >
-              <X size={20} className="text-foreground" />
-            </button>
-            <div className="flex flex-col gap-6 text-center">
-              {slices.map(({ id, label, icon: Icon }, i) => (
-                <motion.div 
-                   key={id}
-                   initial={{ opacity: 0, y: 10 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   exit={{ opacity: 0, y: -10 }}
-                   transition={{ delay: i * 0.05 }}
+              <div className="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground">Quick navigate</p>
+                  <h3 className="text-xl font-serif text-foreground">Sections</h3>
+                </div>
+                <button 
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2.5 rounded-full border border-border/50 bg-secondary/50 hover:bg-secondary/80 transition-colors shadow-sm"
+                  title="Close Navigation"
                 >
-                  <button
+                  <X size={16} className="text-foreground" />
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {slices.map(({ id, label, icon: Icon }, i) => (
+                  <motion.button
+                    key={id}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ delay: i * 0.04 }}
                     onClick={() => { goTo(i); setMenuOpen(false); }}
-                    className={`flex items-center justify-center gap-4 w-full text-2xl min-[400px]:text-3xl font-serif uppercase tracking-[0.2em] transition-all duration-300 group px-6 py-3 rounded-2xl ${
+                    className={`flex items-center justify-between w-full rounded-2xl border px-4 py-3.5 text-left transition-all duration-300 ${
                       current === i 
-                        ? "text-foreground font-semibold bg-secondary/30 backdrop-blur-md border border-border/50 shadow-sm" 
-                        : "text-muted-foreground hover:text-foreground/70 border border-transparent"
+                        ? "border-border bg-secondary/50 text-foreground shadow-sm" 
+                        : "border-transparent bg-transparent text-muted-foreground hover:border-border/50 hover:bg-secondary/20 hover:text-foreground"
                     }`}
                   >
-                    <motion.div
-                      animate={
-                        current === i
-                          ? { scale: [1, 1.2, 1], rotate: [0, -10, 10, -10, 10, 0] }
-                          : { scale: 1, rotate: 0 }
-                      }
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Icon className="w-6 h-6 min-[400px]:w-8 min-[400px]:h-8 group-hover:scale-110 transition-transform duration-300" />
-                    </motion.div>
-                    {label}
-                  </button>
-                </motion.div>
-              ))}
-            </div>
+                    <span className="flex items-center gap-3">
+                      <motion.div
+                        animate={
+                          current === i
+                            ? { scale: [1, 1.12, 1], rotate: [0, -8, 8, -8, 8, 0] }
+                            : { scale: 1, rotate: 0 }
+                        }
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Icon className="w-5 h-5" />
+                      </motion.div>
+                      <span className="text-sm sm:text-base font-serif uppercase tracking-[0.2em]">{label}</span>
+                    </span>
+                    <span className={`text-[10px] font-mono uppercase tracking-[0.25em] ${current === i ? "text-foreground" : "text-muted-foreground"}`}>
+                      {current === i ? "Open" : "Go"}
+                    </span>
+                  </motion.button>
+                ))}
+              </div>
+
+              <div className="mt-4 flex items-center justify-between rounded-2xl border border-border/50 bg-secondary/20 px-3 py-2 text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground">
+                <span>Tap a section to jump</span>
+                <span>{String(current + 1).padStart(2, "0")}/{String(slices.length).padStart(2, "0")}</span>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
