@@ -300,14 +300,22 @@ export default function App() {
           </div>
 
           <div className="flex lg:hidden items-center">
-            <button 
+            <motion.button 
+              whileTap={{ scale: 0.92, rotate: [0, -6, 6, 0] }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
               onClick={() => setMenuOpen(true)}
               className="flex items-center gap-2 px-3 py-2 bg-card/80 backdrop-blur-md border border-border/50 rounded-full hover:bg-secondary/60 transition-colors shadow-sm"
               title="Open Navigation"
             >
-              <Menu size={16} className="text-foreground" />
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground">Menu</span>
-            </button>
+              <motion.div
+                animate={menuOpen ? { scale: 0.9, opacity: 0.7 } : { scale: 1, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center gap-2"
+              >
+                <Menu size={16} className="text-foreground" />
+                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground">Menu</span>
+              </motion.div>
+            </motion.button>
           </div>
 
           <AnimatePresence>
