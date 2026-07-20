@@ -301,7 +301,7 @@ export default function App() {
 
           <div className="flex lg:hidden items-center">
             <motion.button 
-              whileTap={{ scale: 0.92, rotate: [0, -6, 6, 0] }}
+              whileTap={{ scale: 0.92 }}
               transition={{ duration: 0.18, ease: "easeOut" }}
               onClick={() => setMenuOpen(true)}
               className="flex items-center gap-2 px-3 py-2 bg-card/80 backdrop-blur-md border border-border/50 rounded-full hover:bg-secondary/60 transition-colors shadow-sm"
