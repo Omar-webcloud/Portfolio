@@ -14,7 +14,7 @@ export function About({ onConnect }) {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="container mx-auto px-4 sm:px-8 py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide transition-colors duration-500">
+      <div className="container mx-auto px-4 sm:px-8 pt-6 pb-28 sm:pt-10 sm:pb-36 lg:pt-12 lg:pb-44 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide transition-colors duration-500">
 
         <div className="max-w-4xl mx-auto flex flex-col items-start z-0 select-none pointer-events-none mb-4 sm:mb-8 pl-2 md:pl-6">
           <h1 className="text-[24px] min-[375px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-serif uppercase text-foreground whitespace-nowrap leading-none tracking-[0.02em] font-bold transition-colors duration-500 text-left">

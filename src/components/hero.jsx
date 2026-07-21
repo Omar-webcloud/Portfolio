@@ -28,7 +28,7 @@ export function Hero() {
     <div className="relative w-full h-full flex flex-col items-center">
       <div 
         ref={scrollRef}
-        className="page-shell py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide"
+        className="page-shell pt-6 pb-28 sm:pt-10 sm:pb-36 lg:pt-12 lg:pb-44 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide"
       >
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 min-h-full">
           
@@ -36,9 +36,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[40%] lg:sticky lg:top-0 lg:pr-10"
+            className="w-full lg:w-[40%] lg:sticky lg:top-0 lg:pr-6 xl:pr-10"
           >
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-[0.9] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
               Selected<br />
               Projects
             </h1>
@@ -117,7 +117,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <div className="w-full lg:w-[50%] flex flex-col gap-8 sm:gap-16 pb-12 sm:pb-20">
+          <div className="w-full lg:w-[55%] flex flex-col gap-8 sm:gap-16">
             {featuredProjects.map((project, idx) => (
               <ProjectCard key={idx} project={project} idx={idx} />
             ))}

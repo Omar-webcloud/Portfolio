@@ -38,16 +38,16 @@ export function Credentials() {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="page-shell py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div className="page-shell pt-6 pb-28 sm:pt-10 sm:pb-36 lg:pt-12 lg:pb-44 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-8 sm:pb-16 lg:pb-24">
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[45%] lg:sticky lg:top-0 lg:pr-10"
+            className="w-full lg:w-[40%] lg:sticky lg:top-0 lg:pr-6 xl:pr-10"
           >
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
               Expertise &<br /> Credentials
             </h2>
             <p className="text-sm sm:text-lg md:text-xl text-muted-foreground uppercase tracking-widest font-light mb-4 sm:mb-6">
@@ -65,7 +65,7 @@ export function Credentials() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="w-full lg:w-[50%] flex flex-col gap-8 sm:gap-14"
+            className="w-full lg:w-[55%] flex flex-col gap-8 sm:gap-14"
           >
             <motion.div variants={item}>
               <div className="flex items-center gap-4 mb-4 sm:mb-6">
@@ -74,7 +74,7 @@ export function Credentials() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 sm:gap-y-8">
                 {skillGroups.map((group, idx) => (
-                  <div key={idx} className="space-y-2 sm:space-y-3">
+                  <div key={idx} className={`space-y-2 sm:space-y-3 ${idx === 2 ? 'sm:col-span-2' : ''}`}>
                     <div className="flex items-center gap-3 text-foreground font-bold uppercase tracking-wider text-[11px] sm:text-xs">
                       {group.icon}
                       {group.title}

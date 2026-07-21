@@ -44,16 +44,16 @@ export function Blog() {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="page-shell py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div className="page-shell pt-6 pb-28 sm:pt-10 sm:pb-36 lg:pt-12 lg:pb-44 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-12 pb-24 sm:pb-28 lg:pb-32">
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[45%] lg:sticky lg:top-0"
+            className="w-full lg:w-[40%] lg:sticky lg:top-0 lg:pr-6 xl:pr-10"
           >
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] font-bold text-foreground mb-3 sm:mb-4 uppercase tracking-tighter">
               Writings &<br /> Insights
             </h2>
             <p className="text-sm sm:text-lg md:text-xl text-muted-foreground uppercase tracking-widest font-light mb-4 sm:mb-6">
@@ -76,7 +76,7 @@ export function Blog() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="w-full lg:w-[50%] flex flex-col gap-6 sm:gap-8"
+            className="w-full lg:w-[55%] flex flex-col gap-6 sm:gap-8"
           >
             {ARTICLES.map((article, idx) => (
               <motion.a 

@@ -13,14 +13,14 @@ export function Connect() {
 
   return (
     <div className="relative w-full h-full flex flex-col items-center">
-      <div className="page-shell py-6 sm:py-12 lg:py-16 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
+      <div className="page-shell pt-6 pb-28 sm:pt-10 sm:pb-36 lg:pt-12 lg:pb-44 relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scrollbar-hide">
         <div className="w-full mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-14 pb-16 lg:pb-24">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-[40%] lg:pr-6 xl:pr-10"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] font-bold uppercase tracking-tighter mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] font-bold uppercase tracking-tighter mb-4 text-foreground">
               Connect
             </h2>
             <div className="flex items-center gap-3 mb-6">
@@ -35,7 +35,7 @@ export function Connect() {
             </p>
           </motion.div>
 
-          <div className="w-full lg:w-1/2 flex flex-col gap-3">
+          <div className="w-full lg:w-[55%] flex flex-col gap-3">
             {[
               { label: "Email",    value: "omarfarukcihs@gmail.com", href: "mailto:omarfarukcihs@gmail.com", icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
               { label: "LinkedIn", value: "in/md-omar-faruk-chowdhury",href: "https://www.linkedin.com/in/md-omar-faruk-chowdhury", icon: <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary-foreground/70 dark:group-hover:text-foreground/70 transition-colors" /> },
