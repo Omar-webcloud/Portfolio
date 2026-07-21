@@ -44,16 +44,18 @@ export default function Home() {
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
   const [menuOpen, setMenuOpen]   = useState(false)
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      const stored = sessionStorage.getItem("portfolio-theme")
-      if (stored) return stored
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark"
-      }
+  const [theme, setTheme] = useState("light")
+
+  // Sync theme with stored preference or system setting after mount
+  // (must run after mount to avoid SSR/client hydration mismatch)
+  useEffect(() => {
+    const stored = sessionStorage.getItem("portfolio-theme")
+    if (stored) {
+      setTheme(stored)
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark")
     }
-    return "light"
-  })
+  }, [])
 
   useEffect(() => {
     if (theme === "dark") {

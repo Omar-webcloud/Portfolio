@@ -36,7 +36,10 @@ export function About({ onConnect }) {
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
-              transition={{ duration: 0.8, ease: "easeOut", type: "spring", bounce: 0.4 }}
+              transition={{
+                scale: { type: "spring", bounce: 0.4, duration: 0.8 },
+                rotate: { type: "tween", ease: "easeInOut", duration: 0.5 },
+              }}
               className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] aspect-square rounded-full p-1.5 sm:p-2 border border-border/50 dark:border-border shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:shadow-[0_10px_50px_rgba(0,0,0,0.2)] group-hover:border-border transition-all duration-500 bg-secondary/30 dark:bg-secondary/30"
             >
               <div className="w-full h-full rounded-full bg-gradient-to-b from-secondary/50 dark:from-foreground/5 to-transparent overflow-hidden flex justify-center items-end relative shadow-inner border border-border/30 dark:border-border/30 transition-all duration-500 group-hover:from-secondary dark:group-hover:from-foreground/10">
