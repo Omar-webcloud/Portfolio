@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsxImportSource": "react"
+  },
+  "include": ["next.config.mjs"]
+}
