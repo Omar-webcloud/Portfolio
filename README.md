@@ -1,13 +1,12 @@
-# 🧑‍💻
- Portfolio Website
+# 🧑‍💻 Portfolio Website
 
-A personal portfolio website that showcases my journey as a self-taught web developer, highlights my skills, projects, certifications, and provides a way to contact me.
+A personal portfolio website that showcases my journey as a web developer, highlights my skills, projects, certifications, and provides a way to contact me.
 
 ---
 
 ## 🚀 Live Demo
 
-[View the live version here](https://portfolio-liard-rho-18.vercel.app/)  
+[View the live version here](https://omarwebcloud.netlify.app/)
 
 ---
 
@@ -15,21 +14,22 @@ A personal portfolio website that showcases my journey as a self-taught web deve
 
 | Technology | Purpose |
 |------------|---------|
-| TailwindCSS         | Styling & layout |
-| React (Javascript) | Component-based UI |
-| Git & GitHub  | Version control & hosting |
+| Next.js | App framework and server-rendered React experience |
+| React | Component-based UI |
+| Tailwind CSS | Styling and layout |
+| Framer Motion | Animations and transitions |
+| Git & GitHub | Version control and hosting |
 
 ---
 
 ## 📦 Features
 
-- Responsive design optimized for desktop, tablet, and mobile  
-- Sidebar navigation with collapsible menu on mobile  
-- About Me section detailing my web development journey  
-- Skills section showcasing HTML, CSS, JavaScript, React, etc.  
-- Projects section with links to live demos and GitHub repositories  
-- Certificates section displaying my achievements  
-- Contact section with email, LinkedIn and GitHub links  
+- Responsive design optimized for desktop, tablet, and mobile
+- Smooth animated section navigation
+- About section detailing my web development journey
+- Skills and expertise section showcasing modern web technologies
+- Experience and certification highlights
+- Contact section with email, LinkedIn, GitHub, and resume links
 
----
+
 

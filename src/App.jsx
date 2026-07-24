@@ -46,27 +46,28 @@ export default function App() {
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
   const [menuOpen, setMenuOpen]   = useState(false)
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") {
-      return "light"
-    }
-
-    const stored = window.sessionStorage.getItem("portfolio-theme")
-    if (stored) return stored
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark"
-    }
-    return "light"
-  })
+  const [theme, setTheme] = useState("light")
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const stored = window.sessionStorage.getItem("portfolio-theme")
+    const initialTheme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    setTheme(initialTheme)
+    setHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (!hydrated) return
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark")
     } else {
       document.documentElement.classList.remove("dark")
     }
-    sessionStorage.setItem("portfolio-theme", theme)
-  }, [theme])
+    window.sessionStorage.setItem("portfolio-theme", theme)
+  }, [theme, hydrated])
 
   useEffect(() => {
     if (!menuOpen) return
@@ -335,9 +336,11 @@ export default function App() {
                 <button 
                   onClick={toggleTheme}
                   className="p-3 sm:p-2.5 rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 group shadow-sm"
-                  title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+                  title={hydrated ? `Switch to ${theme === "light" ? "dark" : "light"} mode` : "Switch theme"}
                 >
-                  {theme === "light" ? (
+                  {!hydrated ? (
+                    <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                  ) : theme === "light" ? (
                     <Moon size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
                   ) : (
                     <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
