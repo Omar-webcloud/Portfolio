@@ -45,9 +45,13 @@ export default function App() {
   const [animating, setAnimating] = useState(false)
   const [menuOpen, setMenuOpen]   = useState(false)
   const [theme, setTheme] = useState(() => {
-    const stored = sessionStorage.getItem("portfolio-theme")
+    if (typeof window === "undefined") {
+      return "light"
+    }
+
+    const stored = window.sessionStorage.getItem("portfolio-theme")
     if (stored) return stored
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       return "dark"
     }
     return "light"
