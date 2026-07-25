@@ -50,7 +50,7 @@ export function Experience() {
             </p>
             <div className="max-w-md hidden sm:block">
               <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                Building production-grade software and honing professional skills through real client delivery at a fast-paced web agencyy.
+                Building production-grade software and honing professional skills through real client delivery at a fast-paced web agency.
               </p>
             </div>
           </div>
