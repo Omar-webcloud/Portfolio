@@ -12,6 +12,17 @@ export const featuredProjects = [
   },
   {
     num: "02",
+    title: "SALESPILOT - Dashboard",
+    description: "A modern analytics dashboard with revenue tracking, sales funnel visualization, team performance metrics, product management, and a real-time Currency Converter API",
+    stack: ["Next.js", "React", "Tailwind CSS", "API"],
+    link: "https://sales-dashboard-omar.vercel.app/",
+    github: "https://github.com/omar-webcloud/Sales-CRM/",
+    type: "Analytics Dashboard",
+    imageLight: "/projects/sales-light.png",
+    imageDark: "/projects/sales-dark.png"
+  },
+  {
+    num: "03",
     title: "BLOGGIN'",
     description: "Modern blogging platform with full user authentication and post management capabilities.",
     stack: ["TypeScript", "Next.js", "Firebase"],
@@ -22,7 +33,7 @@ export const featuredProjects = [
     imageDark: "/projects/bloggin.png"
   },
   {
-    num: "03",
+    num: "04",
     title: "SYNTAXA",
     description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
     stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
@@ -33,7 +44,7 @@ export const featuredProjects = [
     imageDark: "/projects/Syntaxa-dark.png"
   },
   {
-    num: "04",
+    num: "05",
     title: "MEDIQUEUE",
     description: "Tutor booking and educational queue management platform with real-time session scheduling, advanced filtering, and personalized dashboards for students and educators.",
     stack: ["Next.js", "Tailwind CSS 4", "Shadcn UI", "React Day Picker"],
@@ -44,7 +55,7 @@ export const featuredProjects = [
     imageDark: "/projects/mediqueue.png"
   },
   {
-    num: "05",
+    num: "06",
     title: "PLASTITRACK",
     description: "Web-based application that helps users monitor and reduce plastic consumption with intuitive tracking and visual charts.",
     stack: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -55,7 +66,7 @@ export const featuredProjects = [
     imageDark: "/projects/plastitrack-dark.png"
   },
   {
-    num: "06",
+    num: "07",
     title: "SKILL SPHERE",
     description: "Online learning platform for discovering and mastering new skills, featuring secure authentication, real-time course search, personalized profiles, and a modern hero slider.",
     stack: ["Next.js", "Better Auth", "Tailwind CSS 4", "DaisyUI", "Swiper.js"],
@@ -66,7 +77,7 @@ export const featuredProjects = [
     imageDark: "/projects/skillsphere.png"
   },
   {
-    num: "07",
+    num: "08",
     title: "WEBCHRONICLES",
     description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
@@ -77,7 +88,7 @@ export const featuredProjects = [
     imageDark: "/projects/webchronicles.png"
   },
   {
-    num: "08",
+    num: "09",
     title: "FRESH FARM",
     description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
     stack: ["React", "JavaScript", "CSS"],
@@ -88,7 +99,7 @@ export const featuredProjects = [
     imageDark: "/projects/fresh-farm-dark.png"
   },
   {
-    num: "09",
+    num: "10",
     title: "KINO-XPLORER",
     description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
     stack: ["React", "API", "JavaScript"],
