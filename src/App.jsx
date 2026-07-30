@@ -325,30 +325,25 @@ export default function App() {
             </motion.button>
           </div>
 
-          <AnimatePresence>
-            {current === 0 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="flex items-center ml-auto"
-              >
-                <button 
-                  onClick={toggleTheme}
-                  className="p-3 sm:p-2.5 rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 group shadow-sm"
-                  title={hydrated ? `Switch to ${theme === "light" ? "dark" : "light"} mode` : "Switch theme"}
-                >
-                  {!hydrated ? (
-                    <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
-                  ) : theme === "light" ? (
-                    <Moon size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
-                  ) : (
-                    <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
-                  )}
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center ml-auto"
+          >
+            <button 
+              onClick={toggleTheme}
+              className="p-3 sm:p-2.5 rounded-full border border-border bg-card hover:bg-secondary transition-all duration-300 group shadow-sm"
+              title={hydrated ? `Switch to ${theme === "light" ? "dark" : "light"} mode` : "Switch theme"}
+            >
+              {!hydrated ? (
+                <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              ) : theme === "light" ? (
+                <Moon size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              ) : (
+                <Sun size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              )}
+            </button>
+          </motion.div>
         </div>
       </nav>
 
