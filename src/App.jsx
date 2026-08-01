@@ -41,7 +41,7 @@ const SLIDES = (goTo) => [
 
 
 export default function App() {
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(1)
   const [prev, setPrev]       = useState(null)
   const [dir, setDir]         = useState(1)
   const [animating, setAnimating] = useState(false)
