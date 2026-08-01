@@ -14,7 +14,7 @@ export const featuredProjects = [
     num: "02",
     title: "SALESPILOT - Dashboard",
     description: "A modern analytics dashboard with revenue tracking, sales funnel visualization, team performance metrics, product management, and a real-time Currency Converter API",
-    stack: ["Next.js", "React", "Tailwind CSS", "API"],
+    stack: ["Next.js", "React", "Tailwind CSS", "API" , "PostgreSQL", "Prisma"],
     link: "https://sales-dashboard-omar.vercel.app/",
     github: "https://github.com/omar-webcloud/Sales-CRM/",
     type: "Analytics Dashboard",
