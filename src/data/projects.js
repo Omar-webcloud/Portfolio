@@ -14,7 +14,7 @@ export const featuredProjects = [
     num: "02",
     title: "SALESPILOT - Dashboard",
     description: "A modern analytics dashboard with revenue tracking, sales funnel visualization, team performance metrics, product management, and a real-time Currency Converter API",
-    stack: ["Next.js", "React", "Tailwind CSS", "API" , "PostgreSQL", "Prisma"],
+    stack: ["Next.js", "React", "Tailwind CSS", "API", "PostgreSQL", "Prisma"],
     link: "https://sales-dashboard-omar.vercel.app/",
     github: "https://github.com/omar-webcloud/Sales-CRM/",
     type: "Analytics Dashboard",
@@ -23,6 +23,17 @@ export const featuredProjects = [
   },
   {
     num: "03",
+    title: "NEXO Gadgets",
+    description: "A Bangladeshi local gadget shop with WhatsApp integrated checkout with real products.",
+    stack: ["Next.js", "Tailwind CSS 4", "Zustand", "WhatsApp API"],
+    link: "https://nexo-gadgets.vercel.app/",
+    github: "https://github.com/Omar-webcloud/NEXO-gadgets",
+    type: "E-commerce",
+    imageLight: "/projects/nexo-light.png",
+    imageDark: "/projects/nexo-dark.png"
+  },
+  {
+    num: "04",
     title: "BLOGGIN'",
     description: "Modern blogging platform with full user authentication and post management capabilities.",
     stack: ["TypeScript", "Next.js", "Firebase"],
@@ -31,17 +42,6 @@ export const featuredProjects = [
     type: "Platform",
     imageLight: "/projects/bloggin.png",
     imageDark: "/projects/bloggin.png"
-  },
-  {
-    num: "04",
-    title: "SYNTAXA",
-    description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    link: "https://syntaxa-ten.vercel.app/",
-    github: "https://github.com/Omar-webcloud/syntaxa",
-    type: "EdTech App",
-    imageLight: "/projects/syntaxa-light.png",
-    imageDark: "/projects/Syntaxa-dark.png"
   },
   {
     num: "05",
@@ -67,6 +67,17 @@ export const featuredProjects = [
   },
   {
     num: "07",
+    title: "SYNTAXA",
+    description: "Interactive grammar web application for practicing sentences and improving writing skills through dynamic exercises.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    link: "https://syntaxa-ten.vercel.app/",
+    github: "https://github.com/Omar-webcloud/syntaxa",
+    type: "EdTech App",
+    imageLight: "/projects/syntaxa-light.png",
+    imageDark: "/projects/Syntaxa-dark.png"
+  },
+  {
+    num: "08",
     title: "SKILL SPHERE",
     description: "Online learning platform for discovering and mastering new skills, featuring secure authentication, real-time course search, personalized profiles, and a modern hero slider.",
     stack: ["Next.js", "Better Auth", "Tailwind CSS 4", "DaisyUI", "Swiper.js"],
@@ -77,7 +88,7 @@ export const featuredProjects = [
     imageDark: "/projects/skillsphere.png"
   },
   {
-    num: "08",
+    num: "09",
     title: "WEBCHRONICLES",
     description: "Interactive web app visualizing internet mood and headlines over time using sentiment analysis and dynamic data fetching.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
@@ -88,7 +99,7 @@ export const featuredProjects = [
     imageDark: "/projects/webchronicles.png"
   },
   {
-    num: "09",
+    num: "10",
     title: "FRESH FARM",
     description: "Frontend e-commerce platform for fresh produce, featuring a clean and intuitive shopping interface.",
     stack: ["React", "JavaScript", "CSS"],
@@ -99,7 +110,7 @@ export const featuredProjects = [
     imageDark: "/projects/fresh-farm-dark.png"
   },
   {
-    num: "10",
+    num: "11",
     title: "KINO-XPLORER",
     description: "Sleek movie discovery tool that lets you search and browse up-to-date film information effortlessly.",
     stack: ["React", "API", "JavaScript"],
