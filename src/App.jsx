@@ -98,7 +98,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false)
-    }, 4000)
+    }, 1800)
     return () => clearTimeout(timer)
   }, [])
 
@@ -253,9 +253,9 @@ export default function App() {
             initial={{ opacity: 1 }}
             exit={{ 
               opacity: 0,
-              scale: 0.96,
-              filter: "blur(8px)",
-              transition: { duration: 0.6, ease: "easeInOut" } 
+              scale: 0.97,
+              filter: "blur(4px)",
+              transition: { duration: 0.35, ease: "easeInOut" } 
             }}
             className="fixed inset-0 z-[9999]"
           >

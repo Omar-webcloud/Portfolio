@@ -27,17 +27,14 @@ export function Splash({ theme }) {
       opacity: 0 
     },
     visible: (index) => ({
-      pathLength: [0, 1, 1, 0],
-      pathOffset: [0, 0, 0, 1],
-      opacity: [0, 1, 1, 0],
+      pathLength: [0, 1, 1],
+      pathOffset: [0, 0, 0],
+      opacity: [0, 1, 1],
       transition: {
-        duration: 4,
+        duration: 1.2,
         ease: "easeInOut",
-        times: [0, 0.45, 0.55, 1], // Stays fully drawn in the middle
-        delay: index * 0.3,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0.5
+        times: [0, 0.6, 1],
+        delay: index * 0.1,
       }
     })
   }
